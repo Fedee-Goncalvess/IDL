@@ -13,7 +13,6 @@ Cantidad fraccionaria representable = 0.9375 -> 255
 
 
 typedef struct{ 
-    unsigned int signo : 1;
     unsigned int entero;
     unsigned int fraccion;
 }numeroPF;
@@ -24,45 +23,42 @@ typedef struct{
     unsigned int cantFraccion;
 }dataString;
 
-int verificarEntrada(char *entrada, size_t tamaño, dataString * arreglo);
+int verificarEntrada(char *entrada, size_t tamaño, dataString * arreglo, int * negativo);
 int esNumero(char caracter);
 int pedirEntrada(char *entrada);
 int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arreglo);
 int validarRango(numeroPF * num);
-int convertirDecimalChar(int operador, int resto, char * respuesta, int * i);
-int expresarHexadecimal(numeroPF * num, char * hexadecimal);
+int expresionHexadecimal(numeroPF * num, int negativo);
 
 int main()
 {
     printf("\nLos valores validos son");
     printf("\nEnteros = 127");
     printf("\nFraccionaros = 255\n");
-    int buffer = 100;//
+
+    int buffer = 10;//
     char entrada[buffer];
     pedirEntrada(entrada);
     size_t tamaño = strlen(entrada);
     
     dataString arreglo;
-
-    while (!verificarEntrada(entrada , tamaño, &arreglo)){
+    int negativo; //Flag Negativo se usa al expresar en hexa
+    while (!verificarEntrada(entrada , tamaño, &arreglo,&negativo)){
         pedirEntrada(entrada);
         tamaño = strlen(entrada);
     }
 
     numeroPF num;
     
-    obtenerNumeros(&num, entrada, tamaño, &arreglo);
+    obtenerNumeros(&num, entrada, tamaño, &arreglo); //De string a Integer
 
     
     printf("\nEl numero en parte entera= %d ", num.entero);
     printf("\nEl numero en parte fraccionaria= %d ",num.fraccion);
     
     if (validarRango(&num)){
-        printf("\nRango Valido");
-        /*char hexadecimal [6];
-        expresarHexadecimal(&num,hexadecimal);*/
-        otraExpresionHexadecimal(&num);
-        //printf(" %s",hexadecimal);
+        printf("\nRango Valido\n");
+        expresionHexadecimal(&num,negativo);
     }else printf("\nNo es rango válido");
 
     return 0;
@@ -75,16 +71,20 @@ int esNumero (char caracter){
 
 int pedirEntrada(char * entrada){
     printf("\nIngrese un valor decimal ±eee.ffff\n");
-    scanf(" %9s",entrada);  
+    scanf(" %9s",entrada);  //Restringe los primeros 9 digitos
 }
 
-int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo){ 
+int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo,int * negativo){ 
     
     int i;
+    *negativo=0;
 
-    if ((entrada[0] == '-')||(entrada[0] == '+')){
+    if ((entrada[0] == '-')||(entrada[0] == '+')){ //Si tiene un +- no se procesa ese caracter
+        if (entrada[0] == '-'){                     //Caso de ser - se guarda flag
+            *negativo=1;
+        }
         i = 1;
-    }else if (esNumero(entrada[0])){
+    }else if (esNumero(entrada[0])){                //Si no tiene +- se procesa completo
         i = 0;
     }else {
         printf("\nEntrada Invalida"); 
@@ -97,35 +97,37 @@ int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo){
     int cantEnteros = 0;
     int cantFraccion = 0;
 
-    for ( i; i < tamaño; i++)
+    for ( i; i < tamaño; i++)       //Se procesa string
     {   
         int es_num = esNumero(entrada[i]);
 
-        if (!es_num) {  
-            if ((entrada[i]=='.')&&(!puntoFijo))
+        if (!es_num) {                              // No es numero
+            if ((entrada[i]=='.')&&(!puntoFijo))    // Único caracter válido es un punto
             {
                 arreglo->posPunto = i;
-                puntoFijo = 1;
+                puntoFijo = 1;                      //Se tiene en cuenta posición del punto
             }else {
                 printf("\nEntrada Invalida"); 
                 printf("\nSolo puede haber un punto dentro del numero"); 
                 return 0;
             }
-        }else {
-            if (puntoFijo) {
-                cantFraccion++;
+        }else {                                     // Es numero
+            if (puntoFijo) {                        // A partir de la posición del punto se analiza Enteros y Fracciones
+                cantFraccion++;                     
             }else cantEnteros++;
         }
-        if ((cantEnteros>3)||(cantEnteros<1)||(cantFraccion>4)) {
+        if ((cantEnteros>3)||(cantEnteros<1)||(cantFraccion>4)) {   // Con lo anterior, se valida el rango
             printf("\nEntrada Invalida");
             printf("\nDebe haber como máximo 3 valores enteros");
             printf("\nDebe haber como máximo 4 valores fraccionarios"); 
             return 0;
         }
     }
-
+    
     arreglo->cantEnteros = cantEnteros;
     arreglo->cantFraccion = cantFraccion;
+    printf("\n\n cantEnteros = %d",cantEnteros);
+    printf("\n cantFraccion = %d\n\n", cantFraccion);
     printf("\nNúmero Valido.");
     return 1;
     
@@ -134,22 +136,25 @@ int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo){
 int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arreglo){
     int i;
     int fin = (arreglo->posPunto) - (arreglo->cantEnteros);
+    printf("\nfin = %d",fin);
     int multiplicador=1;
     int valor;
     for ( i = arreglo->posPunto-1; i >= fin; i--)
     {
         valor = entrada[i]-48; //Diferencia Ascii a Integer
-        num->entero = num->entero + multiplicador * valor;
+        num->entero = num->entero + multiplicador * valor; 
         multiplicador = multiplicador * 10;
     }
 
     multiplicador = 1;
-
+    num->fraccion = 0;
     for ( i = tamaño-1; i > (arreglo->posPunto); i--){
         valor = entrada[i]-48; //Diferencai Ascii a Integer
         num->fraccion = (num->fraccion) + multiplicador * valor;
         multiplicador = multiplicador * 10;
     }
+    printf("\nnum->enteros = ", num->entero);
+    printf("\nnum->fraccion = ", num->fraccion);
 }
 
 int validarRango(numeroPF * num){
@@ -158,39 +163,11 @@ int validarRango(numeroPF * num){
     }else return 0;
 }
 
-int convertirDecimalChar(int operador, int resto, char * respuesta, int * i){
-    printf("\n\nEl calculo es el siguiente");
-    printf("\noperador = %d", operador);
-    while (operador>0)
-    {
-        printf("\n\n Entre al convertir decimal");
-        resto = operador % 16;
-        printf("\n %d / 16 tiene resto = %d",operador,resto);
-        if (resto<10){
-            respuesta[*i]= resto + 48;
-        }else {
-            respuesta[*i]= resto + 55;
-        }
-        printf("\nrespuesta[i]= %c",respuesta[*i]);
-        (*i)--;
-        operador = operador / 16;
-    }
-    return 1;
-}
-
-int expresarHexadecimal(numeroPF * num, char * hexadecimal){
-    int operador = num->fraccion;
-    char respuesta[]= "0x0000";
-    int i = 5;
-    int resto;
-    convertirDecimalChar(operador, resto, respuesta, &i);
-    operador = num->entero;
-    convertirDecimalChar(operador,resto, respuesta, &i);
-    printf(" \nrespuesta = %s", respuesta);
-    return 1;
-}
-
-int otraExpresionHexadecimal(numeroPF * num){
+int expresionHexadecimal(numeroPF * num, int negativo){
     __int16_t numero = ((num->entero)<<8) + num->fraccion;
-    printf("\n0x%x \n", numero);
+    if ((negativo)&&(numero != 0)){
+        numero = numero + (1<<15);
+    }
+
+    printf("\n0x%X \n", numero & 0xFFFF);
 }
