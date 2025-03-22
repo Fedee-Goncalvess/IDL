@@ -8,6 +8,9 @@ Cantidad entera representable = 127
 Cantidad fraccionaria representable = 0.9375 -> 255
 */
 
+//token: 
+//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
+
 #include <stdio.h>
 #include <string.h>
 
@@ -116,18 +119,19 @@ int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo,int * 
                 cantFraccion++;                     
             }else cantEnteros++;
         }
-        if ((cantEnteros>3)||(cantEnteros<1)||(cantFraccion>4)) {   // Con lo anterior, se valida el rango
-            printf("\nEntrada Invalida");
-            printf("\nDebe haber como máximo 3 valores enteros");
-            printf("\nDebe haber como máximo 4 valores fraccionarios"); 
-            return 0;
-        }
     }
-    
+
+    if ((cantEnteros>3)||(cantEnteros<1)||(cantFraccion>4)||(cantFraccion<1)) {   // Con lo anterior, se valida el rango
+        printf("\nEntrada Invalida");
+        printf("\n  Debe haber entre 1-3 valores enteros");
+        printf("\n  Debe haber como entre 1-4 valores fraccionarios"); 
+        printf("\n  Debe haber un punto fijo"); 
+        return 0;
+    }
     arreglo->cantEnteros = cantEnteros;
     arreglo->cantFraccion = cantFraccion;
-    printf("\n\n cantEnteros = %d",cantEnteros);
-    printf("\n cantFraccion = %d\n\n", cantFraccion);
+    printf("\n cantEnteros = %d",cantEnteros);
+    printf("\n cantFraccion = %d\n", cantFraccion);
     printf("\nNúmero Valido.");
     return 1;
     
@@ -136,7 +140,6 @@ int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo,int * 
 int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arreglo){
     int i;
     int fin = (arreglo->posPunto) - (arreglo->cantEnteros);
-    printf("\nfin = %d",fin);
     int multiplicador=1;
     int valor;
     for ( i = arreglo->posPunto-1; i >= fin; i--)
@@ -153,8 +156,6 @@ int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arr
         num->fraccion = (num->fraccion) + multiplicador * valor;
         multiplicador = multiplicador * 10;
     }
-    printf("\nnum->enteros = ", num->entero);
-    printf("\nnum->fraccion = ", num->fraccion);
 }
 
 int validarRango(numeroPF * num){
