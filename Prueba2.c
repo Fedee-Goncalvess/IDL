@@ -29,12 +29,14 @@ int esNumero(char caracter);
 int pedirEntrada(char *entrada);
 int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arreglo);
 int validarRango(numeroPF * num);
+int convertirDecimalChar(int operador, int resto, char * respuesta, int * i);
+int expresarHexadecimal(numeroPF * num, char * hexadecimal);
 
 int main()
 {
     printf("\nLos valores validos son");
     printf("\nEnteros = 127");
-    printf("\nFraccionaros = 255");
+    printf("\nFraccionaros = 255\n");
     int buffer = 100;//
     char entrada[buffer];
     pedirEntrada(entrada);
@@ -56,8 +58,12 @@ int main()
     printf("\nEl numero en parte fraccionaria= %d ",num.fraccion);
     
     if (validarRango(&num)){
-        printf("\nSi wachin esta re piola el num");
-    }else printf("\nNa wacho pedilo");
+        printf("\nRango Valido");
+        /*char hexadecimal [6];
+        expresarHexadecimal(&num,hexadecimal);*/
+        otraExpresionHexadecimal(&num);
+        //printf(" %s",hexadecimal);
+    }else printf("\nNo es rango válido");
 
     return 0;
 }
@@ -72,13 +78,8 @@ int pedirEntrada(char * entrada){
     scanf(" %9s",entrada);  
 }
 
-int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo){
-    if (tamaño <= 0){
-        printf("\nEntrada Invalida");
-        printf("\nTamaño no admitido");
-        return 0;
-    } 
-
+int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo){ 
+    
     int i;
 
     if ((entrada[0] == '-')||(entrada[0] == '+')){
@@ -155,4 +156,41 @@ int validarRango(numeroPF * num){
     if ((num->entero<128)&&(num->fraccion<256)){
         return 1;
     }else return 0;
+}
+
+int convertirDecimalChar(int operador, int resto, char * respuesta, int * i){
+    printf("\n\nEl calculo es el siguiente");
+    printf("\noperador = %d", operador);
+    while (operador>0)
+    {
+        printf("\n\n Entre al convertir decimal");
+        resto = operador % 16;
+        printf("\n %d / 16 tiene resto = %d",operador,resto);
+        if (resto<10){
+            respuesta[*i]= resto + 48;
+        }else {
+            respuesta[*i]= resto + 55;
+        }
+        printf("\nrespuesta[i]= %c",respuesta[*i]);
+        (*i)--;
+        operador = operador / 16;
+    }
+    return 1;
+}
+
+int expresarHexadecimal(numeroPF * num, char * hexadecimal){
+    int operador = num->fraccion;
+    char respuesta[]= "0x0000";
+    int i = 5;
+    int resto;
+    convertirDecimalChar(operador, resto, respuesta, &i);
+    operador = num->entero;
+    convertirDecimalChar(operador,resto, respuesta, &i);
+    printf(" \nrespuesta = %s", respuesta);
+    return 1;
+}
+
+int otraExpresionHexadecimal(numeroPF * num){
+    __int16_t numero = ((num->entero)<<8) + num->fraccion;
+    printf("\n0x%x \n", numero);
 }
