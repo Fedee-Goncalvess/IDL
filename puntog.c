@@ -15,9 +15,15 @@ int main(int argc, char const *argv[])
     printf("Ingrese un numero hexadecimal expresado en la forma 0xHHHH: ");
     scanf(" %s", num);
 
-    controlEntradaYConversion(num, &resul);
+    while (!controlEntradaYConversion(num, &resul))
+    {
+        printf("ERROR : El numero ingresado no cumple con el formato 0xHHHH. Por favor vuelva a ingresar el numero : ");
+        scanf(" %s", num);
+        controlEntradaYConversion(num, &resul);
+    }
 
     // Tengo en resul la representacion de la entrada
+    printf("La conversion del numero a formato +-eee.ffff es : ");
     expresarDecimal(resul);
     // imprimirBinario(resul);
     return 0;
