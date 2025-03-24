@@ -26,11 +26,11 @@ typedef struct{
     unsigned int cantFraccion;
 }dataString;
 
-int verificarEntrada(char *entrada, size_t tamaño, dataString * arreglo, int * negativo);
+int verificarEntrada(char *entrada, size_t tamanio, dataString * arreglo, int * negativo);
 int esNumero(char caracter);
 int pedirEntrada(char *entrada);
-int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arreglo);
-int validarRango(numeroPF * num);
+int obtenerNumeros(numeroPF * num, char * entrada, int tamanio, dataString * arreglo);
+int validarRango(numeroPF * num, int negativo);
 int expresionHexadecimal(numeroPF * num, int negativo);
 
 int main()
@@ -42,24 +42,20 @@ int main()
     int buffer = 10;//
     char entrada[buffer];
     pedirEntrada(entrada);
-    size_t tamaño = strlen(entrada);
+    size_t tamanio = strlen(entrada);
     
     dataString arreglo;
     int negativo; //Flag Negativo se usa al expresar en hexa
-    while (!verificarEntrada(entrada , tamaño, &arreglo,&negativo)){
+    while (!verificarEntrada(entrada , tamanio, &arreglo,&negativo)){
         pedirEntrada(entrada);
-        tamaño = strlen(entrada);
+        tamanio = strlen(entrada);
     }
 
-    numeroPF num;
+    numeroPF num={0,0};
     
-    obtenerNumeros(&num, entrada, tamaño, &arreglo); //De string a Integer
-
+    obtenerNumeros(&num, entrada, tamanio, &arreglo); //De string a Integer
     
-    printf("\nEl numero en parte entera= %d ", num.entero);
-    printf("\nEl numero en parte fraccionaria= %d ",num.fraccion);
-    
-    if (validarRango(&num)){
+    if (validarRango(&num, negativo)){
         printf("\nRango Valido\n");
         expresionHexadecimal(&num,negativo);
     }else printf("\nNo es rango válido");
@@ -77,7 +73,7 @@ int pedirEntrada(char * entrada){
     scanf(" %9s",entrada);  //Restringe los primeros 9 digitos
 }
 
-int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo,int * negativo){ 
+int verificarEntrada(char *entrada , size_t tamanio, dataString * arreglo,int * negativo){ 
     
     int i;
     *negativo=0;
@@ -100,7 +96,7 @@ int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo,int * 
     int cantEnteros = 0;
     int cantFraccion = 0;
 
-    for ( i; i < tamaño; i++)       //Se procesa string
+    for ( i; i < tamanio; i++)       //Se procesa string
     {   
         int es_num = esNumero(entrada[i]);
 
@@ -130,14 +126,11 @@ int verificarEntrada(char *entrada , size_t tamaño, dataString * arreglo,int * 
     }
     arreglo->cantEnteros = cantEnteros;
     arreglo->cantFraccion = cantFraccion;
-    printf("\n cantEnteros = %d",cantEnteros);
-    printf("\n cantFraccion = %d\n", cantFraccion);
-    printf("\nNúmero Valido.");
     return 1;
     
 }
 
-int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arreglo){
+int obtenerNumeros(numeroPF * num, char * entrada, int tamanio, dataString * arreglo){
     int i;
     int fin = (arreglo->posPunto) - (arreglo->cantEnteros);
     int multiplicador=1;
@@ -148,26 +141,44 @@ int obtenerNumeros(numeroPF * num, char * entrada, int tamaño, dataString * arr
         num->entero = num->entero + multiplicador * valor; 
         multiplicador = multiplicador * 10;
     }
-
-    multiplicador = 1;
-    num->fraccion = 0;
-    for ( i = tamaño-1; i > (arreglo->posPunto); i--){
+    multiplicador = 1000;
+    int conversion = 0;
+    for ( i = (arreglo->posPunto)+1; i < tamanio; i++){
         valor = entrada[i]-48; //Diferencai Ascii a Integer
-        num->fraccion = (num->fraccion) + multiplicador * valor;
-        multiplicador = multiplicador * 10;
+        conversion = conversion + multiplicador * valor;
+        multiplicador = multiplicador / 10;
+    
     }
+    num->fraccion=0;        //Conversión de Fracción a Binario
+    for (i = 7; i >= 0; i--)
+    {
+        conversion=conversion<<1;
+        if (conversion>=10000) {
+            num->fraccion = num->fraccion | 1<<i;
+            conversion=conversion-10000;
+        }
+    }
+    
+
 }
 
-int validarRango(numeroPF * num){
-    if ((num->entero<128)&&(num->fraccion<256)){
-        return 1;
-    }else return 0;
+int validarRango(numeroPF * num, int negativo){
+    if (negativo){
+        if ((num->entero<=128)&&(num->fraccion<256)){
+            return 1;
+        }else return 0;    
+    }else {
+        if ((num->entero<128)&&(num->fraccion<256)){
+            return 1;
+        }else return 0;
+    }
 }
 
 int expresionHexadecimal(numeroPF * num, int negativo){
     __int16_t numero = ((num->entero)<<8) + num->fraccion;
     if ((negativo)&&(numero != 0)){
-        numero = numero + (1<<15);
+        numero = ~numero;
+        numero++;
     }
 
     printf("\n0x%X \n", numero & 0xFFFF);
