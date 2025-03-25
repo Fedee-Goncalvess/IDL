@@ -101,32 +101,33 @@ int16_t esNumero(char caracter)
         return 0;
 }
 
-void printInDecimal_32(int32_t resul) // Recibe la representacion Q(15,16) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
+void printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe la representacion Q(15,16) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
 {
     // Mascara para ver el bit de signo
-    int32_t aux = 0;
-    int32_t mascara;
+    uint32_t aux = 0;
+    int32_t mascaraE, mascaraF;
     int32_t mascaraSigno = 0x80000000;
     if ((resul & mascaraSigno) == 0)
     {
         // Ahora me quedo con la parte entera utilizando otra mascara que me deje los 7 bits despues del MSB
-        mascara = 0x7FFF0000;
-        aux = mascara & resul;
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0x7FFFFFFF - mascaraF;
 
-        aux = aux >> 16;
+        aux = mascaraE & resul;
+
+        aux = aux >> nBitsF;
 
         printf("%d", aux); // Imprimo la parte entera
 
         printf(".");
         // Me quedo con la parte fraccionaria utilizando otra mascara
-        mascara = 0x0000FFFF;
-        aux = mascara & resul;
+        aux = mascaraF & resul;
 
         int32_t nroImprimir = 0;
         int32_t j = 10;
         for (size_t i = 1; i < 5; i++, j = j * 10)
         {
-            nroImprimir = (aux * j / (2 << 16)) % 10;
+            nroImprimir = (aux * j / (1 << nBitsF)) % 10;
             printf("%d", nroImprimir);
         }
     }
@@ -136,18 +137,19 @@ void printInDecimal_32(int32_t resul) // Recibe la representacion Q(15,16) del v
         // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
         aux = ~resul + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
         // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
-        mascara = 0xFFFF0000;
-        int32_t parteEntera = (mascara & aux) >> 16;
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0xFFFFFFFF;
+
+        int32_t parteEntera = (mascaraE & aux) >> nBitsF;
         printf("%d.", parteEntera);
         // Parte fraccionaria
-        mascara = 0x0000FFFF;
-        int32_t parteFraccionaria = mascara & aux;
+        int32_t parteFraccionaria = mascaraF & aux;
 
         int32_t nroImprimir;
         int32_t j = 10;
         for (size_t i = 1; i < 5; i++, j = j * 10)
         {
-            nroImprimir = (aux * j / (2 << 16)) % 10;
+            nroImprimir = (aux * j / (1 << nBitsF)) % 10;
             printf("%d", nroImprimir);
         }
     }
@@ -217,7 +219,7 @@ int16_t conversionValidacion_32(char *entrada, dataString *arreglo, char negativ
     }
 
     int32_t resulFraccion = 0;
-    for (i = n; i >= 0; i--) // Conversión de Fracción a Binario
+    for (i = nBitsF - 1; i >= 0; i--) // Conversión de Fracción a Binario
     {
         conversion = conversion << 1;
         if (conversion >= 10000)
@@ -226,14 +228,14 @@ int16_t conversionValidacion_32(char *entrada, dataString *arreglo, char negativ
             conversion = conversion - 10000;
         }
         // cambiar rango
-        if (resulFraccion > 255)
+        if (resulFraccion > ((2 << nBitsF) - 1))
         { // Validación de rango
             return 0;
         }
     }
 
     *resultado = resulEntero;
-    *resultado = *resultado << 16;
+    *resultado = *resultado << nBitsF;
     *resultado = *resultado | resulFraccion;
 
     if ((negativo) && (resultado != 0))
@@ -257,32 +259,33 @@ int16_t validarRango_32(int32_t resul)
         return 0;
 }
 
-void printInDecimal_16(int16_t resul) // Recibe la representacion Q(7,8) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
+void printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe la representacion Q(7,8) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
 {
     // Mascara para ver el bit de signo
-    int16_t aux = 0;
-    int16_t mascara;
+    uint16_t aux = 0;
+    int16_t mascaraE, mascaraF;
     int16_t mascaraSigno = 0x8000;
     if ((resul & mascaraSigno) == 0)
     {
         // Ahora me quedo con la parte entera utilizando otra mascara que me deje los 7 bits despues del MSB
-        mascara = 0x7F00;
-        aux = mascara & resul;
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0x7FFF - mascaraF;
 
-        aux = aux >> 8;
+        aux = mascaraE & resul;
+
+        aux = aux >> nBitsF;
 
         printf("%d", aux); // Imprimo la parte entera
 
         printf(".");
         // Me quedo con la parte fraccionaria utilizando otra mascara
-        mascara = 0x00FF;
-        aux = mascara & resul;
+        aux = mascaraF & resul;
 
         int16_t nroImprimir = 0;
         int16_t j = 10;
         for (size_t i = 1; i < 5; i++, j = j * 10)
         {
-            nroImprimir = (aux * j / 256) % 10;
+            nroImprimir = (aux * j / (1 << nBitsF)) % 10;
             printf("%d", nroImprimir);
         }
     }
@@ -292,18 +295,19 @@ void printInDecimal_16(int16_t resul) // Recibe la representacion Q(7,8) del val
         // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
         aux = ~resul + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
         // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
-        mascara = 0xFF00;
-        int16_t parteEntera = (mascara & aux) >> 8;
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0xFFFF - mascaraF;
+
+        int16_t parteEntera = (mascaraE & aux) >> nBitsF;
         printf("%d.", parteEntera);
         // Parte fraccionaria
-        mascara = 0x00FF;
-        int16_t parteFraccionaria = mascara & aux;
+        int16_t parteFraccionaria = mascaraF & aux;
 
         int16_t nroImprimir;
         int16_t j = 10;
         for (size_t i = 1; i < 5; i++, j = j * 10)
         {
-            nroImprimir = (aux * j / 256) % 10;
+            nroImprimir = (aux * j / (1 << nBitsF)) % 10;
             printf("%d", nroImprimir);
         }
     }
@@ -372,7 +376,7 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
     }
 
     int16_t resulFraccion = 0;
-    for (i = nBitsF-1; i >= 0; i--) // Conversión de Fracción a Binario
+    for (i = nBitsF - 1; i >= 0; i--) // Conversión de Fracción a Binario
     {
         conversion = conversion << 1;
         if (conversion >= 10000)
@@ -403,7 +407,7 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
 int16_t validarRango_16(int16_t resul)
 {
     printf("\n%d < 32769", resul);
-    if ((resul < 0b111111111111111))
+    if ((resul < 0x7FFF))
     {
         return 1;
     }

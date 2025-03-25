@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 {
     int16_t resultado = ingresarEnHexadecimal();
     printf("La conversion del numero a formato +-eee.ffff es : ");
-    printInDecimal_16(resultado);
+    printInDecimal_16(resultado,7,8);
 
     return 0;
 }
