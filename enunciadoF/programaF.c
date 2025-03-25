@@ -13,25 +13,19 @@ Cantidad fraccionaria representable = 0.9375 -> 255
 
 #include <stdio.h>
 #include <string.h>
-
-
-typedef struct{ 
-    unsigned int entero;
-    unsigned int fraccion;
-}numeroPF;
+#include <stdint.h>
 
 typedef struct{
-    unsigned int posPunto;
-    unsigned int cantEnteros;
-    unsigned int cantFraccion;
+    int16_t posPunto;
+    int16_t cantEnteros;
+    int16_t cantFraccion;
 }dataString;
 
-int verificarEntrada(char *entrada, size_t tamanio, dataString * arreglo, int * negativo);
-int esNumero(char caracter);
-int pedirEntrada(char *entrada);
-int obtenerNumeros(numeroPF * num, char * entrada, int tamanio, dataString * arreglo);
-int validarRango(numeroPF * num, int negativo);
-int expresionHexadecimal(numeroPF * num, int negativo);
+int16_t verificarEntrada(char *entrada, dataString * arreglo, char * negativo);
+int16_t esNumero(char caracter);
+void pedirEntrada(char *entrada);
+int16_t conversionValidacion(char * entrada, dataString * arreglo, char negativo, int16_t * resultado);
+int16_t validarRango(int16_t resul);
 
 int main()
 {
@@ -39,43 +33,39 @@ int main()
     printf("\nEnteros = 127");
     printf("\nFraccionaros = 255\n");
 
-    int buffer = 10;//
+    int16_t buffer = 10;//
     char entrada[buffer];
     pedirEntrada(entrada);
-    size_t tamanio = strlen(entrada);
     
     dataString arreglo;
-    int negativo; //Flag Negativo se usa al expresar en hexa
-    while (!verificarEntrada(entrada , tamanio, &arreglo,&negativo)){
+    
+    char negativo; //Flag Negativo se usa al expresar en hexa
+    while (!verificarEntrada(entrada, &arreglo,&negativo)){
         pedirEntrada(entrada);
-        tamanio = strlen(entrada);
     }
-
-    numeroPF num={0,0};
     
-    obtenerNumeros(&num, entrada, tamanio, &arreglo); //De string a Integer
-    
-    if (validarRango(&num, negativo)){
-        printf("\nRango Valido\n");
-        expresionHexadecimal(&num,negativo);
+    int16_t resultado;
+    if (conversionValidacion(entrada, &arreglo, negativo, &resultado)){     //De string a Integer y validacion
+        printf("\n0x%X",resultado & 0xFFFF);
     }else printf("\nNo es rango válido");
+        
 
     return 0;
 }
 
-int esNumero (char caracter){
+int16_t esNumero (char caracter){
     if ((caracter <= '9') && (caracter >= '0')) return 1;
     else return 0;
 }
 
-int pedirEntrada(char * entrada){
+void pedirEntrada(char * entrada){
     printf("\nIngrese un valor decimal ±eee.ffff\n");
     scanf(" %9s",entrada);  //Restringe los primeros 9 digitos
 }
 
-int verificarEntrada(char *entrada , size_t tamanio, dataString * arreglo,int * negativo){ 
+int16_t verificarEntrada(char *entrada, dataString * arreglo,char * negativo){ 
     
-    int i;
+    int16_t i;
     *negativo=0;
 
     if ((entrada[0] == '-')||(entrada[0] == '+')){ //Si tiene un +- no se procesa ese caracter
@@ -91,27 +81,25 @@ int verificarEntrada(char *entrada , size_t tamanio, dataString * arreglo,int * 
         return 0;
     }
 
-    int puntoFijo = 0;
     arreglo->posPunto=0;
-    int cantEnteros = 0;
-    int cantFraccion = 0;
+    int16_t cantEnteros = 0;
+    int16_t cantFraccion = 0;
 
-    for ( i; i < tamanio; i++)       //Se procesa string
+    for ( i; i < strlen(entrada); i++)       //Se procesa string
     {   
-        int es_num = esNumero(entrada[i]);
+        int16_t es_num = esNumero(entrada[i]);
 
         if (!es_num) {                              // No es numero
-            if ((entrada[i]=='.')&&(!puntoFijo))    // Único caracter válido es un punto
+            if ((entrada[i]=='.')&&(!(arreglo->posPunto)))    // Único caracter válido es un punto
             {
-                arreglo->posPunto = i;
-                puntoFijo = 1;                      //Se tiene en cuenta posición del punto
+                arreglo->posPunto = i;              //Se tiene en cuenta posición del punto
             }else {
                 printf("\nEntrada Invalida"); 
                 printf("\nSolo puede haber un punto dentro del numero"); 
                 return 0;
             }
         }else {                                     // Es numero
-            if (puntoFijo) {                        // A partir de la posición del punto se analiza Enteros y Fracciones
+            if (arreglo->posPunto) {                        // A partir de la posición del punto se analiza Enteros y Fracciones
                 cantFraccion++;                     
             }else cantEnteros++;
         }
@@ -130,56 +118,65 @@ int verificarEntrada(char *entrada , size_t tamanio, dataString * arreglo,int * 
     
 }
 
-int obtenerNumeros(numeroPF * num, char * entrada, int tamanio, dataString * arreglo){
-    int i;
-    int fin = (arreglo->posPunto) - (arreglo->cantEnteros);
-    int multiplicador=1;
-    int valor;
+int16_t conversionValidacion(char * entrada, dataString * arreglo, char negativo, int16_t * resultado){
+    int16_t i;
+    int16_t fin = (arreglo->posPunto) - (arreglo->cantEnteros);
+    int16_t multiplicador=1;
+    int16_t valor;
+    int16_t resulEntero = 0;
     for ( i = arreglo->posPunto-1; i >= fin; i--)
     {
         valor = entrada[i]-48; //Diferencia Ascii a Integer
-        num->entero = num->entero + multiplicador * valor; 
+        resulEntero = resulEntero + multiplicador * valor; 
+
+        if (((resulEntero > 127) && (!negativo)) || (resulEntero>128)) { //Validación de rango
+            return 0;
+        }
+
         multiplicador = multiplicador * 10;
     }
+
+
     multiplicador = 1000;
-    int conversion = 0;
-    for ( i = (arreglo->posPunto)+1; i < tamanio; i++){
+    int16_t conversion = 0;
+    for ( i = (arreglo->posPunto)+1; i < strlen(entrada); i++){
         valor = entrada[i]-48; //Diferencai Ascii a Integer
         conversion = conversion + multiplicador * valor;
         multiplicador = multiplicador / 10;
-    
+        
     }
-    num->fraccion=0;        //Conversión de Fracción a Binario
-    for (i = 7; i >= 0; i--)
+    
+    int16_t resulFraccion = 0;
+    for (i = 7; i >= 0; i--)    //Conversión de Fracción a Binario
     {
         conversion=conversion<<1;
         if (conversion>=10000) {
-            num->fraccion = num->fraccion | 1<<i;
+            resulFraccion = resulFraccion | 1<<i;
             conversion=conversion-10000;
+        }
+
+        if (resulFraccion>255){ //Validación de rango
+            return 0;
         }
     }
     
 
+    *resultado = resulEntero;
+    *resultado = *resultado<<8;           
+    *resultado = *resultado | resulFraccion;
+
+    if ((negativo)&&(resultado != 0)){
+        *resultado = ~(*resultado);
+        (*resultado)++;
+    }
+    
+    return 1;
 }
 
-int validarRango(numeroPF * num, int negativo){
-    if (negativo){
-        if ((num->entero<=128)&&(num->fraccion<256)){
-            return 1;
-        }else return 0;    
-    }else {
-        if ((num->entero<128)&&(num->fraccion<256)){
-            return 1;
-        }else return 0;
-    }
-}
-
-int expresionHexadecimal(numeroPF * num, int negativo){
-    __int16_t numero = ((num->entero)<<8) + num->fraccion;
-    if ((negativo)&&(numero != 0)){
-        numero = ~numero;
-        numero++;
-    }
-
-    printf("\n0x%X \n", numero & 0xFFFF);
+int16_t validarRango(int16_t resul){
+    printf("\n%d < 32769",resul);
+    if ((resul<0b111111111111111))
+    {
+        return 1;
+    }else return 0;
 }
