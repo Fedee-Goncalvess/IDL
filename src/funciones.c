@@ -149,7 +149,7 @@ void printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe 
         int32_t j = 10;
         for (size_t i = 1; i < 5; i++, j = j * 10)
         {
-            nroImprimir = (aux * j / (1 << nBitsF)) % 10;
+            nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
             printf("%d", nroImprimir);
         }
     }
@@ -160,7 +160,7 @@ int32_t ingresarEnDecimal_32(int32_t *resultado, int16_t nBitsE, int16_t nBitsF)
     printf("\nEl rango de valores validos es [");
     printInDecimal_32(0x7FFFFFFF, nBitsE, nBitsF);
     printf(";");
-    printInDecimal_32(0xFFFFFFFF, nBitsE, nBitsF);
+    printInDecimal_32(0x80000000, nBitsE, nBitsF);
     printf("]\n");
 
     int16_t buffer = 10;
@@ -305,7 +305,7 @@ void printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe 
         int16_t j = 10;
         for (size_t i = 1; i < 5; i++, j = j * 10)
         {
-            nroImprimir = (aux * j / (1 << nBitsF)) % 10;
+            nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
             printf("%d", nroImprimir);
         }
     }
