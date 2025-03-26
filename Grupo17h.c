@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "headers/funciones.h"
 
-
-
 int32_t normalizar_16_A_32(int16_t n, int16_t nBitsE_16, int16_t nBitsF_16, int16_t nBitsE_32, int16_t nBitsF_32);
 int32_t division_32(int32_t a, int32_t b, int16_t nBitsF);
 
@@ -29,7 +27,7 @@ int main()
     int32_t muynegativoanashei = 0x80000000;
     int32_t notannegativoashane = 0x8FFF0000;
 
-    printf("negativo??? %d\n",muynegativoanashei);
+    printf("negativo??? %d\n", muynegativoanashei);
 
     printf("valor max: %0x\n", valorMaxX);
     printf("valor min: %0x\n", valorMinX);
