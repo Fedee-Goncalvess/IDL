@@ -275,6 +275,44 @@ void printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe 
     printf("\n");
 }
 
+void printInDecimal_64(int64_t resul, int64_t nBitsE, int64_t nBitsF) // Recibe la representacion Q(7,8) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
+{
+    // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
+    uint16_t aux = resul;
+    int64_t mascaraE, mascaraF;
+    int64_t mascaraSigno = 0x8000;
+    int64_t parteFraccionaria, parteEntera;
+
+    if ((aux & mascaraSigno) == 0)
+    {
+        // Ahora me quedo con la parte entera
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0x7FFF - mascaraF;
+    }
+    else
+    {
+        printf("-"); // Imprimo el menos
+        // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
+        aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
+        // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
+        mascaraF = (1 << nBitsF) - 1;
+    }
+
+    parteEntera = (mascaraE & aux) >> nBitsF;
+    printf("%d.", parteEntera);
+    // Parte fraccionaria
+    parteFraccionaria = mascaraF & aux;
+
+    int16_t nroImprimir;
+    int16_t j = 10;
+    for (size_t i = 1; i < 5; i++, j = j * 10)
+    {
+        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
+        printf("%d", nroImprimir);
+    }
+    printf("\n");
+}
+
 int16_t ingresarEnDecimal_16(int16_t *resultado, int16_t nBitsE, int16_t nBitsF)
 {
     int16_t buffer = 10;
