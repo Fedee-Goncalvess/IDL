@@ -1,4 +1,4 @@
-#include "../headers/funciones.h"
+#include "../headers/Grupo17funciones.h"
 
 typedef struct
 {
@@ -299,7 +299,7 @@ void printInDecimal_64(int64_t resul, int64_t nBitsE, int64_t nBitsF) // Recibe 
     }
 
     parteEntera = (mascaraE & aux) >> nBitsF;
-    printf("%d.", parteEntera);
+    printf("%ld.", parteEntera);
     // Parte fraccionaria
     parteFraccionaria = mascaraF & aux;
 
