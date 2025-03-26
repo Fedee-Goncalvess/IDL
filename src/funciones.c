@@ -153,17 +153,15 @@ void printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe 
             printf("%d", nroImprimir);
         }
     }
-    printf("\n");
 }
 
-/* cambiar En base al punto e) hay que definir cuál es el rango válido*/
 int32_t ingresarEnDecimal_32(int32_t *resultado, int16_t nBitsE, int16_t nBitsF)
 {
-    printf("\nLos valores validos son");
-    printf("\nEnteros = 127");
-    printf("\nFraccionaros = 255\n");
-    // cambiar No sería más fácil decir positivos hasta 127.9961 y negativos
-    // hasta -128?
+    printf("\nEl rango de valores validos es [");
+    printInDecimal_32(0x7FFFFFFF, nBitsE, nBitsF);
+    printf(";");
+    printInDecimal_32(0xFFFFFFFF, nBitsE, nBitsF);
+    printf("]\n");
 
     int16_t buffer = 10;
     char entrada[buffer];
@@ -311,16 +309,15 @@ void printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe 
             printf("%d", nroImprimir);
         }
     }
-    printf("\n");
 }
 
 int16_t ingresarEnDecimal_16(int16_t *resultado, int16_t nBitsE, int16_t nBitsF)
 {
-    printf("\nLos valores validos son");
-    printf("\nEnteros = 127");
-    printf("\nFraccionaros = 255\n");
-    // No sería más fácil decir positivos hasta 127.9961 y negativos
-    // hasta -128?
+    printf("\nEl rango de valores validos es [");
+    printInDecimal_16(0x7FFF, nBitsE, nBitsF);
+    printf(";");
+    printInDecimal_16(0x8000, nBitsE, nBitsF);
+    printf("]\n");
 
     int16_t buffer = 10;
     char entrada[buffer];
@@ -376,7 +373,7 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
     }
 
     int16_t resulFraccion = 0;
-    for (i = nBitsF - 1; i >= 0; i--) // Conversión de Fracción a Binario
+    for (i = 7 ; i >= 0; i--) // Conversión de Fracción a Binario
     {
         conversion = conversion << 1;
         if (conversion >= 10000)
