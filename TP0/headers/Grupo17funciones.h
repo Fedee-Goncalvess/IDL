@@ -1,5 +1,5 @@
-#ifndef FUNCIONES_H
-#define FUNCIONES_H
+#ifndef GRUPO17FUNCIONES_H
+#define GRUPO17FUNCIONES_H
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "headers/funciones.h"
+#include "headers/Grupo17funciones.h"
 
 int32_t normalizar_16_A_32(int16_t n, int16_t nBitsE_16, int16_t nBitsF_16, int16_t nBitsE_32, int16_t nBitsF_32);
 int32_t division_32(int32_t a, int32_t b, int16_t nBitsF);
