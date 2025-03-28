@@ -76,8 +76,10 @@ int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo, int
     if ((cantEnteros > nE) || (cantEnteros < 1) || (cantFraccion > nF) || (cantFraccion < 1))
     { // Con lo anterior, se valida el rango
         printf("\nEntrada Invalida");
-        printf("\n  Debe haber entre 1-%d",nE);printf(" valores enteros");
-        printf("\n  Debe haber entre 1-%d",nF);printf("valores fraccionarios");
+        printf("\n  Debe haber entre 1-%d", nE);
+        printf(" valores enteros");
+        printf("\n  Debe haber entre 1-%d", nF);
+        printf(" valores fraccionarios");
         printf("\n  Debe haber un punto fijo");
         return 0;
     }
@@ -192,7 +194,6 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
 {
     if ((nBitsE + nBitsF) > 15)
     {
-        printf("salio suma\n");
         return 0;
     }
     int16_t i;
@@ -207,7 +208,6 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
 
         if (((resulEntero > ((1 << nBitsE) - 1)) && (!negativo)) || (resulEntero > (1 << nBitsE)))
         { // Validación de rango
-            printf("salio validacion rango entero\n");
             return 0;
         }
 
@@ -235,7 +235,6 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
 
         if (resulFraccion > ((2 << nBitsF) - 1))
         { // Validación de rango
-            printf("salio validacion rango entero\n");
             return 0;
         }
     }
