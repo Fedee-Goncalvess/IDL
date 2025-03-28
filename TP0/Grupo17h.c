@@ -68,6 +68,7 @@ int main()
 
     printf("Valor de y: ");
     printInDecimal_32(y_32, nBitsE_x, nBitsF_x);
+    printf("\n0x%X", y_32);
 
     return 1;
 }
@@ -75,7 +76,6 @@ int main()
 int32_t normalizar_16_A_32(int16_t n, int16_t nBitsE_16, int16_t nBitsF_16, int16_t nBitsE_32, int16_t nBitsF_32)
 {
     int32_t resultado = n & 0xFFFF;
-    int32_t aux;
     int32_t signo = 0x00008000 & resultado;
 
     resultado = resultado << (nBitsF_32 - nBitsF_16);
@@ -85,9 +85,9 @@ int32_t normalizar_16_A_32(int16_t n, int16_t nBitsE_16, int16_t nBitsF_16, int1
         int32_t mascara = (0x7FFFFFFF) - ((1 << (nBitsF_32 + nBitsE_16)) - 1);
         resultado = (resultado + mascara);
 
-        int32_t aux2 = (1 << (nBitsF_32 + nBitsE_16)) - 1;
+        int32_t aux = (1 << (nBitsF_32 + nBitsE_16)) - 1;
 
-        resultado = ((resultado)) ^ ((0x7FFFFFFF - aux2));
+        resultado = ((resultado)) ^ ((0x7FFFFFFF - aux));
     }
 
     return (resultado);

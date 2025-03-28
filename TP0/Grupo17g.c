@@ -5,6 +5,9 @@
 
 #include "headers/Grupo17funciones.h"
 
+#define nBitsE 7
+#define nBitsF 8
+
 int controlEntrada(char *);
 int16_t digitHexToDec(char car);
 int convertHexToDec(char *num, int16_t *ptrResul);
@@ -14,7 +17,7 @@ int main(int argc, char const *argv[])
 {
     int16_t resultado = ingresarEnHexadecimal();
     printf("La conversion del numero a formato +-eee.ffff es : ");
-    printInDecimal_16(resultado,7,8);
+    printInDecimal_16(resultado,nBitsE,nBitsF);
 
     return 0;
 }
