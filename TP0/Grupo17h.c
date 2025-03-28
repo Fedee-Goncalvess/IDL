@@ -22,15 +22,17 @@ int main()
     }
 
     m_32 = normalizar_16_A_32(m_16, 0, 15, 15, 16);
+    printInDecimal_16(m_16,0,15);
 
     printf("Ingrese b, ");
-    if ((ingresarEnDecimal_16(&b_16, 7, 8, 3, 4)))
+    if ((!ingresarEnDecimal_16(&b_16, 7, 8, 3, 4)))
     {
         printf("Valor de b se salió del rango\n");
         return 0;
     }
 
     b_32 = normalizar_16_A_32(b_16, 7, 8, 15, 16);
+    printInDecimal_16(b_16, 7, 8);
 
     printf("multiplicacion m * b: ");
     printInDecimal_32((multiplicacion_32(m_32, b_32, 16)), 15, 16);
