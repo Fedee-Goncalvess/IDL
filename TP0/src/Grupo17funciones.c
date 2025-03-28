@@ -7,17 +7,16 @@ typedef struct
     int16_t cantFraccion;
 } dataString;
 
-int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo);
-void pedirEntrada(char *entrada);
+int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo, int16_t nE, int16_t nF);
+void pedirEntrada(char *entrada, int16_t nDigE, int16_t nDigF);
 int16_t esNumero(char caracter);
 
-int16_t validarRango_16(int16_t resul);
 int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativo, int16_t *resultado, int16_t nBitsE, int16_t nBitsF);
 
-int16_t validarRango_32(int32_t resul);
 int16_t conversionValidacion_32(char *entrada, dataString *arreglo, char negativo, int32_t *resultado, int16_t nBitsE, int16_t nBitsF);
 
-int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo)
+// --- METODOS GENERALES
+int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo, int16_t nE, int16_t nF)
 {
 
     int16_t i;
@@ -74,7 +73,7 @@ int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo)
         }
     }
 
-    if ((cantEnteros > 3) || (cantEnteros < 1) || (cantFraccion > 4) || (cantFraccion < 1))
+    if ((cantEnteros > nE) || (cantEnteros < 1) || (cantFraccion > nF) || (cantFraccion < 1))
     { // Con lo anterior, se valida el rango
         printf("\nEntrada Invalida");
         printf("\n  Debe haber entre 1-3 valores enteros");
@@ -87,10 +86,22 @@ int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo)
     return 1;
 }
 
-void pedirEntrada(char *entrada)
+void pedirEntrada(char *entrada, int16_t nDigE, int16_t nDigF)
 {
-    printf("\nIngrese un valor decimal ±eee.ffff\n");
-    scanf(" %9s", entrada); // Restringe los primeros 9 digitos
+    char formato[10];                              // Espacio suficiente para almacenar el formato
+    sprintf(formato, " %%%ds", nDigE + nDigF + 1); // Construye la cadena de formato
+    printf("\nIngrese un valor decimal ±");
+    for (int i = 0; i < nDigE; i++)
+    {
+        printf("e");
+    }
+    printf(".");
+    for (int i = 0; i < nDigF; i++)
+    {
+        printf("f");
+    }
+    printf("\n");
+    scanf(formato, entrada); // Usa la cadena de formato generada
 }
 
 int16_t esNumero(char caracter)
@@ -101,144 +112,16 @@ int16_t esNumero(char caracter)
         return 0;
 }
 
-void printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe la representacion Q(15,16) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
+// --- FIN METODOS GENERALES
+
+// --- METODOS 16 BITS
+
+int16_t printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe la representacion Q(nBitsE,8) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
 {
-    // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
-    uint32_t aux = resul;
-    int32_t mascaraE, mascaraF;
-    int32_t mascaraSigno = 0x80000000;
-    int32_t parteFraccionaria, parteEntera;
-
-    if ((aux & mascaraSigno) == 0)
+    if (nBitsE + nBitsF > 15)
     {
-        // Ahora me quedo con la parte entera
-        mascaraF = (1 << nBitsF) - 1;
-        mascaraE = 0x7FFFFFFF - mascaraF;
+        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 32 bits
     }
-    else
-    {
-        printf("-"); // Imprimo el menos
-        // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
-        aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
-        // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
-        mascaraF = (1 << nBitsF) - 1;
-        mascaraE = 0xFFFFFFFF;
-    }
-
-    parteEntera = (mascaraE & aux) >> nBitsF;
-    printf("%d.", parteEntera);
-    // Parte fraccionaria
-    parteFraccionaria = mascaraF & aux;
-
-    int32_t nroImprimir;
-    int32_t j = 10;
-    for (size_t i = 1; i < 5; i++, j = j * 10)
-    {
-        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
-        printf("%d", nroImprimir);
-    }
-    printf("\n");
-}
-
-/* cambiar En base al punto e) hay que definir cuál es el rango válido*/
-int32_t ingresarEnDecimal_32(int32_t *resultado, int16_t nBitsE, int16_t nBitsF)
-{
-    int16_t buffer = 10;
-    char entrada[buffer];
-    pedirEntrada(entrada);
-
-    dataString arreglo;
-
-    char negativo; // Flag Negativo se usa al expresar en hexa
-    while (!verificarEntrada(entrada, &arreglo, &negativo))
-    {
-        pedirEntrada(entrada);
-    }
-
-    if (conversionValidacion_32(entrada, &arreglo, negativo, resultado, nBitsE, nBitsF))
-    { // De string a Integer y validacion
-        return 1;
-    }
-    else
-        return 0;
-}
-
-int16_t conversionValidacion_32(char *entrada, dataString *arreglo, char negativo, int32_t *resultado, int16_t nBitsE, int16_t nBitsF)
-{
-    if (nBitsE + nBitsF > 31)
-    {
-        return 0;
-    }
-    int16_t i;
-    int16_t fin = (arreglo->posPunto) - (arreglo->cantEnteros);
-    int16_t multiplicador = 1;
-    int16_t valor;
-    int32_t resulEntero = 0;
-    for (i = arreglo->posPunto - 1; i >= fin; i--)
-    {
-        valor = entrada[i] - 48; // Diferencia Ascii a Integer
-        resulEntero = resulEntero + multiplicador * valor;
-
-        if (((resulEntero > ((1 << nBitsE) - 1)) && (!negativo)) || (resulEntero > (1 << nBitsE)))
-        { // Validación de rango
-            return 0;
-        }
-
-        multiplicador = multiplicador * 10;
-    }
-
-    multiplicador = 1000;
-    int32_t conversion = 0;
-    for (i = (arreglo->posPunto) + 1; i < strlen(entrada); i++)
-    {
-        valor = entrada[i] - 48; // Diferencia Ascii a Integer
-        conversion = conversion + multiplicador * valor;
-        multiplicador = multiplicador / 10;
-    }
-
-    int32_t resulFraccion = 0;
-    for (i = nBitsF - 1; i >= 0; i--) // Conversión de Fracción a Binario
-    {
-        conversion = conversion << 1;
-        if (conversion >= 10000)
-        {
-            resulFraccion = resulFraccion | 1 << i;
-            conversion = conversion - 10000;
-        }
-        // cambiar rango
-        if (resulFraccion > ((2 << nBitsF) - 1))
-        { // Validación de rango
-            return 0;
-        }
-    }
-
-    *resultado = resulEntero;
-    *resultado = *resultado << nBitsF;
-    *resultado = *resultado | resulFraccion;
-
-    if ((negativo) && (resultado != 0))
-    {
-        *resultado = ~(*resultado);
-        (*resultado)++;
-    }
-
-    return 1;
-}
-
-int16_t validarRango_32(int32_t resul)
-{
-    // cambiar: ver que onda el rango se va a la mierda como para printearlo
-    // printf("\n%d < 32769", resul);
-    if ((resul < 0x7FFFFFFF))
-    {
-        return 1;
-    }
-    else
-        return 0;
-}
-
-void printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe la representacion Q(7,8) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
-{
     // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
     uint16_t aux = resul;
     int16_t mascaraE, mascaraF;
@@ -273,58 +156,28 @@ void printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe 
         printf("%d", nroImprimir);
     }
     printf("\n");
+
+    return 1;
 }
 
-void printInDecimal_64(int64_t resul, int64_t nBitsE, int64_t nBitsF) // Recibe la representacion Q(7,8) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
+// Ingresa un número en representación en punto fijo Q(nBitsE,nBitsF) con un espacio de 16bits
+// y la cantidad de digitos decimales enteros y fraccionarios de la entrada
+int16_t ingresarEnDecimal_16(int16_t *resultado, int16_t nBitsE, int16_t nBitsF, int16_t nE, int16_t nF)
 {
-    // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
-    uint16_t aux = resul;
-    int64_t mascaraE, mascaraF;
-    int64_t mascaraSigno = 0x8000;
-    int64_t parteFraccionaria, parteEntera;
-
-    if ((aux & mascaraSigno) == 0)
+    if (nBitsE + nBitsF > 15)
     {
-        // Ahora me quedo con la parte entera
-        mascaraF = (1 << nBitsF) - 1;
-        mascaraE = 0x7FFF - mascaraF;
+        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 32 bits
     }
-    else
-    {
-        printf("-"); // Imprimo el menos
-        // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
-        aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
-        // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
-        mascaraF = (1 << nBitsF) - 1;
-    }
-
-    parteEntera = (mascaraE & aux) >> nBitsF;
-    printf("%ld.", parteEntera);
-    // Parte fraccionaria
-    parteFraccionaria = mascaraF & aux;
-
-    int16_t nroImprimir;
-    int16_t j = 10;
-    for (size_t i = 1; i < 5; i++, j = j * 10)
-    {
-        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
-        printf("%d", nroImprimir);
-    }
-    printf("\n");
-}
-
-int16_t ingresarEnDecimal_16(int16_t *resultado, int16_t nBitsE, int16_t nBitsF)
-{
     int16_t buffer = 10;
     char entrada[buffer];
-    pedirEntrada(entrada);
+    pedirEntrada(entrada, nE, nF);
 
     dataString arreglo;
 
     char negativo; // Flag Negativo se usa al expresar en hexa
-    while (!verificarEntrada(entrada, &arreglo, &negativo))
+    while (!verificarEntrada(entrada, &arreglo, &negativo, nE, nF))
     {
-        pedirEntrada(entrada);
+        pedirEntrada(entrada, nF, nE);
     }
 
     if (conversionValidacion_16(entrada, &arreglo, negativo, resultado, nBitsE, nBitsF))
@@ -345,7 +198,7 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
     int16_t fin = (arreglo->posPunto) - (arreglo->cantEnteros);
     int16_t multiplicador = 1;
     int16_t valor;
-    int16_t resulEntero = 0;
+    int32_t resulEntero = 0;
     for (i = arreglo->posPunto - 1; i >= fin; i--)
     {
         valor = entrada[i] - 48; // Diferencia Ascii a Integer
@@ -384,7 +237,7 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
         }
     }
 
-    *resultado = resulEntero;
+    *resultado = (int16_t)resulEntero;
     *resultado = *resultado << nBitsF;
     *resultado = *resultado | resulFraccion;
 
@@ -397,12 +250,139 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
     return 1;
 }
 
-int16_t validarRango_16(int16_t resul)
+// --- FIN METODOS 16 BITS
+
+// --- METODOS 32 BITS
+
+int16_t printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Recibe la representacion Q(nBitsE,nBitsF) del valor guardado en resul y lo imprime en formato decimal +-eee.ffff
 {
-    if ((resul < 0x7FFF))
+    if (nBitsE + nBitsF > 31)
     {
+        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 32 bits
+    }
+    // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
+    uint32_t aux = resul;
+    int32_t mascaraE, mascaraF;
+    int32_t mascaraSigno = 0x80000000;
+    int32_t parteFraccionaria, parteEntera;
+
+    if ((aux & mascaraSigno) == 0)
+    {
+        // Ahora me quedo con la parte entera
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0x7FFFFFFF - mascaraF;
+    }
+    else
+    {
+        printf("-"); // Imprimo el menos
+        // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
+        aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
+        // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
+        mascaraF = (1 << nBitsF) - 1;
+        mascaraE = 0xFFFFFFFF;
+    }
+
+    parteEntera = (mascaraE & aux) >> nBitsF;
+    printf("%d.", parteEntera);
+    // Parte fraccionaria
+    parteFraccionaria = mascaraF & aux;
+
+    int32_t nroImprimir;
+    int32_t j = 10;
+    for (size_t i = 1; i < 5; i++, j = j * 10)
+    {
+        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
+        printf("%d", nroImprimir);
+    }
+    printf("\n");
+
+    return 1;
+}
+
+// Ingresa un número en representación en punto fijo Q(nBitsE,nBitsF) con un espacio de 32bits
+// y la cantidad de digitos decimales enteros y fraccionarios de la entrada
+int32_t ingresarEnDecimal_32(int32_t *resultado, int16_t nBitsE, int16_t nBitsF, int16_t nE, int16_t nF)
+{
+    if (nBitsE + nBitsF > 31)
+    {
+        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 32 bits
+    }
+    int16_t buffer = 10;
+    char entrada[buffer];
+    pedirEntrada(entrada, nE, nF);
+
+    dataString arreglo;
+
+    char negativo; // Flag Negativo se usa al expresar en hexa
+    while (!verificarEntrada(entrada, &arreglo, &negativo, nE, nF))
+    {
+        pedirEntrada(entrada, nE, nF);
+    }
+
+    if (conversionValidacion_32(entrada, &arreglo, negativo, resultado, nBitsE, nBitsF))
+    { // De string a Integer y validacion
         return 1;
     }
     else
         return 0;
 }
+
+int16_t conversionValidacion_32(char *entrada, dataString *arreglo, char negativo, int32_t *resultado, int16_t nBitsE, int16_t nBitsF)
+{
+    int16_t i;
+    int16_t fin = (arreglo->posPunto) - (arreglo->cantEnteros);
+    int16_t multiplicador = 1;
+    int16_t valor;
+    int64_t resulEntero = 0;
+    for (i = arreglo->posPunto - 1; i >= fin; i--)
+    {
+        valor = entrada[i] - 48; // Diferencia Ascii a Integer
+        resulEntero = resulEntero + multiplicador * valor;
+
+        if (((resulEntero > ((1 << nBitsE) - 1)) && (!negativo)) || (resulEntero > (1 << nBitsE)))
+        { // Validación de rango
+            return 0;
+        }
+
+        multiplicador = multiplicador * 10;
+    }
+
+    multiplicador = 1000;
+    int32_t conversion = 0;
+    for (i = (arreglo->posPunto) + 1; i < strlen(entrada); i++)
+    {
+        valor = entrada[i] - 48; // Diferencia Ascii a Integer
+        conversion = conversion + multiplicador * valor;
+        multiplicador = multiplicador / 10;
+    }
+
+    int32_t resulFraccion = 0;
+    for (i = nBitsF - 1; i >= 0; i--) // Conversión de Fracción a Binario
+    {
+        conversion = conversion << 1;
+        if (conversion >= 10000)
+        {
+            resulFraccion = resulFraccion | 1 << i;
+            conversion = conversion - 10000;
+        }
+        // cambiar rango
+        if (resulFraccion > ((2 << nBitsF) - 1))
+        { // Validación de rango
+            return 0;
+        }
+    }
+
+    *resultado = (int32_t)resulEntero;
+    *resultado = *resultado << nBitsF;
+    *resultado = *resultado | resulFraccion;
+
+    if ((negativo) && (resultado != 0))
+    {
+        *resultado = ~(*resultado);
+        (*resultado)++;
+    }
+
+    return 1;
+}
+
+// --- FIN METODOS 32 BITS

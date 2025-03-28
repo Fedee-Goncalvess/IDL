@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#include "headers/funciones.h"
+#include "headers/Grupo17funciones.h"
 
 int controlEntrada(char *);
 int16_t digitHexToDec(char car);
