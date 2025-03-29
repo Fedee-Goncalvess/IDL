@@ -66,9 +66,9 @@ int main()
 
     int32_t y_32 = multiplicacion_32(x_32, m_32, nBitsF_x) + b_32;
 
-    printf("Valor de y: ");
+    printf("Valor de y en decimal: ");
     printInDecimal_32(y_32, nBitsE_x, nBitsF_x);
-    printf("\n0x%X", y_32);
+    printf("Valor de y en hexadecimal: 0x%X\n", y_32);
 
     return 1;
 }

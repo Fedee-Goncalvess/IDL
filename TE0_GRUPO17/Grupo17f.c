@@ -11,7 +11,7 @@ int main()
 
     if (ingresarEnDecimal_16(&resultado, nBitsE, nBitsF, nDigE, nDigF))
     {
-        printf("\n0x%X\n", resultado & 0xFFFF);
+        printf("\nValor en hexadecimal: 0x%X\n", resultado & 0xFFFF);
     }
     else
         printf("\nNo es rango válido");
