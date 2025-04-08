@@ -218,6 +218,11 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
         multiplicador = multiplicador / 10;
     }
 
+    if ((negativo && (conversion != 0) && (resulEntero == 128)))
+    {
+        return 0;
+    }
+
     int16_t resulFraccion = 0;
     for (i = nBitsF - 1; i >= 0; i--) // Conversión de Fracción a Binario
     {
