@@ -127,22 +127,17 @@ int16_t printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Reci
     // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
     uint16_t aux = resul;
     int16_t mascaraE, mascaraF;
+    mascaraF = (1 << nBitsF) - 1;
+    mascaraE = 0xFFFF - mascaraF;
     int16_t mascaraSigno = 0x8000;
     int16_t parteFraccionaria, parteEntera;
 
-    if ((aux & mascaraSigno) == 0)
-    {
-        // Ahora me quedo con la parte entera
-        mascaraF = (1 << nBitsF) - 1;
-        mascaraE = 0x7FFF - mascaraF;
-    }
-    else
+    if ((aux & mascaraSigno) != 0)
     {
         printf("-"); // Imprimo el menos
         // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
         aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
         // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
-        mascaraF = (1 << nBitsF) - 1;
     }
 
     parteEntera = (mascaraE & aux) >> nBitsF;
