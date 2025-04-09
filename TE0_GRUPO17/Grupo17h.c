@@ -34,7 +34,7 @@ int main()
         return 0;
     }
     m_32 = normalizar_16_A_32(m_16, nBitsE_m, nBitsF_m, nBitsE_x, nBitsF_x);
-
+   
     printf("--- Ingreso de b (Ordenada al origen) ---) ");
     if ((!ingresarEnDecimal_16(&b_16, nBitsE_b, nBitsF_b, cantDigE_b, cantDigF)))
     {
@@ -42,7 +42,7 @@ int main()
         return 0;
     }
     b_32 = normalizar_16_A_32(b_16, nBitsE_b, nBitsF_b, nBitsE_x, nBitsF_x);
-
+    
     printf("--- Ingreso de x ---");
     if (!ingresarEnDecimal_32(&x_32, nBitsE_x, nBitsF_x, cantDigE_x, cantDigF))
     {
@@ -75,27 +75,32 @@ int main()
 
 int32_t normalizar_16_A_32(int16_t n, int16_t nBitsE_16, int16_t nBitsF_16, int16_t nBitsE_32, int16_t nBitsF_32)
 {
+    // Al realizar la operación redudante 'n % 0xFFFF' la variable 'n' de 16 bits se carga en 'resultado' de 32 bits
+    // con el resto de bits superiores al bit de posición 16 en 0
     int32_t resultado = n & 0xFFFF;
-    int32_t signo = 0x00008000 & resultado;
 
+    // El desfasaje entre las representaciones en punto fijo Q(nBitsE_16,nBitsF_16) y Q(nBitsE_32,nBitsF_32) se puede
+    // escribir como 'nBitsF_32 - nBitsF_16'. Al desplazar 'n' dentro de 'resultado' acomodamos las partes fraccionaria
+    // y entera a la nueva representación
     resultado = resultado << (nBitsF_32 - nBitsF_16);
 
-    if (signo != 0)
-    {
-        int32_t mascara = (0x7FFFFFFF) - ((1 << (nBitsF_32 + nBitsE_16)) - 1);
-        resultado = (resultado + mascara);
+    // Habiendo hecho el desplazamiento, queda ahora "acomodar" el bit de signo, procedemos a aplicar el
+    // método explicado en el informe
+    int32_t mascara = (0x7FFFFFFF) - ((1 << (nBitsF_32 + nBitsE_16)) - 1);
 
-        int32_t aux = (1 << (nBitsF_32 + nBitsE_16)) - 1;
+    resultado = (resultado + mascara) ^ mascara;
 
-        resultado = ((resultado)) ^ ((0x7FFFFFFF - aux));
-    }
-
-    return (resultado);
+    return resultado;
 }
 
 int32_t multiplicacion_32(int32_t a, int32_t b, int16_t nBitsF_32)
 {
-    int64_t temp = (int64_t)a * (int64_t)b; // Multiplicación de 64 bits
-    temp = temp >> nBitsF_32;               // Ajustar la escala de vuelta a 32 bits
-    return (int32_t)temp;                   // Truncar a 32 bits
+    // Multiplicación de 64 bits
+    int64_t temp = (int64_t)a * (int64_t)b;
+
+    // Ajustar la escala de vuelta a 32 bits
+    temp = temp >> nBitsF_32;
+
+    // Truncar a 32 bits
+    return (int32_t)temp;
 }
