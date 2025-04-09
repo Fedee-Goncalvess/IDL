@@ -122,7 +122,7 @@ int16_t printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Reci
 {
     if (nBitsE + nBitsF > 15)
     {
-        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 32 bits
+        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 16 bits
     }
     // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
     uint16_t aux = resul;
@@ -149,7 +149,7 @@ int16_t printInDecimal_16(int16_t resul, int16_t nBitsE, int16_t nBitsF) // Reci
     int16_t j = 10;
     for (size_t i = 1; i < 5; i++, j = j * 10)
     {
-        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
+        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10; // Me voy quedando de a uno con los digitos de la parte fraccionaria para poder imprimir los ceros
         printf("%d", nroImprimir);
     }
     printf("\n");
@@ -213,14 +213,14 @@ int16_t conversionValidacion_16(char *entrada, dataString *arreglo, char negativ
     int16_t conversion = 0;
     for (i = (arreglo->posPunto) + 1; i < strlen(entrada); i++)
     {
-        valor = entrada[i] - 48; // Diferencai Ascii a Integer
+        valor = entrada[i] - 48; // Diferencia Ascii a Integer
         conversion = conversion + multiplicador * valor;
         multiplicador = multiplicador / 10;
     }
 
     if ((negativo && (conversion != 0) && (resulEntero == 128)))
     {
-        return 0;
+        return 0; // Limite negativo
     }
 
     int16_t resulFraccion = 0;
@@ -293,7 +293,7 @@ int16_t printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Reci
     int32_t j = 10;
     for (size_t i = 1; i < 5; i++, j = j * 10)
     {
-        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10;
+        nroImprimir = (parteFraccionaria * j / (1 << nBitsF)) % 10; // Imprimo uno a uno los digitos de la parte fraccionaria
         printf("%d", nroImprimir);
     }
     printf("\n");
