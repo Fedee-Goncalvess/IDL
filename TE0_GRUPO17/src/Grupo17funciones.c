@@ -265,25 +265,19 @@ int16_t printInDecimal_32(int32_t resul, int16_t nBitsE, int16_t nBitsF) // Reci
     // Mascaras para ver el bit de signo , parte entera , parte fraccionaria y variables auxiliares.
     uint32_t aux = resul;
     int32_t mascaraE, mascaraF;
-    int32_t mascaraSigno = 0x80000000;
+    mascaraF = (1 << nBitsF) - 1;
+    mascaraE = 0xFFFFFFFF - mascaraF;
+    int32_t mascaraSigno = 0x80000000; // Un 1 en el bit de signo para 32 bits
     int32_t parteFraccionaria, parteEntera;
 
-    if ((aux & mascaraSigno) == 0)
-    {
-        // Ahora me quedo con la parte entera
-        mascaraF = (1 << nBitsF) - 1;
-        mascaraE = 0x7FFFFFFF - mascaraF;
-    }
-    else
+    if ((aux & mascaraSigno) != 0)
     {
         printf("-"); // Imprimo el menos
-        // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo
-        aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion que luego interpretare por separado
-        // Ya tengo el valor en BSS para poder imprimir , trabajo con la Parte entera
-        mascaraF = (1 << nBitsF) - 1;
-        mascaraE = 0xFFFFFFFF;
+        // Invierto los bits por ser CA2 y al ya haber imprimido el signo  en vez de restarle la resolucion se la sumo (trabajo con modulos)
+        aux = ~aux + 1; // Sumo uno ya que como tengo toda la variable en 16 bits al sumarle 1 es como que le estoy sumando la resolucion
+        // Ya tengo el valor en BSS para poder imprimir
     }
-
+    // Me quedo con la parte entera y la reacomodo para imprimirla mediante desplazamientos
     parteEntera = (mascaraE & aux) >> nBitsF;
     printf("%d.", parteEntera);
     // Parte fraccionaria
