@@ -163,7 +163,7 @@ int16_t ingresarEnDecimal_16(int16_t *resultado, int16_t nBitsE, int16_t nBitsF,
 {
     if (nBitsE + nBitsF > 15)
     {
-        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 32 bits
+        return 0; // Devuelve error si la representación Q(nBitsE,nBitsF) no es válida para 16 bits
     }
     int16_t buffer = 10;
     char entrada[buffer];
