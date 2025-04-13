@@ -27,7 +27,11 @@ int main()
     int16_t m_16, b_16;
     int32_t m_32, b_32, x_32;
 
-    printf("--- Ingreso de m (Pendiente) ---");
+    printf("--- Ingreso de m (Pendiente) ---\n");
+    printf("Valor máximo: ");
+    printInDecimal_16(0x7FFF, nBitsE_m, nBitsF_m);
+    printf("Valor mínimo: ");
+    printInDecimal_16(0x8000, nBitsE_m, nBitsF_m);
     if (!ingresarEnDecimal_16(&m_16, nBitsE_m, nBitsF_m, cantDigE_m, cantDigF))
     {
         printf("Valor de m se salió del rango\n");
@@ -35,7 +39,11 @@ int main()
     }
     m_32 = normalizar_16_A_32(m_16, nBitsE_m, nBitsF_m, nBitsE_x, nBitsF_x);
    
-    printf("--- Ingreso de b (Ordenada al origen) ---) ");
+    printf("--- Ingreso de b (Ordenada al origen) ---\n");
+    printf("Valor máximo: ");
+    printInDecimal_16(0x7FFF, nBitsE_b, nBitsF_b);
+    printf("Valor mínimo: ");
+    printInDecimal_16(0x8000, nBitsE_b, nBitsF_b);
     if ((!ingresarEnDecimal_16(&b_16, nBitsE_b, nBitsF_b, cantDigE_b, cantDigF)))
     {
         printf("Valor de b se salió del rango\n");
@@ -43,7 +51,11 @@ int main()
     }
     b_32 = normalizar_16_A_32(b_16, nBitsE_b, nBitsF_b, nBitsE_x, nBitsF_x);
     
-    printf("--- Ingreso de x ---");
+    printf("--- Ingreso de x ---\n");
+    printf("Valor máximo: ");
+    printInDecimal_32(valorMaxX, nBitsE_x, nBitsF_x);
+    printf("Valor mínimo: ");
+    printInDecimal_32(valorMinX, nBitsE_x, nBitsF_x);
     if (!ingresarEnDecimal_32(&x_32, nBitsE_x, nBitsF_x, cantDigE_x, cantDigF))
     {
         printf("El valor ingresado está fuera del rango\n");
