@@ -91,7 +91,7 @@ int16_t verificarEntrada(char *entrada, dataString *arreglo, char *negativo, int
 void pedirEntrada(char *entrada, int16_t nDigE, int16_t nDigF)
 {
     char formato[10];                              // Espacio suficiente para almacenar el formato
-    sprintf(formato, " %%%ds", nDigE + nDigF + 1); // Construye la cadena de formato
+    sprintf(formato, " %%%ds", nDigE + nDigF + 2); // Construye la cadena de formato
     printf("\nIngrese un valor decimal ±");
     for (int i = 0; i < nDigE; i++)
     {
