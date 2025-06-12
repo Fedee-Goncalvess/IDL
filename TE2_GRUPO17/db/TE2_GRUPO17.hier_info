@@ -1,0 +1,30 @@
+|MEF
+d2 <= FuncionDeEstado:inst.OUT_D2
+in => FuncionDeEstado:inst.IN_In
+q2 => FuncionDeEstado:inst.IN_Q2
+q1 => FuncionDeEstado:inst.IN_Q1
+q0 => FuncionDeEstado:inst.IN_Q0
+d1 <= FuncionDeEstado:inst.OUT_D1
+d0 <= FuncionDeEstado:inst.OUT_D0
+
+
+|MEF|FuncionDeEstado:inst
+OUT_D2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q1 => inst1.IN0
+IN_Q1 => inst3.IN0
+IN_Q1 => inst5.IN1
+IN_Q1 => inst11.IN0
+IN_In => inst1.IN1
+IN_In => inst9.IN0
+IN_In => inst4.IN2
+IN_In => inst8.IN1
+IN_Q0 => inst1.IN2
+IN_Q0 => inst9.IN1
+IN_Q0 => inst4.IN1
+IN_Q0 => inst8.IN0
+IN_Q2 => inst.IN1
+IN_Q2 => inst12.IN0
+OUT_D1 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+OUT_D0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
