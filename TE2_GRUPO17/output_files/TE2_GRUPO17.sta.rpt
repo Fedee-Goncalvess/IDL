@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for TE2_GRUPO17
-Thu Jun 12 15:13:29 2025
+Thu Jun 12 15:35:42 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -149,12 +149,12 @@ No paths to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; IN_In      ; OUT_D0      ; 6.307 ; 6.329 ; 6.710 ; 6.764 ;
-; IN_In      ; OUT_D1      ; 7.362 ; 7.380 ; 7.765 ; 7.815 ;
+; IN_In      ; OUT_D1      ; 7.360 ; 7.380 ; 7.765 ; 7.816 ;
 ; IN_In      ; OUT_D2      ; 6.360 ; 6.350 ; 6.769 ; 6.790 ;
 ; IN_Q0      ; OUT_D0      ; 6.532 ; 6.556 ; 6.944 ; 6.959 ;
-; IN_Q0      ; OUT_D1      ;       ; 7.606 ; 8.001 ;       ;
+; IN_Q0      ; OUT_D1      ; 7.586 ; 7.606 ; 8.001 ; 8.012 ;
 ; IN_Q0      ; OUT_D2      ; 6.588 ; 6.578 ; 7.003 ; 6.984 ;
-; IN_Q1      ; OUT_D1      ; 8.423 ;       ;       ; 8.913 ;
+; IN_Q1      ; OUT_D1      ; 8.423 ; 8.398 ; 8.835 ; 8.913 ;
 ; IN_Q1      ; OUT_D2      ; 7.373 ; 7.445 ; 7.904 ; 7.840 ;
 ; IN_Q2      ; OUT_D1      ;       ; 7.510 ; 7.903 ;       ;
 ; IN_Q2      ; OUT_D2      ; 6.456 ;       ;       ; 6.871 ;
@@ -167,14 +167,14 @@ No paths to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; IN_In      ; OUT_D0      ; 6.151 ; 6.173 ; 6.545 ; 6.597 ;
-; IN_In      ; OUT_D1      ; 7.165 ; 7.182 ; 7.560 ; 7.607 ;
+; IN_In      ; OUT_D1      ; 7.163 ; 7.182 ; 7.560 ; 7.608 ;
 ; IN_In      ; OUT_D2      ; 6.206 ; 6.197 ; 6.606 ; 6.626 ;
 ; IN_Q0      ; OUT_D0      ; 6.366 ; 6.389 ; 6.770 ; 6.784 ;
-; IN_Q0      ; OUT_D1      ;       ; 7.398 ; 7.786 ;       ;
+; IN_Q0      ; OUT_D1      ; 7.380 ; 7.398 ; 7.786 ; 7.795 ;
 ; IN_Q0      ; OUT_D2      ; 6.425 ; 6.415 ; 6.831 ; 6.812 ;
-; IN_Q1      ; OUT_D1      ; 8.138 ;       ;       ; 8.601 ;
+; IN_Q1      ; OUT_D1      ; 8.138 ; 8.163 ; 8.588 ; 8.601 ;
 ; IN_Q1      ; OUT_D2      ; 7.166 ; 7.196 ; 7.652 ; 7.609 ;
-; IN_Q2      ; OUT_D1      ;       ; 7.257 ; 7.651 ;       ;
+; IN_Q2      ; OUT_D1      ;       ; 7.240 ; 7.617 ;       ;
 ; IN_Q2      ; OUT_D2      ; 6.252 ;       ;       ; 6.645 ;
 +------------+-------------+-------+-------+-------+-------+
 
@@ -227,12 +227,12 @@ No paths to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; IN_In      ; OUT_D0      ; 5.834 ; 5.832 ; 6.181 ; 6.209 ;
-; IN_In      ; OUT_D1      ; 6.817 ; 6.796 ; 7.166 ; 7.175 ;
+; IN_In      ; OUT_D1      ; 6.815 ; 6.796 ; 7.166 ; 7.176 ;
 ; IN_In      ; OUT_D2      ; 5.893 ; 5.875 ; 6.246 ; 6.257 ;
 ; IN_Q0      ; OUT_D0      ; 6.052 ; 6.052 ; 6.384 ; 6.376 ;
-; IN_Q0      ; OUT_D1      ;       ; 7.017 ; 7.370 ;       ;
+; IN_Q0      ; OUT_D1      ; 7.036 ; 7.017 ; 7.370 ; 7.343 ;
 ; IN_Q0      ; OUT_D2      ; 6.115 ; 6.097 ; 6.449 ; 6.423 ;
-; IN_Q1      ; OUT_D1      ; 7.799 ;       ;       ; 8.153 ;
+; IN_Q1      ; OUT_D1      ; 7.799 ; 7.744 ; 8.119 ; 8.153 ;
 ; IN_Q1      ; OUT_D2      ; 6.830 ; 6.884 ; 7.257 ; 7.192 ;
 ; IN_Q2      ; OUT_D1      ;       ; 6.915 ; 7.289 ;       ;
 ; IN_Q2      ; OUT_D2      ; 5.981 ;       ;       ; 6.331 ;
@@ -245,14 +245,14 @@ No paths to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; IN_In      ; OUT_D0      ; 5.701 ; 5.698 ; 6.042 ; 6.067 ;
-; IN_In      ; OUT_D1      ; 6.646 ; 6.624 ; 6.988 ; 6.994 ;
+; IN_In      ; OUT_D1      ; 6.644 ; 6.624 ; 6.988 ; 6.995 ;
 ; IN_In      ; OUT_D2      ; 5.761 ; 5.743 ; 6.108 ; 6.117 ;
 ; IN_Q0      ; OUT_D0      ; 5.911 ; 5.910 ; 6.235 ; 6.228 ;
-; IN_Q0      ; OUT_D1      ;       ; 6.835 ; 7.183 ;       ;
+; IN_Q0      ; OUT_D1      ; 6.855 ; 6.835 ; 7.183 ; 7.157 ;
 ; IN_Q0      ; OUT_D2      ; 5.974 ; 5.956 ; 6.301 ; 6.277 ;
-; IN_Q1      ; OUT_D1      ; 7.547 ;       ;       ; 7.879 ;
+; IN_Q1      ; OUT_D1      ; 7.547 ; 7.537 ; 7.903 ; 7.879 ;
 ; IN_Q1      ; OUT_D2      ; 6.648 ; 6.665 ; 7.038 ; 6.992 ;
-; IN_Q2      ; OUT_D1      ;       ; 6.692 ; 7.067 ;       ;
+; IN_Q2      ; OUT_D1      ;       ; 6.682 ; 7.040 ;       ;
 ; IN_Q2      ; OUT_D2      ; 5.805 ;       ;       ; 6.135 ;
 +------------+-------------+-------+-------+-------+-------+
 
@@ -302,9 +302,9 @@ No paths to report.
 ; IN_In      ; OUT_D1      ; 4.350 ; 4.471 ; 4.915 ; 5.055 ;
 ; IN_In      ; OUT_D2      ; 3.752 ; 3.821 ; 4.318 ; 4.406 ;
 ; IN_Q0      ; OUT_D0      ; 3.838 ; 3.891 ; 4.431 ; 4.477 ;
-; IN_Q0      ; OUT_D1      ;       ; 4.590 ; 5.058 ;       ;
+; IN_Q0      ; OUT_D1      ; 4.466 ; 4.590 ; 5.058 ; 5.175 ;
 ; IN_Q0      ; OUT_D2      ; 3.866 ; 3.938 ; 4.460 ; 4.525 ;
-; IN_Q1      ; OUT_D1      ; 4.983 ;       ;       ; 5.749 ;
+; IN_Q1      ; OUT_D1      ; 4.983 ; 5.077 ; 5.602 ; 5.749 ;
 ; IN_Q1      ; OUT_D2      ; 4.351 ; 4.466 ; 5.042 ; 5.076 ;
 ; IN_Q2      ; OUT_D1      ;       ; 4.545 ; 4.997 ;       ;
 ; IN_Q2      ; OUT_D2      ; 3.805 ;       ;       ; 4.445 ;
@@ -320,11 +320,11 @@ No paths to report.
 ; IN_In      ; OUT_D1      ; 4.238 ; 4.353 ; 4.795 ; 4.929 ;
 ; IN_In      ; OUT_D2      ; 3.666 ; 3.733 ; 4.224 ; 4.310 ;
 ; IN_Q0      ; OUT_D0      ; 3.745 ; 3.797 ; 4.329 ; 4.374 ;
-; IN_Q0      ; OUT_D1      ;       ; 4.467 ; 4.932 ;       ;
+; IN_Q0      ; OUT_D1      ; 4.348 ; 4.467 ; 4.932 ; 5.044 ;
 ; IN_Q0      ; OUT_D2      ; 3.775 ; 3.846 ; 4.360 ; 4.424 ;
-; IN_Q1      ; OUT_D1      ; 4.814 ;       ;       ; 5.562 ;
+; IN_Q1      ; OUT_D1      ; 4.814 ; 4.932 ; 5.454 ; 5.562 ;
 ; IN_Q1      ; OUT_D2      ; 4.231 ; 4.318 ; 4.892 ; 4.936 ;
-; IN_Q2      ; OUT_D1      ;       ; 4.392 ; 4.848 ;       ;
+; IN_Q2      ; OUT_D1      ;       ; 4.383 ; 4.826 ;       ;
 ; IN_Q2      ; OUT_D2      ; 3.687 ;       ;       ; 4.314 ;
 +------------+-------------+-------+-------+-------+-------+
 
@@ -351,12 +351,12 @@ No synchronizer chains to report.
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
 ; IN_In      ; OUT_D0      ; 6.307 ; 6.329 ; 6.710 ; 6.764 ;
-; IN_In      ; OUT_D1      ; 7.362 ; 7.380 ; 7.765 ; 7.815 ;
+; IN_In      ; OUT_D1      ; 7.360 ; 7.380 ; 7.765 ; 7.816 ;
 ; IN_In      ; OUT_D2      ; 6.360 ; 6.350 ; 6.769 ; 6.790 ;
 ; IN_Q0      ; OUT_D0      ; 6.532 ; 6.556 ; 6.944 ; 6.959 ;
-; IN_Q0      ; OUT_D1      ;       ; 7.606 ; 8.001 ;       ;
+; IN_Q0      ; OUT_D1      ; 7.586 ; 7.606 ; 8.001 ; 8.012 ;
 ; IN_Q0      ; OUT_D2      ; 6.588 ; 6.578 ; 7.003 ; 6.984 ;
-; IN_Q1      ; OUT_D1      ; 8.423 ;       ;       ; 8.913 ;
+; IN_Q1      ; OUT_D1      ; 8.423 ; 8.398 ; 8.835 ; 8.913 ;
 ; IN_Q1      ; OUT_D2      ; 7.373 ; 7.445 ; 7.904 ; 7.840 ;
 ; IN_Q2      ; OUT_D1      ;       ; 7.510 ; 7.903 ;       ;
 ; IN_Q2      ; OUT_D2      ; 6.456 ;       ;       ; 6.871 ;
@@ -372,11 +372,11 @@ No synchronizer chains to report.
 ; IN_In      ; OUT_D1      ; 4.238 ; 4.353 ; 4.795 ; 4.929 ;
 ; IN_In      ; OUT_D2      ; 3.666 ; 3.733 ; 4.224 ; 4.310 ;
 ; IN_Q0      ; OUT_D0      ; 3.745 ; 3.797 ; 4.329 ; 4.374 ;
-; IN_Q0      ; OUT_D1      ;       ; 4.467 ; 4.932 ;       ;
+; IN_Q0      ; OUT_D1      ; 4.348 ; 4.467 ; 4.932 ; 5.044 ;
 ; IN_Q0      ; OUT_D2      ; 3.775 ; 3.846 ; 4.360 ; 4.424 ;
-; IN_Q1      ; OUT_D1      ; 4.814 ;       ;       ; 5.562 ;
+; IN_Q1      ; OUT_D1      ; 4.814 ; 4.932 ; 5.454 ; 5.562 ;
 ; IN_Q1      ; OUT_D2      ; 4.231 ; 4.318 ; 4.892 ; 4.936 ;
-; IN_Q2      ; OUT_D1      ;       ; 4.392 ; 4.848 ;       ;
+; IN_Q2      ; OUT_D1      ;       ; 4.383 ; 4.826 ;       ;
 ; IN_Q2      ; OUT_D2      ; 3.687 ;       ;       ; 4.314 ;
 +------------+-------------+-------+-------+-------+-------+
 
@@ -473,7 +473,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 12 15:13:27 2025
+    Info: Processing started: Thu Jun 12 15:35:40 2025
 Info: Command: quartus_sta TE2_GRUPO17 -c TE2_GRUPO17
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -521,7 +521,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 579 megabytes
-    Info: Processing ended: Thu Jun 12 15:13:29 2025
+    Info: Processing ended: Thu Jun 12 15:35:42 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

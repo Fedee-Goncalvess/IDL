@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TE2_GRUPO17
-Thu Jun 12 15:13:09 2025
+Thu Jun 12 15:35:23 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 12 15:13:09 2025      ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 12 15:35:23 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TE2_GRUPO17                                ;
 ; Top-level Entity Name              ; FuncionDeEstado                            ;
@@ -234,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 12 15:13:07 2025
+    Info: Processing started: Thu Jun 12 15:35:21 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TE2_GRUPO17 -c TE2_GRUPO17
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file FuncionDeEstado.bdf
@@ -253,7 +253,7 @@ Info (21057): Implemented 10 device resources after synthesis - the final resour
     Info (21061): Implemented 3 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Thu Jun 12 15:13:09 2025
+    Info: Processing ended: Thu Jun 12 15:35:23 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

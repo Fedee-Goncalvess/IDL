@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "06/12/2025 15:13:34"
+// DATE "06/12/2025 15:35:47"
 
 // 
 // Device: Altera EP3C5F256C6 Package FBGA256
@@ -180,7 +180,7 @@ defparam \IN_Q2~input .simulate_z_as = "z";
 // Location: LCCOMB_X1_Y2_N18
 cycloneiii_lcell_comb \inst1~0 (
 // Equation(s):
-// \inst1~0_combout  = (!\IN_Q2~input_o  & ((\IN_In~input_o  & ((!\IN_Q0~input_o ))) # (!\IN_In~input_o  & (\IN_Q1~input_o ))))
+// \inst1~0_combout  = (!\IN_Q2~input_o  & (\IN_Q1~input_o  $ (((\IN_In~input_o  & \IN_Q0~input_o )))))
 
 	.dataa(\IN_Q1~input_o ),
 	.datab(\IN_Q2~input_o ),
@@ -190,7 +190,7 @@ cycloneiii_lcell_comb \inst1~0 (
 	.combout(\inst1~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \inst1~0 .lut_mask = 16'h0232;
+defparam \inst1~0 .lut_mask = 16'h1222;
 defparam \inst1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
