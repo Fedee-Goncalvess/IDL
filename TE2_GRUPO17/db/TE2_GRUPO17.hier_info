@@ -1,14 +1,26 @@
 |MEF
-d2 <= FuncionDeEstado:inst.OUT_D2
-in => FuncionDeEstado:inst.IN_In
-q2 => FuncionDeEstado:inst.IN_Q2
-q1 => FuncionDeEstado:inst.IN_Q1
-q0 => FuncionDeEstado:inst.IN_Q0
-d1 <= FuncionDeEstado:inst.OUT_D1
-d0 <= FuncionDeEstado:inst.OUT_D0
+O2 <= FuncionDeSalida:inst4.OUT_O2
+RESET => inst2.ACLR
+RESET => inst.ACLR
+RESET => inst1.ACLR
+CLK => inst2.CLK
+CLK => inst.CLK
+CLK => inst1.CLK
+In => FuncionDeEstado:inst3.IN_In
+O1 <= FuncionDeSalida:inst4.OUT_O1
+O0 <= FuncionDeSalida:inst4.OUT_O0
 
 
-|MEF|FuncionDeEstado:inst
+|MEF|FuncionDeSalida:inst4
+OUT_O2 <= IN_Q2.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q2 => OUT_O2.DATAIN
+OUT_O1 <= IN_Q1.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q1 => OUT_O1.DATAIN
+OUT_O0 <= IN_Q0.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q0 => OUT_O0.DATAIN
+
+
+|MEF|FuncionDeEstado:inst3
 OUT_D2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 IN_Q1 => inst1.IN0
 IN_Q1 => inst3.IN0
