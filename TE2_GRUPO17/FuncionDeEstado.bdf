@@ -101,7 +101,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1000 456 1176 472)
+	(rect 1016 440 1192 456)
 	(text "OUTPUT" (rect 1 6 41 16)(font "Arial" (font_size 6)))
 	(text "OUT_D1" (rect 90 5 134 16)(font "Arial" ))
 	(pt 0 8)
@@ -118,7 +118,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1816 456 1992 472)
+	(rect 1832 424 2008 440)
 	(text "OUTPUT" (rect 1 6 41 16)(font "Arial" (font_size 6)))
 	(text "OUT_D2" (rect 90 5 134 16)(font "Arial" ))
 	(pt 0 8)
@@ -976,6 +976,30 @@ applicable agreement for further details.
 (connector
 	(pt 512 464)
 	(pt 512 584)
+)
+(connector
+	(pt 1000 464)
+	(pt 1008 464)
+)
+(connector
+	(pt 1008 464)
+	(pt 1008 448)
+)
+(connector
+	(pt 1008 448)
+	(pt 1016 448)
+)
+(connector
+	(pt 1824 464)
+	(pt 1824 432)
+)
+(connector
+	(pt 1816 464)
+	(pt 1824 464)
+)
+(connector
+	(pt 1824 432)
+	(pt 1832 432)
 )
 (junction (pt 200 304))
 (junction (pt 216 208))

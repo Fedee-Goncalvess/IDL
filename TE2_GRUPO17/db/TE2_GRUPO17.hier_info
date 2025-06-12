@@ -6,15 +6,15 @@ RESET => inst2.ACLR
 CLK => inst.CLK
 CLK => inst1.CLK
 CLK => inst2.CLK
-In => FuncionDeEstado:inst5.IN_In
+In => FuncionDeEstado:inst8.IN_In
 O1 <= FuncionDeSalida:inst4.OUT_O1
 O0 <= FuncionDeSalida:inst4.OUT_O0
 Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 Q2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 Q0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Q2p <= FuncionDeEstado:inst5.OUT_D0
-Q1p <= FuncionDeEstado:inst5.OUT_D1
-Q0p <= FuncionDeEstado:inst5.OUT_D2
+Q2p <= FuncionDeEstado:inst8.OUT_D2
+Q1p <= FuncionDeEstado:inst8.OUT_D1
+Q0p <= FuncionDeEstado:inst8.OUT_D0
 
 
 |MEF|FuncionDeSalida:inst4
@@ -26,7 +26,7 @@ OUT_O0 <= IN_Q0.DB_MAX_OUTPUT_PORT_TYPE
 IN_Q0 => OUT_O0.DATAIN
 
 
-|MEF|FuncionDeEstado:inst5
+|MEF|FuncionDeEstado:inst8
 OUT_D0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 IN_In => inst8.IN0
 IN_In => inst17.IN2

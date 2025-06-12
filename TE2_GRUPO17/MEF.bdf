@@ -459,7 +459,7 @@ applicable agreement for further details.
 (symbol
 	(rect 528 184 672 312)
 	(text "FuncionDeEstado" (rect 5 0 106 13)(font "Arial" (font_size 8)))
-	(text "inst5" (rect 8 113 32 124)(font "Arial" ))
+	(text "inst8" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -491,8 +491,8 @@ applicable agreement for further details.
 	(port
 		(pt 144 32)
 		(output)
-		(text "OUT_D0" (rect 0 0 51 13)(font "Arial" (font_size 8)))
-		(text "OUT_D0" (rect 72 27 123 40)(font "Arial" (font_size 8)))
+		(text "OUT_D2" (rect 0 0 51 13)(font "Arial" (font_size 8)))
+		(text "OUT_D2" (rect 72 27 123 40)(font "Arial" (font_size 8)))
 		(line (pt 144 32)(pt 128 32))
 	)
 	(port
@@ -505,8 +505,8 @@ applicable agreement for further details.
 	(port
 		(pt 144 64)
 		(output)
-		(text "OUT_D2" (rect 0 0 51 13)(font "Arial" (font_size 8)))
-		(text "OUT_D2" (rect 72 59 123 72)(font "Arial" (font_size 8)))
+		(text "OUT_D0" (rect 0 0 51 13)(font "Arial" (font_size 8)))
+		(text "OUT_D0" (rect 72 59 123 72)(font "Arial" (font_size 8)))
 		(line (pt 144 64)(pt 128 64))
 	)
 	(drawing

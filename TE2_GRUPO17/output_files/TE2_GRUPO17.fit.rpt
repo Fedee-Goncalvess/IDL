@@ -1,5 +1,5 @@
 Fitter report for TE2_GRUPO17
-Thu Jun 12 15:48:51 2025
+Thu Jun 12 15:58:49 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jun 12 15:48:51 2025      ;
+; Fitter Status                      ; Successful - Thu Jun 12 15:58:49 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TE2_GRUPO17                                ;
 ; Top-level Entity Name              ; MEF                                        ;
@@ -673,7 +673,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 ; |MEF                       ; 6 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 12   ; 0            ; 3 (0)        ; 3 (3)             ; 0 (0)            ; |MEF                       ; work         ;
-;    |FuncionDeEstado:inst5| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MEF|FuncionDeEstado:inst5 ; work         ;
+;    |FuncionDeEstado:inst8| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MEF|FuncionDeEstado:inst8 ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -738,9 +738,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; inst1                         ; 4       ;
 ; inst                          ; 4       ;
 ; In~input                      ; 3       ;
-; FuncionDeEstado:inst5|inst7~0 ; 2       ;
-; FuncionDeEstado:inst5|inst1~0 ; 2       ;
-; FuncionDeEstado:inst5|inst8   ; 2       ;
+; FuncionDeEstado:inst8|inst8   ; 2       ;
+; FuncionDeEstado:inst8|inst1~0 ; 2       ;
+; FuncionDeEstado:inst8|inst7~0 ; 2       ;
 +-------------------------------+---------+
 
 
@@ -1022,7 +1022,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1031,7 +1031,7 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/joaquin/Universidad/IDL/TE2_GRUPO17/output_files/TE2_GRUPO17.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 810 megabytes
-    Info: Processing ended: Thu Jun 12 15:48:51 2025
+    Info: Processing ended: Thu Jun 12 15:58:49 2025
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 

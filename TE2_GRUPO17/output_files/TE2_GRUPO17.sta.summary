@@ -7,7 +7,7 @@ Slack : -0.430
 TNS   : -0.962
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.713
+Slack : 0.712
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
@@ -16,10 +16,10 @@ TNS   : -6.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
 Slack : -0.272
-TNS   : -0.554
+TNS   : -0.553
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.638
+Slack : 0.636
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
