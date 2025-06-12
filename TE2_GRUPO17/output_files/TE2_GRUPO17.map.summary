@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Thu Jun 12 01:20:22 2025
+Analysis & Synthesis Status : Successful - Thu Jun 12 01:38:48 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : TE2_GRUPO17
 Top-level Entity Name : MEF
@@ -7,7 +7,7 @@ Total logic elements : 3
     Total combinational functions : 3
     Dedicated logic registers : 3
 Total registers : 3
-Total pins : 6
+Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
