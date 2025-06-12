@@ -1,5 +1,5 @@
 Fitter report for TE2_GRUPO17
-Thu Jun 12 00:32:19 2025
+Thu Jun 12 01:20:30 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jun 12 00:32:19 2025      ;
+; Fitter Status                      ; Successful - Thu Jun 12 01:20:30 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TE2_GRUPO17                                ;
 ; Top-level Entity Name              ; MEF                                        ;
@@ -686,9 +686,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                   ; Pad To Core Index ; Setting ;
 +---------------------------------------+-------------------+---------+
 ; In                                    ;                   ;         ;
-;      - inst2~0                        ; 0                 ; 6       ;
-;      - FuncionDeEstado:inst3|inst10~0 ; 0                 ; 6       ;
 ;      - FuncionDeEstado:inst3|inst2    ; 0                 ; 6       ;
+;      - FuncionDeEstado:inst3|inst10~0 ; 0                 ; 6       ;
+;      - inst2~0                        ; 0                 ; 6       ;
 ; CLK                                   ;                   ;         ;
 ; RESET                                 ;                   ;         ;
 +---------------------------------------+-------------------+---------+
@@ -721,11 +721,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------+---------+
 ; inst2                          ; 4       ;
 ; In~input                       ; 3       ;
-; inst                           ; 3       ;
 ; inst1                          ; 3       ;
-; FuncionDeEstado:inst3|inst2    ; 1       ;
-; FuncionDeEstado:inst3|inst10~0 ; 1       ;
+; inst                           ; 3       ;
 ; inst2~0                        ; 1       ;
+; FuncionDeEstado:inst3|inst10~0 ; 1       ;
+; FuncionDeEstado:inst3|inst2    ; 1       ;
 +--------------------------------+---------+
 
 
@@ -990,7 +990,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -999,9 +999,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/joaquin/Universidad/IDL/TE2_GRUPO17/output_files/TE2_GRUPO17.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 817 megabytes
-    Info: Processing ended: Thu Jun 12 00:32:19 2025
+    Info: Processing ended: Thu Jun 12 01:20:31 2025
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+

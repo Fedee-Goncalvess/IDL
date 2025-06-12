@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "06/12/2025 00:32:34"
+// DATE "06/12/2025 01:20:42"
 
 // 
 // Device: Altera EP3C5F256C6 Package FBGA256
@@ -76,15 +76,15 @@ wire \inst2~0_combout ;
 wire \RESET~input_o ;
 wire \RESET~inputclkctrl_outclk ;
 wire \inst2~q ;
-wire \inst3|inst2~combout ;
-wire \inst~q ;
 wire \inst3|inst10~0_combout ;
 wire \inst1~q ;
+wire \inst3|inst2~combout ;
+wire \inst~q ;
 
 
 // Location: IOOBUF_X0_Y8_N23
 cycloneiii_io_obuf \O2~output (
-	.i(\inst2~q ),
+	.i(\inst~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -110,7 +110,7 @@ defparam \O1~output .open_drain_output = "false";
 
 // Location: IOOBUF_X0_Y8_N2
 cycloneiii_io_obuf \O0~output (
-	.i(\inst~q ),
+	.i(\inst2~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -213,42 +213,6 @@ defparam inst2.is_wysiwyg = "true";
 defparam inst2.power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X1_Y8_N24
-cycloneiii_lcell_comb \inst3|inst2 (
-// Equation(s):
-// \inst3|inst2~combout  = (\inst1~q  & (\In~input_o  & (\inst2~q ))) # (!\inst1~q  & (((\inst~q ))))
-
-	.dataa(\In~input_o ),
-	.datab(\inst2~q ),
-	.datac(\inst~q ),
-	.datad(\inst1~q ),
-	.cin(gnd),
-	.combout(\inst3|inst2~combout ),
-	.cout());
-// synopsys translate_off
-defparam \inst3|inst2 .lut_mask = 16'h88F0;
-defparam \inst3|inst2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X1_Y8_N25
-dffeas inst(
-	.clk(\CLK~inputclkctrl_outclk ),
-	.d(\inst3|inst2~combout ),
-	.asdata(vcc),
-	.clrn(\RESET~inputclkctrl_outclk ),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam inst.is_wysiwyg = "true";
-defparam inst.power_up = "low";
-// synopsys translate_on
-
 // Location: LCCOMB_X1_Y8_N2
 cycloneiii_lcell_comb \inst3|inst10~0 (
 // Equation(s):
@@ -283,6 +247,42 @@ dffeas inst1(
 // synopsys translate_off
 defparam inst1.is_wysiwyg = "true";
 defparam inst1.power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y8_N24
+cycloneiii_lcell_comb \inst3|inst2 (
+// Equation(s):
+// \inst3|inst2~combout  = (\inst1~q  & (\In~input_o  & (\inst2~q ))) # (!\inst1~q  & (((\inst~q ))))
+
+	.dataa(\In~input_o ),
+	.datab(\inst2~q ),
+	.datac(\inst~q ),
+	.datad(\inst1~q ),
+	.cin(gnd),
+	.combout(\inst3|inst2~combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst3|inst2 .lut_mask = 16'h88F0;
+defparam \inst3|inst2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y8_N25
+dffeas inst(
+	.clk(\CLK~inputclkctrl_outclk ),
+	.d(\inst3|inst2~combout ),
+	.asdata(vcc),
+	.clrn(\RESET~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam inst.is_wysiwyg = "true";
+defparam inst.power_up = "low";
 // synopsys translate_on
 
 assign O2 = \O2~output_o ;

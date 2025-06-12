@@ -13,5 +13,5 @@ instance = comp, \In~input , In~input, MEF, 1
 instance = comp, \inst2~0 , inst2~0, MEF, 1
 instance = comp, \RESET~input , RESET~input, MEF, 1
 instance = comp, \RESET~inputclkctrl , RESET~inputclkctrl, MEF, 1
-instance = comp, \inst3|inst2 , inst3|inst2, MEF, 1
 instance = comp, \inst3|inst10~0 , inst3|inst10~0, MEF, 1
+instance = comp, \inst3|inst2 , inst3|inst2, MEF, 1

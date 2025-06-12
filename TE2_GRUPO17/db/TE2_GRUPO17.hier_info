@@ -1,11 +1,11 @@
 |MEF
 O2 <= FuncionDeSalida:inst4.OUT_O2
-RESET => inst2.ACLR
 RESET => inst.ACLR
 RESET => inst1.ACLR
-CLK => inst2.CLK
+RESET => inst2.ACLR
 CLK => inst.CLK
 CLK => inst1.CLK
+CLK => inst2.CLK
 In => FuncionDeEstado:inst3.IN_In
 O1 <= FuncionDeSalida:inst4.OUT_O1
 O0 <= FuncionDeSalida:inst4.OUT_O0
