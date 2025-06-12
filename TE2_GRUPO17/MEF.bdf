@@ -459,7 +459,7 @@ applicable agreement for further details.
 (symbol
 	(rect 528 184 672 312)
 	(text "FuncionDeEstado" (rect 5 0 106 13)(font "Arial" (font_size 8)))
-	(text "inst3" (rect 8 113 32 124)(font "Arial" ))
+	(text "inst5" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
