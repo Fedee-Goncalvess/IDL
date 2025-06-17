@@ -1,7 +1,8 @@
 |CircuitoPrincipal
 OUT_SV1 <= Decodificador:inst1.SV1
 CLK => ComparadorContador:inst.CLK
-CLK => inst3.IN0
+CLK => MEF:inst2.CLK
+RESET => MEF:inst2.RESET
 OUT_SA1 <= Decodificador:inst1.SA1
 OUT_SR1 <= Decodificador:inst1.SR1
 OUT_SV2 <= Decodificador:inst1.SV2
