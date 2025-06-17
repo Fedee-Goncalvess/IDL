@@ -1,4 +1,105 @@
-|Contador
+|CircuitoPrincipal
+OUT_SV1 <= Decodificador:inst1.SV1
+CLK => ComparadorContador:inst.CLK
+CLK => inst3.IN0
+OUT_SA1 <= Decodificador:inst1.SA1
+OUT_SR1 <= Decodificador:inst1.SR1
+OUT_SV2 <= Decodificador:inst1.SV2
+OUT_SA2 <= Decodificador:inst1.SA2
+OUT_SR2 <= Decodificador:inst1.SR2
+OUT_SV3 <= Decodificador:inst1.SV3
+OUT_SA3 <= Decodificador:inst1.SA3
+OUT_SR3 <= Decodificador:inst1.SR3
+
+
+|CircuitoPrincipal|Decodificador:inst1
+SV1 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Entrada1 => inst6.IN0
+Entrada1 => inst12.IN0
+Entrada1 => inst17.IN1
+Entrada1 => inst4.IN0
+Entrada1 => inst11.IN0
+Entrada2 => inst7.IN0
+Entrada2 => inst15.IN1
+Entrada2 => inst3.IN0
+Entrada2 => inst10.IN0
+Entrada2 => inst13.IN0
+Entrada3 => inst9.IN0
+Entrada3 => inst2.IN0
+Entrada3 => inst14.IN0
+Entrada3 => inst3.IN1
+Entrada3 => inst18.IN0
+Entrada3 => inst4.IN1
+SA1 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+SR1 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+SV2 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+SA2 <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+SR2 <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+SV3 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+SA3 <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+SR3 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoPrincipal|MEF:inst2
+O2 <= FuncionDeSalida:inst4.OUT_O2
+RESET => inst.ACLR
+RESET => inst1.ACLR
+RESET => inst2.ACLR
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+In => FuncionDeEstado:inst8.IN_In
+O1 <= FuncionDeSalida:inst4.OUT_O1
+O0 <= FuncionDeSalida:inst4.OUT_O0
+
+
+|CircuitoPrincipal|MEF:inst2|FuncionDeSalida:inst4
+OUT_O2 <= IN_Q2.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q2 => OUT_O2.DATAIN
+OUT_O1 <= IN_Q1.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q1 => OUT_O1.DATAIN
+OUT_O0 <= IN_Q0.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q0 => OUT_O0.DATAIN
+
+
+|CircuitoPrincipal|MEF:inst2|FuncionDeEstado:inst8
+OUT_D0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+IN_In => inst8.IN0
+IN_In => inst17.IN2
+IN_In => inst.IN0
+IN_In => inst5.IN2
+IN_In => inst10.IN0
+IN_Q0 => inst8.IN1
+IN_Q0 => inst17.IN1
+IN_Q0 => inst.IN1
+IN_Q0 => inst5.IN0
+IN_Q0 => inst9.IN0
+OUT_D1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+IN_Q1 => inst14.IN0
+IN_Q1 => inst3.IN1
+IN_Q1 => inst5.IN1
+IN_Q1 => inst11.IN0
+IN_Q2 => inst13.IN0
+IN_Q2 => inst6.IN1
+OUT_D2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoPrincipal|ComparadorContador:inst
+In <= Comparador:inst1.Output
+CLK => Contador:inst.CLK
+
+
+|CircuitoPrincipal|ComparadorContador:inst|Comparador:inst1
+Output <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q1 => inst1.IN0
+Q5 => inst1.IN1
+Q0 => inst.IN0
+Q2 => inst.IN1
+Q3 => inst.IN2
+Q4 => inst.IN3
+
+
+|CircuitoPrincipal|ComparadorContador:inst|Contador:inst
 Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst1.CLK
