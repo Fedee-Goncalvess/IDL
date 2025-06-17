@@ -1,50 +1,15 @@
-|MEF
-O2 <= FuncionDeSalida:inst4.OUT_O2
-RESET => inst.ACLR
-RESET => inst1.ACLR
-RESET => inst2.ACLR
-CLK => inst.CLK
-CLK => inst1.CLK
-CLK => inst2.CLK
-In => FuncionDeEstado:inst8.IN_In
-O1 <= FuncionDeSalida:inst4.OUT_O1
-O0 <= FuncionDeSalida:inst4.OUT_O0
+|Contador
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Q0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Q2p <= FuncionDeEstado:inst8.OUT_D2
-Q1p <= FuncionDeEstado:inst8.OUT_D1
-Q0p <= FuncionDeEstado:inst8.OUT_D0
-
-
-|MEF|FuncionDeSalida:inst4
-OUT_O2 <= IN_Q2.DB_MAX_OUTPUT_PORT_TYPE
-IN_Q2 => OUT_O2.DATAIN
-OUT_O1 <= IN_Q1.DB_MAX_OUTPUT_PORT_TYPE
-IN_Q1 => OUT_O1.DATAIN
-OUT_O0 <= IN_Q0.DB_MAX_OUTPUT_PORT_TYPE
-IN_Q0 => OUT_O0.DATAIN
-
-
-|MEF|FuncionDeEstado:inst8
-OUT_D0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
-IN_In => inst8.IN0
-IN_In => inst17.IN2
-IN_In => inst.IN0
-IN_In => inst5.IN2
-IN_In => inst10.IN0
-IN_Q0 => inst8.IN1
-IN_Q0 => inst17.IN1
-IN_Q0 => inst.IN1
-IN_Q0 => inst5.IN0
-IN_Q0 => inst9.IN0
-OUT_D1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-IN_Q1 => inst14.IN0
-IN_Q1 => inst3.IN1
-IN_Q1 => inst5.IN1
-IN_Q1 => inst11.IN0
-IN_Q2 => inst13.IN0
-IN_Q2 => inst6.IN1
-OUT_D2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst11.CLK
+CLK => inst2.CLK
+CLK => inst12.CLK
+CLK => inst3.CLK
+CLK => inst.CLK
+Q5 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q4 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 
 
