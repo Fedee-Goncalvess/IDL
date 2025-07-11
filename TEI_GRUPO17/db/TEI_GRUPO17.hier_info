@@ -1,0 +1,29 @@
+|registro12bits
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= <GND>
+Q[3] <= <GND>
+Q[4] <= <GND>
+Q[5] <= <GND>
+Q[6] <= <GND>
+Q[7] <= <GND>
+Q[8] <= <GND>
+Q[9] <= <GND>
+Q[10] <= <GND>
+Q[11] <= <GND>
+CLK => inst.CLK
+CLK => inst1.CLK
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+D[4] => ~NO_FANOUT~
+D[5] => ~NO_FANOUT~
+D[6] => ~NO_FANOUT~
+D[7] => ~NO_FANOUT~
+D[8] => ~NO_FANOUT~
+D[9] => ~NO_FANOUT~
+D[10] => ~NO_FANOUT~
+D[11] => ~NO_FANOUT~
+
+
