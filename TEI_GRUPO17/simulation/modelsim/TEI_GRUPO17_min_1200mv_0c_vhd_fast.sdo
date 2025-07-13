@@ -28,8 +28,8 @@
 
 (DELAYFILE
   (SDFVERSION "2.1")
-  (DESIGN "registro12bits")
-  (DATE "07/11/2025 17:43:53")
+  (DESIGN "registro1bitTristate")
+  (DATE "07/12/2025 21:41:20")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -38,21 +38,13 @@
 
   (CELL
     (CELLTYPE "cycloneiii_io_obuf")
-    (INSTANCE \\Q\[1\]\~output\\)
+    (INSTANCE \\O\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (263:263:263) (307:307:307))
-        (IOPATH i o (1288:1288:1288) (1321:1321:1321))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiii_io_obuf")
-    (INSTANCE \\Q\[0\]\~output\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (251:251:251) (291:291:291))
-        (IOPATH i o (1258:1258:1258) (1269:1269:1269))
+        (PORT i (607:607:607) (685:685:685))
+        (PORT oe (1868:1868:1868) (2086:2086:2086))
+        (IOPATH i o (1298:1298:1298) (1331:1331:1331))
+        (IOPATH oe o (2116:2116:2116) (2112:2112:2112))
       )
     )
   )
@@ -61,45 +53,22 @@
     (INSTANCE \\CLK\~input\\)
     (DELAY
       (ABSOLUTE
+        (IOPATH i o (362:362:362) (745:745:745))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\D\~input\\)
+    (DELAY
+      (ABSOLUTE
         (IOPATH i o (367:367:367) (744:744:744))
       )
     )
   )
   (CELL
-    (CELLTYPE "cycloneiii_clkctrl")
-    (INSTANCE \\CLK\~inputclkctrl\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT inclk[0] (108:108:108) (89:89:89))
-      )
-    )
-  )
-  (CELL
     (CELLTYPE "cycloneiii_io_ibuf")
-    (INSTANCE \\D\[1\]\~input\\)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (347:347:347) (724:724:724))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "dffeas")
-    (INSTANCE inst1)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (764:764:764) (783:783:783))
-        (PORT asdata (1769:1769:1769) (1939:1939:1939))
-        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
-      )
-    )
-    (TIMINGCHECK
-      (HOLD asdata (posedge clk) (84:84:84))
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiii_io_ibuf")
-    (INSTANCE \\D\[0\]\~input\\)
+    (INSTANCE \\Ien\~input\\)
     (DELAY
       (ABSOLUTE
         (IOPATH i o (352:352:352) (735:735:735))
@@ -108,26 +77,39 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\inst\~feeder\\)
+    (INSTANCE \\inst2\~1\\)
     (DELAY
       (ABSOLUTE
-        (PORT datad (1589:1589:1589) (1769:1769:1769))
+        (PORT datab (1725:1725:1725) (1923:1923:1923))
+        (PORT datac (529:529:529) (574:574:574))
+        (PORT datad (89:89:89) (106:106:106))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE inst)
+    (INSTANCE inst4)
     (DELAY
       (ABSOLUTE
-        (PORT clk (770:770:770) (788:788:788))
+        (PORT clk (745:745:745) (785:785:785))
         (PORT d (37:37:37) (50:50:50))
         (IOPATH (posedge clk) q (105:105:105) (105:105:105))
       )
     )
     (TIMINGCHECK
       (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\Oen\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (337:337:337) (714:714:714))
+      )
     )
   )
 )
