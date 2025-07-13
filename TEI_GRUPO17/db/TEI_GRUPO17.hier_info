@@ -1,4 +1,166 @@
-|registro1bitTristate
+|registro12bitsTristate
+O[0] <= registro1bitTristate:inst.O
+O[1] <= registro1bitTristate:inst1.O
+O[2] <= registro1bitTristate:inst2.O
+O[3] <= registro1bitTristate:inst3.O
+O[4] <= registro1bitTristate:inst4.O
+O[5] <= registro1bitTristate:inst5.O
+O[6] <= registro1bitTristate:inst6.O
+O[7] <= registro1bitTristate:inst7.O
+O[8] <= registro1bitTristate:inst8.O
+O[9] <= registro1bitTristate:inst9.O
+O[10] <= registro1bitTristate:inst10.O
+O[11] <= registro1bitTristate:inst11.O
+Oen => registro1bitTristate:inst.Oen
+Oen => registro1bitTristate:inst1.Oen
+Oen => registro1bitTristate:inst2.Oen
+Oen => registro1bitTristate:inst3.Oen
+Oen => registro1bitTristate:inst4.Oen
+Oen => registro1bitTristate:inst5.Oen
+Oen => registro1bitTristate:inst6.Oen
+Oen => registro1bitTristate:inst7.Oen
+Oen => registro1bitTristate:inst8.Oen
+Oen => registro1bitTristate:inst9.Oen
+Oen => registro1bitTristate:inst10.Oen
+Oen => registro1bitTristate:inst11.Oen
+D[0] => registro1bitTristate:inst.D
+D[1] => registro1bitTristate:inst1.D
+D[2] => registro1bitTristate:inst2.D
+D[3] => registro1bitTristate:inst3.D
+D[4] => registro1bitTristate:inst4.D
+D[5] => registro1bitTristate:inst5.D
+D[6] => registro1bitTristate:inst6.D
+D[7] => registro1bitTristate:inst7.D
+D[8] => registro1bitTristate:inst8.D
+D[9] => registro1bitTristate:inst9.D
+D[10] => registro1bitTristate:inst10.D
+D[11] => registro1bitTristate:inst11.D
+Ien => registro1bitTristate:inst.Ien
+Ien => registro1bitTristate:inst1.Ien
+Ien => registro1bitTristate:inst2.Ien
+Ien => registro1bitTristate:inst3.Ien
+Ien => registro1bitTristate:inst4.Ien
+Ien => registro1bitTristate:inst5.Ien
+Ien => registro1bitTristate:inst6.Ien
+Ien => registro1bitTristate:inst7.Ien
+Ien => registro1bitTristate:inst8.Ien
+Ien => registro1bitTristate:inst9.Ien
+Ien => registro1bitTristate:inst10.Ien
+Ien => registro1bitTristate:inst11.Ien
+CLK => registro1bitTristate:inst.CLK
+CLK => registro1bitTristate:inst1.CLK
+CLK => registro1bitTristate:inst2.CLK
+CLK => registro1bitTristate:inst3.CLK
+CLK => registro1bitTristate:inst4.CLK
+CLK => registro1bitTristate:inst5.CLK
+CLK => registro1bitTristate:inst6.CLK
+CLK => registro1bitTristate:inst7.CLK
+CLK => registro1bitTristate:inst8.CLK
+CLK => registro1bitTristate:inst9.CLK
+CLK => registro1bitTristate:inst10.CLK
+CLK => registro1bitTristate:inst11.CLK
+
+
+|registro12bitsTristate|registro1bitTristate:inst
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst1
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst2
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst3
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst4
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst5
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst6
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst7
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst8
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst9
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst10
+O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst4.CLK
+D => inst.IN0
+Ien => inst.IN1
+Ien => inst3.IN0
+Oen => inst5.OE
+
+
+|registro12bitsTristate|registro1bitTristate:inst11
 O <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
