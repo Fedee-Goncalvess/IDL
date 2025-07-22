@@ -21,9 +21,9 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 296 96 464 112)
+	(rect 296 72 464 88)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "A[11..0]" (rect 5 0 44 11)(font "Arial" ))
+	(text "A[11..0]" (rect 5 0 43 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 72 464 88)
+	(rect 296 96 464 112)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "B[11..0]" (rect 5 0 44 11)(font "Arial" ))
+	(text "B[11..0]" (rect 5 0 43 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -85,7 +85,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 296 144 392 240)
-	(text "semiSumador" (rect 5 0 84 13)(font "Arial" (font_size 8)))
+	(text "sumador_semi" (rect 5 0 88 13)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 81 26 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -121,7 +121,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 424 240 520 336)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst1" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -164,7 +164,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 552 336 648 432)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst2" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -207,7 +207,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 680 432 776 528)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst3" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -250,7 +250,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 808 528 904 624)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst4" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -293,7 +293,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 936 624 1032 720)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst5" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -336,7 +336,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 1064 720 1160 816)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst6" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -379,7 +379,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 1192 816 1288 912)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst7" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -422,7 +422,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 1320 912 1416 1008)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst8" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -464,9 +464,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1704 1200 1800 1296)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
-	(text "inst11" (rect 8 81 38 92)(font "Arial" ))
+	(rect 1448 1008 1544 1104)
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
+	(text "inst9" (rect 8 81 32 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -508,7 +508,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 1576 1104 1672 1200)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
 	(text "inst10" (rect 8 81 38 92)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -550,9 +550,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1448 1008 1544 1104)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
-	(text "inst9" (rect 8 81 32 92)(font "Arial" ))
+	(rect 1704 1200 1800 1296)
+	(text "sumador_completo" (rect 5 0 113 13)(font "Arial" (font_size 8)))
+	(text "inst11" (rect 8 81 38 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -738,57 +738,6 @@ applicable agreement for further details.
 	(pt 1432 960)
 )
 (connector
-	(pt 1432 960)
-	(pt 1432 1040)
-)
-(connector
-	(pt 1432 1040)
-	(pt 1448 1040)
-)
-(connector
-	(pt 1560 1056)
-	(pt 1544 1056)
-)
-(connector
-	(text "S[9]" (rect 1544 1024 1564 1035)(font "Arial" ))
-	(pt 1544 1040)
-	(pt 1560 1040)
-)
-(connector
-	(pt 1688 1232)
-	(pt 1704 1232)
-)
-(connector
-	(text "S[11]" (rect 1800 1216 1825 1227)(font "Arial" ))
-	(pt 1800 1232)
-	(pt 1816 1232)
-)
-(connector
-	(pt 1560 1136)
-	(pt 1576 1136)
-)
-(connector
-	(pt 1560 1056)
-	(pt 1560 1136)
-)
-(connector
-	(pt 1688 1152)
-	(pt 1672 1152)
-)
-(connector
-	(text "S[10]" (rect 1672 1120 1697 1131)(font "Arial" ))
-	(pt 1672 1136)
-	(pt 1688 1136)
-)
-(connector
-	(pt 1688 1232)
-	(pt 1688 1152)
-)
-(connector
-	(pt 1800 1248)
-	(pt 1816 1248)
-)
-(connector
 	(text "A[0]" (rect 280 160 300 171)(font "Arial" ))
 	(pt 296 176)
 	(pt 280 176)
@@ -879,6 +828,23 @@ applicable agreement for further details.
 	(pt 1304 976)
 )
 (connector
+	(pt 1432 960)
+	(pt 1432 1040)
+)
+(connector
+	(pt 1432 1040)
+	(pt 1448 1040)
+)
+(connector
+	(pt 1560 1056)
+	(pt 1544 1056)
+)
+(connector
+	(text "S[9]" (rect 1544 1024 1564 1035)(font "Arial" ))
+	(pt 1544 1040)
+	(pt 1560 1040)
+)
+(connector
 	(text "A[9]" (rect 1432 1040 1452 1051)(font "Arial" ))
 	(pt 1448 1056)
 	(pt 1432 1056)
@@ -887,6 +853,19 @@ applicable agreement for further details.
 	(text "B[9]" (rect 1432 1056 1452 1067)(font "Arial" ))
 	(pt 1448 1072)
 	(pt 1432 1072)
+)
+(connector
+	(pt 1560 1136)
+	(pt 1576 1136)
+)
+(connector
+	(pt 1688 1152)
+	(pt 1672 1152)
+)
+(connector
+	(text "S[10]" (rect 1672 1120 1697 1131)(font "Arial" ))
+	(pt 1672 1136)
+	(pt 1688 1136)
 )
 (connector
 	(text "A[10]" (rect 1560 1136 1585 1147)(font "Arial" ))
@@ -899,6 +878,23 @@ applicable agreement for further details.
 	(pt 1560 1168)
 )
 (connector
+	(pt 1560 1056)
+	(pt 1560 1136)
+)
+(connector
+	(pt 1688 1232)
+	(pt 1704 1232)
+)
+(connector
+	(text "S[11]" (rect 1800 1216 1825 1227)(font "Arial" ))
+	(pt 1800 1232)
+	(pt 1816 1232)
+)
+(connector
+	(pt 1816 1248)
+	(pt 1800 1248)
+)
+(connector
 	(text "A[11]" (rect 1688 1232 1713 1243)(font "Arial" ))
 	(pt 1704 1248)
 	(pt 1688 1248)
@@ -907,4 +903,8 @@ applicable agreement for further details.
 	(text "B[11]" (rect 1688 1248 1713 1259)(font "Arial" ))
 	(pt 1704 1264)
 	(pt 1688 1264)
+)
+(connector
+	(pt 1688 1152)
+	(pt 1688 1232)
 )

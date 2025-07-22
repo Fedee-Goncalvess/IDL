@@ -21,28 +21,21 @@ applicable agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 112 112)
-	(text "sumadorCompleto" (rect 5 0 110 13)(font "Arial" (font_size 8)))
+	(text "sumador_semi" (rect 5 0 88 13)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 81 26 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "Cin" (rect 0 0 20 13)(font "Arial" (font_size 8)))
-		(text "Cin" (rect 21 27 41 40)(font "Arial" (font_size 8)))
+		(text "A" (rect 0 0 11 13)(font "Arial" (font_size 8)))
+		(text "A" (rect 21 27 32 40)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "A" (rect 0 0 11 13)(font "Arial" (font_size 8)))
-		(text "A" (rect 21 43 32 56)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
 		(text "B" (rect 0 0 10 13)(font "Arial" (font_size 8)))
-		(text "B" (rect 21 59 31 72)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
+		(text "B" (rect 21 43 31 56)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 96 32)
@@ -54,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 96 48)
 		(output)
-		(text "Cout" (rect 0 0 28 13)(font "Arial" (font_size 8)))
-		(text "Cout" (rect 47 43 75 56)(font "Arial" (font_size 8)))
+		(text "C" (rect 0 0 10 13)(font "Arial" (font_size 8)))
+		(text "C" (rect 65 43 75 56)(font "Arial" (font_size 8)))
 		(line (pt 96 48)(pt 80 48))
 	)
 	(drawing

@@ -3,50 +3,62 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : 0.194
+Slack : 0.175
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.400
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -15.000
+TNS   : -26.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Ien'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IenA'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IenB'
 Slack : -3.000
 TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : 0.224
+Slack : 0.206
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.409
+Slack : 0.411
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -15.000
+TNS   : -26.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Ien'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IenA'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IenB'
 Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : 0.014
+Slack : 0.001
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.720
+Slack : 0.719
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -15.723
+TNS   : -27.380
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Ien'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IenA'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IenB'
 Slack : -3.000
 TNS   : -3.000
 

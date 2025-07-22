@@ -101,7 +101,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 544 96 640 224)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 113 26 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -144,7 +144,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 544 240 640 368)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst1" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -187,7 +187,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 544 384 640 512)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst2" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -230,7 +230,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 544 528 640 656)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst3" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -273,7 +273,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 784 96 880 224)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst4" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -316,7 +316,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 784 240 880 368)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst5" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -359,7 +359,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 784 384 880 512)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst6" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -402,7 +402,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 784 528 880 656)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst7" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -444,8 +444,94 @@ applicable agreement for further details.
 	)
 )
 (symbol
+	(rect 1024 96 1120 224)
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
+	(text "inst8" (rect 8 113 32 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Oen" (rect 0 0 25 13)(font "Arial" (font_size 8)))
+		(text "Oen" (rect 21 27 46 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "D" (rect 0 0 10 13)(font "Arial" (font_size 8)))
+		(text "D" (rect 21 43 31 56)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Ien" (rect 0 0 18 13)(font "Arial" (font_size 8)))
+		(text "Ien" (rect 21 59 39 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "CLK" (rect 0 0 25 13)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 75 46 88)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 96 32)
+		(output)
+		(text "O" (rect 0 0 11 13)(font "Arial" (font_size 8)))
+		(text "O" (rect 64 27 75 40)(font "Arial" (font_size 8)))
+		(line (pt 96 32)(pt 80 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 112))
+	)
+)
+(symbol
+	(rect 1024 240 1120 368)
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
+	(text "inst9" (rect 8 113 32 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Oen" (rect 0 0 25 13)(font "Arial" (font_size 8)))
+		(text "Oen" (rect 21 27 46 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "D" (rect 0 0 10 13)(font "Arial" (font_size 8)))
+		(text "D" (rect 21 43 31 56)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Ien" (rect 0 0 18 13)(font "Arial" (font_size 8)))
+		(text "Ien" (rect 21 59 39 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "CLK" (rect 0 0 25 13)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 75 46 88)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 96 32)
+		(output)
+		(text "O" (rect 0 0 11 13)(font "Arial" (font_size 8)))
+		(text "O" (rect 64 27 75 40)(font "Arial" (font_size 8)))
+		(line (pt 96 32)(pt 80 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 112))
+	)
+)
+(symbol
 	(rect 1024 384 1120 512)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst10" (rect 8 113 38 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -488,94 +574,8 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 1024 528 1120 656)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
+	(text "reg_1bit_tristate" (rect 5 0 97 13)(font "Arial" (font_size 8)))
 	(text "inst11" (rect 8 113 38 124)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "Oen" (rect 0 0 25 13)(font "Arial" (font_size 8)))
-		(text "Oen" (rect 21 27 46 40)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "D" (rect 0 0 10 13)(font "Arial" (font_size 8)))
-		(text "D" (rect 21 43 31 56)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "Ien" (rect 0 0 18 13)(font "Arial" (font_size 8)))
-		(text "Ien" (rect 21 59 39 72)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "CLK" (rect 0 0 25 13)(font "Arial" (font_size 8)))
-		(text "CLK" (rect 21 75 46 88)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 96 32)
-		(output)
-		(text "O" (rect 0 0 11 13)(font "Arial" (font_size 8)))
-		(text "O" (rect 64 27 75 40)(font "Arial" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 112))
-	)
-)
-(symbol
-	(rect 1024 240 1120 368)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
-	(text "inst9" (rect 8 113 32 124)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "Oen" (rect 0 0 25 13)(font "Arial" (font_size 8)))
-		(text "Oen" (rect 21 27 46 40)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "D" (rect 0 0 10 13)(font "Arial" (font_size 8)))
-		(text "D" (rect 21 43 31 56)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "Ien" (rect 0 0 18 13)(font "Arial" (font_size 8)))
-		(text "Ien" (rect 21 59 39 72)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "CLK" (rect 0 0 25 13)(font "Arial" (font_size 8)))
-		(text "CLK" (rect 21 75 46 88)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 96 32)
-		(output)
-		(text "O" (rect 0 0 11 13)(font "Arial" (font_size 8)))
-		(text "O" (rect 64 27 75 40)(font "Arial" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 112))
-	)
-)
-(symbol
-	(rect 1024 96 1120 224)
-	(text "registro1bitTristate" (rect 5 0 111 13)(font "Arial" (font_size 8)))
-	(text "inst8" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -640,10 +640,6 @@ applicable agreement for further details.
 	(pt 512 64)
 )
 (connector
-	(pt 528 560)
-	(pt 544 560)
-)
-(connector
 	(pt 528 0)
 	(pt 528 128)
 )
@@ -660,14 +656,6 @@ applicable agreement for further details.
 	(pt 528 416)
 )
 (connector
-	(pt 528 272)
-	(pt 528 416)
-)
-(connector
-	(pt 528 416)
-	(pt 528 560)
-)
-(connector
 	(pt 520 32)
 	(pt 520 160)
 )
@@ -680,20 +668,12 @@ applicable agreement for further details.
 	(pt 520 304)
 )
 (connector
-	(pt 512 608)
-	(pt 544 608)
-)
-(connector
 	(pt 512 64)
 	(pt 512 176)
 )
 (connector
 	(pt 544 464)
 	(pt 512 464)
-)
-(connector
-	(pt 512 464)
-	(pt 512 608)
 )
 (connector
 	(pt 544 320)
@@ -704,24 +684,8 @@ applicable agreement for further details.
 	(pt 512 320)
 )
 (connector
-	(pt 512 320)
-	(pt 512 464)
-)
-(connector
-	(pt 544 592)
-	(pt 520 592)
-)
-(connector
 	(pt 520 160)
 	(pt 520 304)
-)
-(connector
-	(pt 520 304)
-	(pt 520 448)
-)
-(connector
-	(pt 520 448)
-	(pt 520 592)
 )
 (connector
 	(text "O[0]" (rect 640 112 661 123)(font "Arial" ))
@@ -737,11 +701,6 @@ applicable agreement for further details.
 	(text "O[2]" (rect 640 400 661 411)(font "Arial" ))
 	(pt 640 416)
 	(pt 656 416)
-)
-(connector
-	(text "O[3]" (rect 640 544 661 555)(font "Arial" ))
-	(pt 640 560)
-	(pt 656 560)
 )
 (connector
 	(pt 784 128)
@@ -987,11 +946,6 @@ applicable agreement for further details.
 	(pt 480 432)
 )
 (connector
-	(text "D[3]" (rect 490 560 511 571)(font "Arial" ))
-	(pt 544 576)
-	(pt 480 576)
-)
-(connector
 	(text "D[7]" (rect 730 560 751 571)(font "Arial" ))
 	(pt 784 576)
 	(pt 720 576)
@@ -1070,6 +1024,52 @@ applicable agreement for further details.
 	(text "O[11]" (rect 1120 544 1147 555)(font "Arial" ))
 	(pt 1120 560)
 	(pt 1136 560)
+)
+(connector
+	(pt 528 560)
+	(pt 544 560)
+)
+(connector
+	(pt 512 608)
+	(pt 544 608)
+)
+(connector
+	(pt 520 592)
+	(pt 544 592)
+)
+(connector
+	(text "O[3]" (rect 640 544 661 555)(font "Arial" ))
+	(pt 640 560)
+	(pt 656 560)
+)
+(connector
+	(text "D[3]" (rect 490 560 511 571)(font "Arial" ))
+	(pt 544 576)
+	(pt 480 576)
+)
+(connector
+	(pt 528 272)
+	(pt 528 416)
+)
+(connector
+	(pt 528 416)
+	(pt 528 560)
+)
+(connector
+	(pt 512 320)
+	(pt 512 464)
+)
+(connector
+	(pt 512 464)
+	(pt 512 608)
+)
+(connector
+	(pt 520 304)
+	(pt 520 448)
+)
+(connector
+	(pt 520 448)
+	(pt 520 592)
 )
 (junction (pt 528 0))
 (junction (pt 520 32))

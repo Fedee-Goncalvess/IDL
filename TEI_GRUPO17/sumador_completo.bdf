@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 184 -8 352 8)
 	(text "INPUT" (rect 125 6 154 16)(font "Arial" (font_size 6)))
-	(text "A" (rect 5 5 16 16)(font "Arial" ))
+	(text "A" (rect 5 5 15 16)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 4)(pt 109 4))
@@ -57,7 +57,7 @@ applicable agreement for further details.
 	(input)
 	(rect 184 24 352 40)
 	(text "INPUT" (rect 125 6 154 16)(font "Arial" (font_size 6)))
-	(text "B" (rect 5 5 15 16)(font "Arial" ))
+	(text "B" (rect 5 5 14 16)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 4)(pt 109 4))
