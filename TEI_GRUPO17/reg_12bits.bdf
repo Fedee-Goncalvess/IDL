@@ -746,12 +746,20 @@ applicable agreement for further details.
 	(pt 1192 504)
 )
 (connector
-	(text "D[11]" (rect 1232 491 1259 502)(font "Arial" ))
-	(pt 1232 504)
-	(pt 1248 504)
-)
-(connector
 	(text "Q[11]" (rect 1344 491 1371 502)(font "Arial" ))
 	(pt 1344 504)
 	(pt 1352 504)
+)
+(connector
+	(pt 1248 504)
+	(pt 1240 504)
+)
+(connector
+	(pt 1240 504)
+	(pt 1240 512)
+)
+(connector
+	(text "D[11]" (rect 1232 499 1259 510)(font "Arial" ))
+	(pt 1240 512)
+	(pt 1232 512)
 )

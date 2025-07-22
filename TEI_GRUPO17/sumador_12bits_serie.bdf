@@ -808,11 +808,6 @@ applicable agreement for further details.
 	(pt 1048 784)
 )
 (connector
-	(text "B[7]" (rect 1176 848 1196 859)(font "Arial" ))
-	(pt 1192 864)
-	(pt 1176 864)
-)
-(connector
 	(text "B[7]" (rect 1176 864 1196 875)(font "Arial" ))
 	(pt 1192 880)
 	(pt 1176 880)
@@ -907,4 +902,9 @@ applicable agreement for further details.
 (connector
 	(pt 1688 1152)
 	(pt 1688 1232)
+)
+(connector
+	(text "A[7]" (rect 1176 848 1196 859)(font "Arial" ))
+	(pt 1192 864)
+	(pt 1176 864)
 )

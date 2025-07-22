@@ -1,5 +1,5 @@
 Flow report for TEI_GRUPO17
-Tue Jul 22 17:10:28 2025
+Tue Jul 22 17:41:33 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Jul 22 17:10:28 2025      ;
+; Flow Status                        ; Successful - Tue Jul 22 17:41:33 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
 ; Top-level Entity Name              ; contador_TOP                               ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 48 / 5,136 ( < 1 % )                       ;
-;     Total combinational functions  ; 48 / 5,136 ( < 1 % )                       ;
+; Total logic elements               ; 52 / 5,136 ( 1 % )                         ;
+;     Total combinational functions  ; 52 / 5,136 ( 1 % )                         ;
 ;     Dedicated logic registers      ; 24 / 5,136 ( < 1 % )                       ;
 ; Total registers                    ; 24                                         ;
 ; Total pins                         ; 53 / 183 ( 29 % )                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/22/2025 17:10:03 ;
+; Start date & time ; 07/22/2025 17:41:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TEI_GRUPO17         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------+---------------+--------------+----------------+
 ; Assignment Name                     ; Value                  ; Default Value ; Entity Name  ; Section Id     ;
 +-------------------------------------+------------------------+---------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.175321500213247      ; --            ; --           ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.175321686814448      ; --            ; --           ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                   ; --            ; --           ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL) ; <None>        ; --           ; --             ;
 ; PARTITION_COLOR                     ; 16764057               ; --            ; contador_TOP ; Top            ;
@@ -91,12 +91,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 593 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 816 MB              ; 00:00:08                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 589 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 593 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 822 MB              ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 593 MB              ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 581 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 815 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:14                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
