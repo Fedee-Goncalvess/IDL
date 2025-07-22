@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TEI_GRUPO17
-Tue Jul 22 16:52:59 2025
+Tue Jul 22 17:10:04 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -42,16 +42,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 22 16:52:59 2025      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 22 17:10:04 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
 ; Top-level Entity Name              ; contador_TOP                               ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 47                                         ;
-;     Total combinational functions  ; 47                                         ;
-;     Dedicated logic registers      ; 23                                         ;
-; Total registers                    ; 23                                         ;
-; Total pins                         ; 41                                         ;
+; Total logic elements               ; 48                                         ;
+;     Total combinational functions  ; 48                                         ;
+;     Dedicated logic registers      ; 24                                         ;
+; Total registers                    ; 24                                         ;
+; Total pins                         ; 53                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -176,28 +176,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 47        ;
+; Estimated Total logic elements              ; 48        ;
 ;                                             ;           ;
-; Total combinational functions               ; 47        ;
+; Total combinational functions               ; 48        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 9         ;
-;     -- 3 input functions                    ; 35        ;
+;     -- 3 input functions                    ; 36        ;
 ;     -- <=2 input functions                  ; 3         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 47        ;
+;     -- normal mode                          ; 48        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 23        ;
-;     -- Dedicated logic registers            ; 23        ;
+; Total registers                             ; 24        ;
+;     -- Dedicated logic registers            ; 24        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 41        ;
+; I/O pins                                    ; 53        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 23        ;
-; Total fan-out                               ; 283       ;
-; Average fan-out                             ; 1.73      ;
+; Maximum fan-out                             ; 24        ;
+; Total fan-out                               ; 312       ;
+; Average fan-out                             ; 1.64      ;
 +---------------------------------------------+-----------+
 
 
@@ -206,8 +206,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
-; |contador_TOP                   ; 47 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |contador_TOP                                                   ; work         ;
-;    |reg_12bits:inst1|           ; 11 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1                                  ; work         ;
+; |contador_TOP                   ; 48 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 53   ; 0            ; |contador_TOP                                                   ; work         ;
+;    |reg_12bits:inst1|           ; 12 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1                                  ; work         ;
 ;       |reg_1bit:inst10|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst10                  ; work         ;
 ;       |reg_1bit:inst11|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst11                  ; work         ;
 ;       |reg_1bit:inst1|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst1                   ; work         ;
@@ -216,6 +216,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |reg_1bit:inst4|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst4                   ; work         ;
 ;       |reg_1bit:inst5|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst5                   ; work         ;
 ;       |reg_1bit:inst6|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst6                   ; work         ;
+;       |reg_1bit:inst7|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst7                   ; work         ;
 ;       |reg_1bit:inst8|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst8                   ; work         ;
 ;       |reg_1bit:inst9|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst9                   ; work         ;
 ;       |reg_1bit:inst|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_TOP|reg_12bits:inst1|reg_1bit:inst                    ; work         ;
@@ -262,21 +263,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reg_12bits:inst1|reg_1bit:inst9|inst2~0                ;    ;
 ; reg_12bits:inst2|reg_1bit:inst10|inst2~0               ;    ;
 ; reg_12bits:inst1|reg_1bit:inst10|inst2~0               ;    ;
+; reg_12bits:inst1|reg_1bit:inst7|inst2~0                ;    ;
 ; reg_12bits:inst1|reg_1bit:inst6|inst2~0                ;    ;
+; reg_12bits:inst1|reg_1bit:inst5|inst2~0                ;    ;
+; reg_12bits:inst1|reg_1bit:inst4|inst2~0                ;    ;
+; reg_12bits:inst1|reg_1bit:inst3|inst2~0                ;    ;
+; reg_12bits:inst1|reg_1bit:inst2|inst2~0                ;    ;
+; reg_12bits:inst1|reg_1bit:inst1|inst2~0                ;    ;
+; reg_12bits:inst1|reg_1bit:inst|inst2~0                 ;    ;
 ; reg_12bits:inst2|reg_1bit:inst6|inst2~0                ;    ;
 ; reg_12bits:inst2|reg_1bit:inst4|inst2~0                ;    ;
 ; reg_12bits:inst2|reg_1bit:inst2|inst2~0                ;    ;
 ; reg_12bits:inst2|reg_1bit:inst|inst2~0                 ;    ;
-; reg_12bits:inst1|reg_1bit:inst|inst2~0                 ;    ;
 ; reg_12bits:inst2|reg_1bit:inst1|inst2~0                ;    ;
-; reg_12bits:inst1|reg_1bit:inst1|inst2~0                ;    ;
-; reg_12bits:inst1|reg_1bit:inst2|inst2~0                ;    ;
 ; reg_12bits:inst2|reg_1bit:inst3|inst2~0                ;    ;
-; reg_12bits:inst1|reg_1bit:inst3|inst2~0                ;    ;
-; reg_12bits:inst1|reg_1bit:inst4|inst2~0                ;    ;
 ; reg_12bits:inst2|reg_1bit:inst5|inst2~0                ;    ;
-; reg_12bits:inst1|reg_1bit:inst5|inst2~0                ;    ;
-; Number of logic cells representing combinational loops ; 23 ;
+; Number of logic cells representing combinational loops ; 24 ;
 +--------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -286,7 +288,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 23    ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -311,7 +313,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jul 22 16:52:57 2025
+    Info: Processing started: Tue Jul 22 17:10:02 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TEI_GRUPO17 -c TEI_GRUPO17
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file contador_UC.bdf
@@ -344,14 +346,14 @@ Info (12128): Elaborating entity "contador_UC" for hierarchy "contador_UC:inst12
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 125 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 13 output pins
+    Info (21059): Implemented 25 output pins
     Info (21060): Implemented 12 bidirectional pins
-    Info (21061): Implemented 70 logic cells
+    Info (21061): Implemented 72 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 641 megabytes
-    Info: Processing ended: Tue Jul 22 16:52:59 2025
+    Info: Peak virtual memory: 645 megabytes
+    Info: Processing ended: Tue Jul 22 17:10:04 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

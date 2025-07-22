@@ -132,6 +132,22 @@ applicable agreement for further details.
 	)
 )
 (pin
+	(output)
+	(rect 640 136 816 152)
+	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
+	(text "RegA[11..0]" (rect 90 0 149 11)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
 	(bidir)
 	(rect 936 152 1112 168)
 	(text "BIDIR" (rect 1 0 28 10)(font "Arial" (font_size 6)))
@@ -321,23 +337,8 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(pt 592 280)
-	(pt 600 280)
-	(bus)
-)
-(connector
 	(pt 592 296)
 	(pt 600 296)
-	(bus)
-)
-(connector
-	(pt 592 200)
-	(pt 576 200)
-	(bus)
-)
-(connector
-	(pt 592 280)
-	(pt 592 200)
 	(bus)
 )
 (connector
@@ -471,5 +472,31 @@ applicable agreement for further details.
 	(pt 872 8)
 	(bus)
 )
+(connector
+	(pt 600 280)
+	(pt 592 280)
+	(bus)
+)
+(connector
+	(pt 576 200)
+	(pt 592 200)
+	(bus)
+)
+(connector
+	(pt 592 144)
+	(pt 640 144)
+	(bus)
+)
+(connector
+	(pt 592 144)
+	(pt 592 200)
+	(bus)
+)
+(connector
+	(pt 592 200)
+	(pt 592 280)
+	(bus)
+)
 (junction (pt 384 216))
 (junction (pt 808 8))
+(junction (pt 592 200))
