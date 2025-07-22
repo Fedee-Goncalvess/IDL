@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jul 22 13:23:32 2025
+Analysis & Synthesis Status : Successful - Tue Jul 22 16:21:43 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : TEI_GRUPO17
-Top-level Entity Name : contador_TOP
+Top-level Entity Name : contador_UC
 Family : Cyclone III
-Total logic elements : 47
-    Total combinational functions : 47
-    Dedicated logic registers : 23
-Total registers : 23
-Total pins : 29
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 41
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
