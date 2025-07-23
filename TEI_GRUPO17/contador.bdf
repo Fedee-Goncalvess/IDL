@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -64 208 104 224)
+	(rect -72 408 96 424)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
 	(text "CLK" (rect 5 0 30 11)(font "Arial" ))
 	(pt 168 8)
@@ -104,38 +104,6 @@ applicable agreement for further details.
 	(rect 936 288 1112 304)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "C" (rect 90 0 99 11)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 872 0 1048 16)
-	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
-	(text "Suma[11..0]" (rect 90 0 150 11)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 640 136 816 152)
-	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
-	(text "RegA[11..0]" (rect 90 0 149 11)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -417,14 +385,6 @@ applicable agreement for further details.
 	(pt 384 360)
 )
 (connector
-	(pt 384 360)
-	(pt 384 216)
-)
-(connector
-	(pt 104 216)
-	(pt 384 216)
-)
-(connector
 	(pt 384 216)
 	(pt 432 216)
 )
@@ -468,11 +428,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 808 8)
-	(pt 872 8)
-	(bus)
-)
-(connector
 	(pt 600 280)
 	(pt 592 280)
 	(bus)
@@ -483,20 +438,20 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 592 144)
-	(pt 640 144)
-	(bus)
-)
-(connector
-	(pt 592 144)
-	(pt 592 200)
-	(bus)
-)
-(connector
 	(pt 592 200)
 	(pt 592 280)
 	(bus)
 )
-(junction (pt 384 216))
-(junction (pt 808 8))
-(junction (pt 592 200))
+(connector
+	(pt 384 416)
+	(pt 96 416)
+)
+(connector
+	(pt 384 216)
+	(pt 384 360)
+)
+(connector
+	(pt 384 360)
+	(pt 384 416)
+)
+(junction (pt 384 360))
