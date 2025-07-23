@@ -1,12 +1,21 @@
 Info: Start Nativelink Simulation process
-Error: NativeLink did not detect any HDL files in the project
-Error: NativeLink simulation flow was NOT successful
 
+========= EDA Simulation Settings =====================
 
+Sim Mode              :  Gate
+Family                :  cycloneiii
+Quartus root          :  /home/tomas/altera/13.1/quartus/linux/
+Quartus sim root      :  /home/tomas/altera/13.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  TEI_GRUPO17_6_1200mv_85c_slow.vho
+Sim SDF File       :  TEI_GRUPO17_6_1200mv_85c_vhd_slow.sdo
+Sim dir               :  simulation/modelsim
 
-================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
-Nativelink TCL script failed with errorCode:  NONE
-Nativelink TCL script failed with errorInfo:  NativeLink did not detect any HDL files in the project
-    (procedure "run_eda_simulation_tool" line 1)
-    invoked from within
-"run_eda_simulation_tool eda_opts_hash"
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script /home/tomas/altera/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Info: Spawning ModelSim-Altera Simulation software 
