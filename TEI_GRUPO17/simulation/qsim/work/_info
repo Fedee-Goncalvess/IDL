@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\tomas\Desktop\IngenieriaEnComputacion\IDL\TEI_GRUPO17\simulation\qsim
+vcomparador_12bits
+Z1 !s100 =06H;ezZK:5VJ6_c02DE?1
+Z2 IFjZVkdC52nMHFHC4:gcP11
+Z3 VbKDG?zXUL`PJLToRk09MQ0
+Z4 dC:\Users\tomas\Desktop\IngenieriaEnComputacion\IDL\TEI_GRUPO17\simulation\qsim
+Z5 w1753394791
+Z6 8TEI_GRUPO17.vo
+Z7 FTEI_GRUPO17.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|TEI_GRUPO17.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1753394792.266000
+Z12 !s107 TEI_GRUPO17.vo|
+!s101 -O0
+vcomparador_12bits_vlg_check_tst
+!i10b 1
+Z13 !s100 X2DGn]hNdfCmGcM5mg`Ag0
+Z14 IeOTe=>6i=Y<ZMDV1WaV=D2
+Z15 V[kN2=cc_ZbHe1R__h@g<B0
+R4
+R5
+Z16 8vwfComparador12b.vwf.vt
+Z17 FvwfComparador12b.vwf.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z18 !s108 1753394792.313000
+Z19 !s107 vwfComparador12b.vwf.vt|
+Z20 !s90 -work|work|vwfComparador12b.vwf.vt|
+!s101 -O0
+R10
+vcomparador_12bits_vlg_sample_tst
+!i10b 1
+Z21 !s100 _1hIk;jMNfoh`SidO6JC^3
+Z22 IWX]=Qb@8]h7`fi`k8U=KB2
+Z23 VbVfXbE^dz0EAQGYehJZjV3
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vcomparador_12bits_vlg_vec_tst
+!i10b 1
+!s100 Hii<P6RJk<:?UaSBG8F9k3
+I8ON<5jgTW8ji<lmcGM>Af1
+Z24 VmI:4b?l]T1]j`KjLfCa?G0
+R4
+R5
+R16
+R17
+Z25 L0 208
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vcomparador_1bit
+Z26 !s100 2fd1T]MJVJS4BSa10=RDA2
+Z27 IPN>cWE8kmaHRBVaVm;c8@2
+Z28 VPVg;HXSkaOM::UG;Lm<mH3
+R4
+Z29 w1753394506
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z30 !s108 1753394507.415000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparador_1bit_vlg_check_tst
+Z31 !s100 ko1H>h>4LL?4kh`C_N0fZ2
+Z32 IO@QY`94o<B8Ql@=>fOoIF2
+Z33 VaEA<W>lO5gT9XBo_6zQ]i1
+R4
+R29
+Z34 8vwfComparador1b.vwf.vt
+Z35 FvwfComparador1b.vwf.vt
+L0 65
+R8
+r1
+31
+Z36 !s108 1753394507.460000
+Z37 !s107 vwfComparador1b.vwf.vt|
+Z38 !s90 -work|work|vwfComparador1b.vwf.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparador_1bit_vlg_sample_tst
+Z39 !s100 fSlV:KQoJCfJ5G3V[8NLg3
+Z40 I3V2aA4a^ek_SX:g?4`AAI0
+Z41 Vd2KZz2hU9^FhIBjlJLc;J3
+R4
+R29
+R34
+R35
+L0 29
+R8
+r1
+31
+R36
+R37
+R38
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparador_1bit_vlg_vec_tst
+Z42 If_2_P=7M2JFUK_RMbAgC82
+Z43 VbI[S2_=D@6jf2m5[VW5<71
+R4
+R29
+R34
+R35
+Z44 L0 214
+R8
+r1
+31
+R36
+R37
+R38
+R10
+Z45 !s100 J:^FJd30>S6oTOA36H`=01
+!i10b 1
+!s85 0
+!s101 -O0
