@@ -1,4 +1,36 @@
-|comparador_12bits
+|UC_detector_fin
+FIN <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+VF[0] => comparador_12bits:inst.A[0]
+VF[1] => comparador_12bits:inst.A[1]
+VF[2] => comparador_12bits:inst.A[2]
+VF[3] => comparador_12bits:inst.A[3]
+VF[4] => comparador_12bits:inst.A[4]
+VF[5] => comparador_12bits:inst.A[5]
+VF[6] => comparador_12bits:inst.A[6]
+VF[7] => comparador_12bits:inst.A[7]
+VF[8] => comparador_12bits:inst.A[8]
+VF[9] => comparador_12bits:inst.A[9]
+VF[10] => comparador_12bits:inst.A[10]
+VF[11] => comparador_12bits:inst.A[11]
+VC[0] => comparador_12bits:inst.B[0]
+VC[1] => comparador_12bits:inst.B[1]
+VC[2] => comparador_12bits:inst.B[2]
+VC[3] => comparador_12bits:inst.B[3]
+VC[4] => comparador_12bits:inst.B[4]
+VC[5] => comparador_12bits:inst.B[5]
+VC[6] => comparador_12bits:inst.B[6]
+VC[7] => comparador_12bits:inst.B[7]
+VC[8] => comparador_12bits:inst.B[8]
+VC[9] => comparador_12bits:inst.B[9]
+VC[10] => comparador_12bits:inst.B[10]
+VC[11] => comparador_12bits:inst.B[11]
+UP_DOWN => inst9.IN1
+UP_DOWN => inst7.IN1
+Cout => inst10.IN1
+Cout => inst4.IN0
+
+
+|UC_detector_fin|comparador_12bits:inst
 AmayB <= comparador_1bit:inst11.AmayB
 A[0] => comparador_1bit:inst.A
 A[1] => comparador_1bit:inst1.A
@@ -28,7 +60,7 @@ AeqB <= comparador_1bit:inst11.AeqB
 AmenB <= comparador_1bit:inst11.AmenB
 
 
-|comparador_12bits|comparador_1bit:inst11
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst11
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -43,7 +75,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst10
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst10
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -58,7 +90,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst9
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst9
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -73,7 +105,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst8
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst8
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -88,7 +120,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst7
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst7
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -103,7 +135,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst6
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst6
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -118,7 +150,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst5
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst5
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -133,7 +165,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst4
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst4
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -148,7 +180,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst3
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst3
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -163,7 +195,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst2
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst2
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -178,7 +210,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst1
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst1
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -193,7 +225,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|comparador_12bits|comparador_1bit:inst
+|UC_detector_fin|comparador_12bits:inst|comparador_1bit:inst
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
