@@ -45,9 +45,17 @@ set_global_assignment -name LAST_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE circuito_principal.bdf
+set_global_assignment -name BDF_FILE contador.bdf
 set_global_assignment -name BDF_FILE comparador_12bits.bdf
 set_global_assignment -name BDF_FILE contador_UC.bdf
-set_global_assignment -name BDF_FILE contador_TOP.bdf
 set_global_assignment -name BDF_FILE reg_12bits.bdf
 set_global_assignment -name BDF_FILE reg_1bit.bdf
 set_global_assignment -name BDF_FILE sumador_semi.bdf
@@ -60,11 +68,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE contador_TOP.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE contador_UC.vwf
 set_global_assignment -name BDF_FILE comparador_1bit.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwfComparador1b.vwf
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/" -section_id eda_simulation
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwfComparador12b.vwf
