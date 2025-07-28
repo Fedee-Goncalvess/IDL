@@ -21,9 +21,25 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
+	(rect 56 0 224 16)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "UP_DOWN" (rect 5 0 61 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
 	(rect 360 528 528 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b2" (rect 5 0 17 12)(font "Arial" ))
+	(text "b2_i" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 544 528 712 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b1" (rect 5 0 17 12)(font "Arial" ))
+	(text "b1_i" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,23 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 736 528 904 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b0" (rect 5 0 17 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
-	(rect 56 0 224 16)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "UP_DOWN" (rect 5 0 62 12)(font "Arial" ))
+	(text "b0_i" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1366,11 +1366,6 @@ applicable agreement for further details.
 	(pt 616 648)
 )
 (connector
-	(text "A[11..0]" (rect 608 648 646 660)(font "Arial" ))
-	(pt 624 664)
-	(pt 608 664)
-)
-(connector
 	(text "A[11]" (rect 432 120 457 132)(font "Arial" ))
 	(pt 432 136)
 	(pt 440 136)
@@ -1443,6 +1438,12 @@ applicable agreement for further details.
 (connector
 	(pt 1208 192)
 	(pt 1224 192)
+	(bus)
+)
+(connector
+	(text "A[11..0]" (rect 608 648 646 660)(font "Arial" ))
+	(pt 624 664)
+	(pt 608 664)
 	(bus)
 )
 (junction (pt 256 136))
