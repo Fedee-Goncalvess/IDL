@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TEI_GRUPO17
-Fri Jul 25 03:33:02 2025
+Sat Jul 26 04:01:20 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Jul 25 03:33:02 2025 ;
+; EDA Netlist Writer Status ; Successful - Sat Jul 26 04:01:20 2025 ;
 ; Revision Name             ; TEI_GRUPO17                           ;
-; Top-level Entity Name     ; UC_detector_fin                       ;
+; Top-level Entity Name     ; UC_estados                            ;
 ; Family                    ; Cyclone III                           ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -93,13 +93,13 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Fri Jul 25 03:33:02 2025
+    Info: Processing started: Sat Jul 26 04:01:19 2025
 Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
 Info (204019): Generated file TEI_GRUPO17.vo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4545 megabytes
-    Info: Processing ended: Fri Jul 25 03:33:02 2025
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4544 megabytes
+    Info: Processing ended: Sat Jul 26 04:01:20 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
