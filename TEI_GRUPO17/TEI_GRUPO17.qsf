@@ -59,7 +59,6 @@ set_global_assignment -name BDF_FILE UC_detector_error.bdf
 set_global_assignment -name BDF_FILE UC_detector_fin.bdf
 set_global_assignment -name BDF_FILE comparador_12bits.bdf
 set_global_assignment -name BDF_FILE contador_UC.bdf
-set_global_assignment -name BDF_FILE contador_TOP.bdf
 set_global_assignment -name BDF_FILE reg_12bits.bdf
 set_global_assignment -name BDF_FILE reg_1bit.bdf
 set_global_assignment -name BDF_FILE sumador_semi.bdf
@@ -75,3 +74,7 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE vwfComparador1b.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwfComparador12b.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwfDetectorError.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwfDetectorFin.vwf
+set_global_assignment -name BDF_FILE MEF_funcion_de_estado.bdf
+set_global_assignment -name BDF_FILE MEF_estado.bdf
+set_global_assignment -name BDF_FILE MEF_funcion_de_salida.bdf
+set_global_assignment -name BDF_FILE MEF.bdf
