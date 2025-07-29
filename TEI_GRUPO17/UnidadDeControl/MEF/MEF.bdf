@@ -180,59 +180,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 800 48 896 144)
-	(text "MEF_funcion_de_salida" (rect 5 0 141 13)(font "Arial" (font_size 8)))
-	(text "inst1" (rect 8 81 32 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "IQ2" (rect 0 0 22 13)(font "Arial" (font_size 8)))
-		(text "IQ2" (rect 21 27 43 40)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "IQ1" (rect 0 0 22 13)(font "Arial" (font_size 8)))
-		(text "IQ1" (rect 21 43 43 56)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "IQ0" (rect 0 0 22 13)(font "Arial" (font_size 8)))
-		(text "IQ0" (rect 21 59 43 72)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 96 32)
-		(output)
-		(text "OQ2" (rect 0 0 28 13)(font "Arial" (font_size 8)))
-		(text "OQ2" (rect 47 27 75 40)(font "Arial" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
-	)
-	(port
-		(pt 96 48)
-		(output)
-		(text "OQ1" (rect 0 0 28 13)(font "Arial" (font_size 8)))
-		(text "OQ1" (rect 47 43 75 56)(font "Arial" (font_size 8)))
-		(line (pt 96 48)(pt 80 48))
-	)
-	(port
-		(pt 96 64)
-		(output)
-		(text "OQ0" (rect 0 0 28 13)(font "Arial" (font_size 8)))
-		(text "OQ0" (rect 47 59 75 72)(font "Arial" (font_size 8)))
-		(line (pt 96 64)(pt 80 64))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 80))
-	)
-)
-(symbol
 	(rect 240 144 384 368)
 	(text "MEF_funcion_de_estado" (rect 5 0 146 13)(font "Arial" (font_size 8)))
-	(text "inst2" (rect 8 209 32 220)(font "Arial" ))
+	(text "inst" (rect 8 209 26 220)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -331,7 +281,7 @@ applicable agreement for further details.
 (symbol
 	(rect 488 144 584 272)
 	(text "MEF_estado" (rect 5 0 78 13)(font "Arial" (font_size 8)))
-	(text "inst3" (rect 8 113 32 124)(font "Arial" ))
+	(text "inst1" (rect 8 113 32 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -383,6 +333,56 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 80 112))
+	)
+)
+(symbol
+	(rect 800 48 896 144)
+	(text "MEF_funcion_de_salida" (rect 5 0 141 13)(font "Arial" (font_size 8)))
+	(text "inst2" (rect 8 81 32 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "IQ2" (rect 0 0 22 13)(font "Arial" (font_size 8)))
+		(text "IQ2" (rect 21 27 43 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "IQ1" (rect 0 0 22 13)(font "Arial" (font_size 8)))
+		(text "IQ1" (rect 21 43 43 56)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "IQ0" (rect 0 0 22 13)(font "Arial" (font_size 8)))
+		(text "IQ0" (rect 21 59 43 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 96 32)
+		(output)
+		(text "OQ2" (rect 0 0 28 13)(font "Arial" (font_size 8)))
+		(text "OQ2" (rect 47 27 75 40)(font "Arial" (font_size 8)))
+		(line (pt 96 32)(pt 80 32))
+	)
+	(port
+		(pt 96 48)
+		(output)
+		(text "OQ1" (rect 0 0 28 13)(font "Arial" (font_size 8)))
+		(text "OQ1" (rect 47 43 75 56)(font "Arial" (font_size 8)))
+		(line (pt 96 48)(pt 80 48))
+	)
+	(port
+		(pt 96 64)
+		(output)
+		(text "OQ0" (rect 0 0 28 13)(font "Arial" (font_size 8)))
+		(text "OQ0" (rect 47 59 75 72)(font "Arial" (font_size 8)))
+		(line (pt 96 64)(pt 80 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 80))
 	)
 )
 (connector
