@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/29/2025 02:46:30"
+// Generated on "07/29/2025 02:51:15"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    unidad_control
 // 
@@ -91,6 +91,8 @@ module unidad_control_vlg_check_tst (
 	OenVC_UC,
 	OenVI_UA,
 	PAUSA,
+	PRUEBA1,
+	PRUEBA2,
 	sampler_rx
 );
 input [11:0] Bout;
@@ -103,6 +105,8 @@ input  IenVI_UC;
 input  OenVC_UC;
 input  OenVI_UA;
 input  PAUSA;
+input  PRUEBA1;
+input  PRUEBA2;
 input sampler_rx;
 
 reg [11:0] Bout_expected;
@@ -115,6 +119,8 @@ reg  IenVI_UC_expected;
 reg  OenVC_UC_expected;
 reg  OenVI_UA_expected;
 reg  PAUSA_expected;
+reg  PRUEBA1_expected;
+reg  PRUEBA2_expected;
 
 reg [11:0] Bout_prev;
 reg  ERROR_prev;
@@ -126,6 +132,8 @@ reg  IenVI_UC_prev;
 reg  OenVC_UC_prev;
 reg  OenVI_UA_prev;
 reg  PAUSA_prev;
+reg  PRUEBA1_prev;
+reg  PRUEBA2_prev;
 
 reg [11:0] Bout_expected_prev;
 reg  ERROR_expected_prev;
@@ -137,6 +145,8 @@ reg  IenVI_UC_expected_prev;
 reg  OenVC_UC_expected_prev;
 reg  OenVI_UA_expected_prev;
 reg  PAUSA_expected_prev;
+reg  PRUEBA1_expected_prev;
+reg  PRUEBA2_expected_prev;
 
 reg [11:0] last_Bout_exp;
 reg  last_ERROR_exp;
@@ -148,13 +158,15 @@ reg  last_IenVI_UC_exp;
 reg  last_OenVC_UC_exp;
 reg  last_OenVI_UA_exp;
 reg  last_PAUSA_exp;
+reg  last_PRUEBA1_exp;
+reg  last_PRUEBA2_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:10] on_first_change ;
+reg [1:12] on_first_change ;
 
 
 initial
@@ -162,7 +174,7 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 10'b1;
+on_first_change = 12'b1;
 end
 
 // update real /o prevs
@@ -179,6 +191,8 @@ begin
 	OenVC_UC_prev = OenVC_UC;
 	OenVI_UA_prev = OenVI_UA;
 	PAUSA_prev = PAUSA;
+	PRUEBA1_prev = PRUEBA1;
+	PRUEBA2_prev = PRUEBA2;
 end
 
 // update expected /o prevs
@@ -195,6 +209,8 @@ begin
 	OenVC_UC_expected_prev = OenVC_UC_expected;
 	OenVI_UA_expected_prev = OenVI_UA_expected;
 	PAUSA_expected_prev = PAUSA_expected;
+	PRUEBA1_expected_prev = PRUEBA1_expected;
+	PRUEBA2_expected_prev = PRUEBA2_expected;
 end
 
 
@@ -312,8 +328,20 @@ initial
 begin
 	PAUSA_expected = 1'bX;
 end 
+
+// expected PRUEBA1
+initial
+begin
+	PRUEBA1_expected = 1'bX;
+end 
+
+// expected PRUEBA2
+initial
+begin
+	PRUEBA2_expected = 1'bX;
+end 
 // generate trigger
-always @(Bout_expected or Bout or ERROR_expected or ERROR or FIN_expected or FIN or Ienb_UC_expected or Ienb_UC or IenVF_UA_expected or IenVF_UA or IenVI_UA_expected or IenVI_UA or IenVI_UC_expected or IenVI_UC or OenVC_UC_expected or OenVC_UC or OenVI_UA_expected or OenVI_UA or PAUSA_expected or PAUSA)
+always @(Bout_expected or Bout or ERROR_expected or ERROR or FIN_expected or FIN or Ienb_UC_expected or Ienb_UC or IenVF_UA_expected or IenVF_UA or IenVI_UA_expected or IenVI_UA or IenVI_UC_expected or IenVI_UC or OenVC_UC_expected or OenVC_UC or OenVI_UA_expected or OenVI_UA or PAUSA_expected or PAUSA or PRUEBA1_expected or PRUEBA1 or PRUEBA2_expected or PRUEBA2)
 begin
 	trigger <= ~trigger;
 end
@@ -323,8 +351,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected Bout = %b | expected ERROR = %b | expected FIN = %b | expected Ienb_UC = %b | expected IenVF_UA = %b | expected IenVI_UA = %b | expected IenVI_UC = %b | expected OenVC_UC = %b | expected OenVI_UA = %b | expected PAUSA = %b | ",Bout_expected_prev,ERROR_expected_prev,FIN_expected_prev,Ienb_UC_expected_prev,IenVF_UA_expected_prev,IenVI_UA_expected_prev,IenVI_UC_expected_prev,OenVC_UC_expected_prev,OenVI_UA_expected_prev,PAUSA_expected_prev);
-	$display("| real Bout = %b | real ERROR = %b | real FIN = %b | real Ienb_UC = %b | real IenVF_UA = %b | real IenVI_UA = %b | real IenVI_UC = %b | real OenVC_UC = %b | real OenVI_UA = %b | real PAUSA = %b | ",Bout_prev,ERROR_prev,FIN_prev,Ienb_UC_prev,IenVF_UA_prev,IenVI_UA_prev,IenVI_UC_prev,OenVC_UC_prev,OenVI_UA_prev,PAUSA_prev);
+	$display("| expected Bout = %b | expected ERROR = %b | expected FIN = %b | expected Ienb_UC = %b | expected IenVF_UA = %b | expected IenVI_UA = %b | expected IenVI_UC = %b | expected OenVC_UC = %b | expected OenVI_UA = %b | expected PAUSA = %b | expected PRUEBA1 = %b | expected PRUEBA2 = %b | ",Bout_expected_prev,ERROR_expected_prev,FIN_expected_prev,Ienb_UC_expected_prev,IenVF_UA_expected_prev,IenVI_UA_expected_prev,IenVI_UC_expected_prev,OenVC_UC_expected_prev,OenVI_UA_expected_prev,PAUSA_expected_prev,PRUEBA1_expected_prev,PRUEBA2_expected_prev);
+	$display("| real Bout = %b | real ERROR = %b | real FIN = %b | real Ienb_UC = %b | real IenVF_UA = %b | real IenVI_UA = %b | real IenVI_UC = %b | real OenVC_UC = %b | real OenVI_UA = %b | real PAUSA = %b | real PRUEBA1 = %b | real PRUEBA2 = %b | ",Bout_prev,ERROR_prev,FIN_prev,Ienb_UC_prev,IenVF_UA_prev,IenVI_UA_prev,IenVI_UC_prev,OenVC_UC_prev,OenVI_UA_prev,PAUSA_prev,PRUEBA1_prev,PRUEBA2_prev);
 `endif
 	if (
 		( Bout_expected_prev[0] !== 1'bx ) && ( Bout_prev[0] !== Bout_expected_prev[0] )
@@ -599,6 +627,32 @@ begin
 		on_first_change[10] = 1'b0;
 		last_PAUSA_exp = PAUSA_expected_prev;
 	end
+	if (
+		( PRUEBA1_expected_prev !== 1'bx ) && ( PRUEBA1_prev !== PRUEBA1_expected_prev )
+		&& ((PRUEBA1_expected_prev !== last_PRUEBA1_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PRUEBA1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PRUEBA1_expected_prev);
+		$display ("     Real value = %b", PRUEBA1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_PRUEBA1_exp = PRUEBA1_expected_prev;
+	end
+	if (
+		( PRUEBA2_expected_prev !== 1'bx ) && ( PRUEBA2_prev !== PRUEBA2_expected_prev )
+		&& ((PRUEBA2_expected_prev !== last_PRUEBA2_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PRUEBA2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PRUEBA2_expected_prev);
+		$display ("     Real value = %b", PRUEBA2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_PRUEBA2_exp = PRUEBA2_expected_prev;
+	end
 
 	trigger <= ~trigger;
 end
@@ -643,6 +697,8 @@ wire IenVI_UC;
 wire OenVC_UC;
 wire OenVI_UA;
 wire PAUSA;
+wire PRUEBA1;
+wire PRUEBA2;
 
 wire sampler;                             
 
@@ -667,6 +723,8 @@ unidad_control i1 (
 	.OenVC_UC(OenVC_UC),
 	.OenVI_UA(OenVI_UA),
 	.PAUSA(PAUSA),
+	.PRUEBA1(PRUEBA1),
+	.PRUEBA2(PRUEBA2),
 	.RECARGAR(RECARGAR),
 	.START(START),
 	.UP_DOWN(UP_DOWN),
@@ -678,7 +736,7 @@ unidad_control i1 (
 // b0
 initial
 begin
-	b0 = 1'b1;
+	b0 = 1'b0;
 end 
 
 // b1
@@ -690,7 +748,7 @@ end
 // b2
 initial
 begin
-	b2 = 1'b1;
+	b2 = 1'b0;
 end 
 
 // CLK
@@ -704,7 +762,7 @@ end
 // CONTINUAR
 initial
 begin
-	CONTINUAR = 1'b1;
+	CONTINUAR = 1'b0;
 end 
 
 // Cout
@@ -716,25 +774,25 @@ end
 // LOAD_F
 initial
 begin
-	LOAD_F = 1'b1;
+	LOAD_F = 1'b0;
 end 
 
 // LOAD_I
 initial
 begin
-	LOAD_I = 1'b1;
+	LOAD_I = 1'b0;
 end 
 
 // RECARGAR
 initial
 begin
-	RECARGAR = 1'b1;
+	RECARGAR = 1'b0;
 end 
 
 // START
 initial
 begin
-	START = 1'b1;
+	START = 1'b0;
 end 
 
 // UP_DOWN
@@ -800,7 +858,7 @@ end
 // VC[ 0 ]
 initial
 begin
-	VC[0] = 1'b1;
+	VC[0] = 1'b0;
 end 
 // VF[ 11 ]
 initial
@@ -850,7 +908,7 @@ end
 // VF[ 2 ]
 initial
 begin
-	VF[2] = 1'b1;
+	VF[2] = 1'b0;
 end 
 // VF[ 1 ]
 initial
@@ -860,7 +918,7 @@ end
 // VF[ 0 ]
 initial
 begin
-	VF[0] = 1'b1;
+	VF[0] = 1'b0;
 end 
 // VI[ 11 ]
 initial
@@ -952,6 +1010,8 @@ unidad_control_vlg_check_tst tb_out(
 	.OenVC_UC(OenVC_UC),
 	.OenVI_UA(OenVI_UA),
 	.PAUSA(PAUSA),
+	.PRUEBA1(PRUEBA1),
+	.PRUEBA2(PRUEBA2),
 	.sampler_rx(sampler)
 );
 endmodule

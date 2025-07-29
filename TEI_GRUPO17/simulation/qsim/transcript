@@ -18,11 +18,8 @@
 # Loading work.unidad_control
 # Loading cycloneiii_ver.cycloneiii_io_obuf
 # Loading cycloneiii_ver.cycloneiii_io_ibuf
-# Loading cycloneiii_ver.cycloneiii_lcell_comb
-# Loading altera_ver.dffeas
 # Loading work.unidad_control_vlg_sample_tst
 # Loading work.unidad_control_vlg_check_tst
-# Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : vwfUnidadControl.vwf.vt(614)
+# ** Note: $finish    : prueba2.vwf.vt(668)
 #    Time: 1 us  Iteration: 0  Instance: /unidad_control_vlg_vec_tst/tb_out
