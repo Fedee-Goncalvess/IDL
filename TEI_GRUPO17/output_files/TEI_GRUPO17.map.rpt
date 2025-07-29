@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TEI_GRUPO17
-Mon Jul 28 20:22:55 2025
+Tue Jul 29 00:25:44 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 28 20:22:55 2025      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 29 00:25:44 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
-; Top-level Entity Name              ; MEF_funcion_de_estado                      ;
+; Top-level Entity Name              ; decodificador_salida                       ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 14                                         ;
-;     Total combinational functions  ; 14                                         ;
+; Total logic elements               ; 8                                          ;
+;     Total combinational functions  ; 8                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 13                                         ;
+; Total pins                         ; 11                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -58,90 +58,90 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                           ;
-+----------------------------------------------------------------------------+-----------------------+--------------------+
-; Option                                                                     ; Setting               ; Default Value      ;
-+----------------------------------------------------------------------------+-----------------------+--------------------+
-; Top-level entity name                                                      ; MEF_funcion_de_estado ; TEI_GRUPO17        ;
-; Family name                                                                ; Cyclone III           ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                   ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                    ; On                 ;
-; Enable compact report table                                                ; Off                   ; Off                ;
-; Restructure Multiplexers                                                   ; Auto                  ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                   ; Off                ;
-; Preserve fewer node names                                                  ; On                    ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                   ; Off                ;
-; Verilog Version                                                            ; Verilog_2001          ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993             ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto                  ; Auto               ;
-; Safe State Machine                                                         ; Off                   ; Off                ;
-; Extract Verilog State Machines                                             ; On                    ; On                 ;
-; Extract VHDL State Machines                                                ; On                    ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                   ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000                  ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                   ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                    ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                    ; On                 ;
-; Parallel Synthesis                                                         ; On                    ; On                 ;
-; DSP Block Balancing                                                        ; Auto                  ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                    ; On                 ;
-; Power-Up Don't Care                                                        ; On                    ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                   ; Off                ;
-; Remove Duplicate Registers                                                 ; On                    ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                   ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                   ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                   ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                   ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                   ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                    ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                   ; Off                ;
-; Optimization Technique                                                     ; Balanced              ; Balanced           ;
-; Carry Chain Length                                                         ; 70                    ; 70                 ;
-; Auto Carry Chains                                                          ; On                    ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                    ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                   ; Off                ;
-; Auto ROM Replacement                                                       ; On                    ; On                 ;
-; Auto RAM Replacement                                                       ; On                    ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                    ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto                  ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                  ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                    ; On                 ;
-; Strict RAM Replacement                                                     ; Off                   ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                    ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                   ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                    ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                   ; Off                ;
-; Auto Resource Sharing                                                      ; Off                   ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                   ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                   ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                   ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                    ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                   ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                    ; On                 ;
-; Report Parameter Settings                                                  ; On                    ; On                 ;
-; Report Source Assignments                                                  ; On                    ; On                 ;
-; Report Connectivity Checks                                                 ; On                    ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                   ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                     ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation    ; Normal compilation ;
-; HDL message level                                                          ; Level2                ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                   ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                  ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                  ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                   ; 100                ;
-; Clock MUX Protection                                                       ; On                    ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                   ; Off                ;
-; Block Design Naming                                                        ; Auto                  ; Auto               ;
-; SDC constraint protection                                                  ; Off                   ; Off                ;
-; Synthesis Effort                                                           ; Auto                  ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                    ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                   ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium                ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto                  ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                    ; On                 ;
-; Synthesis Seed                                                             ; 1                     ; 1                  ;
-+----------------------------------------------------------------------------+-----------------------+--------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Option                                                                     ; Setting              ; Default Value      ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Top-level entity name                                                      ; decodificador_salida ; TEI_GRUPO17        ;
+; Family name                                                                ; Cyclone III          ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                  ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                   ; On                 ;
+; Enable compact report table                                                ; Off                  ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                 ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                  ; Off                ;
+; Preserve fewer node names                                                  ; On                   ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                  ; Off                ;
+; Verilog Version                                                            ; Verilog_2001         ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993            ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                 ; Auto               ;
+; Safe State Machine                                                         ; Off                  ; Off                ;
+; Extract Verilog State Machines                                             ; On                   ; On                 ;
+; Extract VHDL State Machines                                                ; On                   ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                  ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                 ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                  ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                   ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                   ; On                 ;
+; Parallel Synthesis                                                         ; On                   ; On                 ;
+; DSP Block Balancing                                                        ; Auto                 ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                   ; On                 ;
+; Power-Up Don't Care                                                        ; On                   ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                  ; Off                ;
+; Remove Duplicate Registers                                                 ; On                   ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                  ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                  ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                  ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                  ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                  ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                   ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                  ; Off                ;
+; Optimization Technique                                                     ; Balanced             ; Balanced           ;
+; Carry Chain Length                                                         ; 70                   ; 70                 ;
+; Auto Carry Chains                                                          ; On                   ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                   ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                  ; Off                ;
+; Auto ROM Replacement                                                       ; On                   ; On                 ;
+; Auto RAM Replacement                                                       ; On                   ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                   ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                 ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                 ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                   ; On                 ;
+; Strict RAM Replacement                                                     ; Off                  ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                   ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                  ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                   ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                  ; Off                ;
+; Auto Resource Sharing                                                      ; Off                  ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                  ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                   ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                  ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                   ; On                 ;
+; Report Parameter Settings                                                  ; On                   ; On                 ;
+; Report Source Assignments                                                  ; On                   ; On                 ;
+; Report Connectivity Checks                                                 ; On                   ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                  ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                    ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation   ; Normal compilation ;
+; HDL message level                                                          ; Level2               ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                  ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                 ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                 ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                  ; 100                ;
+; Clock MUX Protection                                                       ; On                   ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                  ; Off                ;
+; Block Design Naming                                                        ; Auto                 ; Auto               ;
+; SDC constraint protection                                                  ; Off                  ; Off                ;
+; Synthesis Effort                                                           ; Auto                 ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                   ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                  ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium               ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                 ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                   ; On                 ;
+; Synthesis Seed                                                             ; 1                    ; 1                  ;
++----------------------------------------------------------------------------+----------------------+--------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -150,18 +150,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 16     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; MEF_funcion_de_estado.bdf        ; yes             ; User Block Diagram/Schematic File  ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/MEF_funcion_de_estado.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; decodificador_salida.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/decodificador_salida.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -169,38 +169,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 14       ;
+; Estimated Total logic elements              ; 8        ;
 ;                                             ;          ;
-; Total combinational functions               ; 14       ;
+; Total combinational functions               ; 8        ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 11       ;
-;     -- 3 input functions                    ; 2        ;
-;     -- <=2 input functions                  ; 1        ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 8        ;
+;     -- <=2 input functions                  ; 0        ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 14       ;
+;     -- normal mode                          ; 8        ;
 ;     -- arithmetic mode                      ; 0        ;
 ;                                             ;          ;
 ; Total registers                             ; 0        ;
 ;     -- Dedicated logic registers            ; 0        ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 13       ;
+; I/O pins                                    ; 11       ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
-; Maximum fan-out node                        ; Q2~input ;
-; Maximum fan-out                             ; 7        ;
-; Total fan-out                               ; 68       ;
-; Average fan-out                             ; 1.70     ;
+; Maximum fan-out node                        ; Q0~input ;
+; Maximum fan-out                             ; 8        ;
+; Total fan-out                               ; 43       ;
+; Average fan-out                             ; 1.43     ;
 +---------------------------------------------+----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                            ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-; |MEF_funcion_de_estado     ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |MEF_funcion_de_estado ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; |decodificador_salida      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |decodificador_salida ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -234,16 +234,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Jul 28 20:22:53 2025
+    Info: Processing started: Tue Jul 29 00:25:43 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TEI_GRUPO17 -c TEI_GRUPO17
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file MEF_funcion_de_salida.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador_salida.bdf
+    Info (12023): Found entity 1: decodificador_salida
+Info (12021): Found 1 design units, including 1 entities, in source file mef_funcion_de_salida.bdf
     Info (12023): Found entity 1: MEF_funcion_de_salida
-Info (12021): Found 1 design units, including 1 entities, in source file MEF_funcion_de_estado.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file mef_funcion_de_estado.bdf
     Info (12023): Found entity 1: MEF_funcion_de_estado
-Info (12021): Found 1 design units, including 1 entities, in source file MEF_estado.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file mef_estado.bdf
     Info (12023): Found entity 1: MEF_estado
-Info (12021): Found 1 design units, including 1 entities, in source file MEF.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file mef.bdf
     Info (12023): Found entity 1: MEF
 Info (12021): Found 1 design units, including 1 entities, in source file contador.bdf
     Info (12023): Found entity 1: contador
@@ -251,13 +253,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file circuit
     Info (12023): Found entity 1: circuito_principal
 Info (12021): Found 1 design units, including 1 entities, in source file almacenamiento.bdf
     Info (12023): Found entity 1: almacenamiento
-Info (12021): Found 1 design units, including 1 entities, in source file UC_detector_error.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file uc_detector_error.bdf
     Info (12023): Found entity 1: UC_detector_error
-Info (12021): Found 1 design units, including 1 entities, in source file UC_detector_fin.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file uc_detector_fin.bdf
     Info (12023): Found entity 1: UC_detector_fin
 Info (12021): Found 1 design units, including 1 entities, in source file comparador_12bits.bdf
     Info (12023): Found entity 1: comparador_12bits
-Info (12021): Found 1 design units, including 1 entities, in source file contador_UC.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file contador_uc.bdf
     Info (12023): Found entity 1: contador_UC
 Warning (12019): Can't analyze file -- file contador_TOP.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file reg_12bits.bdf
@@ -270,7 +272,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file sumador
     Info (12023): Found entity 1: sumador_completo
 Info (12021): Found 1 design units, including 1 entities, in source file sumador_12bits_serie.bdf
     Info (12023): Found entity 1: sumador_12bits_serie
-Info (12021): Found 1 design units, including 1 entities, in source file UC_detector_pausa.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file uc_detector_pausa.bdf
     Info (12023): Found entity 1: UC_detector_pausa
 Info (12021): Found 1 design units, including 1 entities, in source file reg_1bit_tristate.bdf
     Info (12023): Found entity 1: reg_1bit_tristate
@@ -278,33 +280,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file reg_12b
     Info (12023): Found entity 1: reg_12bits_tristate
 Info (12021): Found 1 design units, including 1 entities, in source file comparador_1bit.bdf
     Info (12023): Found entity 1: comparador_1bit
-Info (12021): Found 1 design units, including 1 entities, in source file UC_de_UA.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file uc_de_ua.bdf
     Info (12023): Found entity 1: UC_de_UA
-Info (12021): Found 1 design units, including 1 entities, in source file UC_estados.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file uc_estados.bdf
     Info (12023): Found entity 1: UC_estados
 Info (12021): Found 1 design units, including 1 entities, in source file unidad_control.bdf
     Info (12023): Found entity 1: unidad_control
-Info (12021): Found 1 design units, including 1 entities, in source file MUX2.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.bdf
     Info (12023): Found entity 1: MUX2
-Info (12021): Found 1 design units, including 1 entities, in source file conversorCA2.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file conversorca2.bdf
     Info (12023): Found entity 1: conversorCA2
-Info (12021): Found 1 design units, including 1 entities, in source file UC_de_UC.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file uc_de_uc.bdf
     Info (12023): Found entity 1: UC_de_UC
-Info (12127): Elaborating entity "MEF_funcion_de_estado" for the top level hierarchy
-Warning (275009): Pin "CLK" not connected
+Info (12127): Elaborating entity "decodificador_salida" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLK"
-Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 14 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Mon Jul 28 20:22:55 2025
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4627 megabytes
+    Info: Processing ended: Tue Jul 29 00:25:44 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
