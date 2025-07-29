@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TEI_GRUPO17
-Tue Jul 29 20:26:01 2025
+Tue Jul 29 20:38:28 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,9 +14,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 29 20:26:01 2025      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 29 20:38:28 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
-; Top-level Entity Name              ; unidad_control                             ;
+; Top-level Entity Name              ; circuito_principal                         ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 84                                         ;
-;     Total combinational functions  ; 84                                         ;
-;     Dedicated logic registers      ; 4                                          ;
-; Total registers                    ; 4                                          ;
-; Total pins                         ; 68                                         ;
+; Total logic elements               ; 95                                         ;
+;     Total combinational functions  ; 95                                         ;
+;     Dedicated logic registers      ; 40                                         ;
+; Total registers                    ; 40                                         ;
+; Total pins                         ; 25                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -64,7 +65,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; unidad_control     ; TEI_GRUPO17        ;
+; Top-level entity name                                                      ; circuito_principal ; TEI_GRUPO17        ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -161,6 +162,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path              ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                            ; Library ;
 +-----------------------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; circuito_principal.bdf                        ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/circuito_principal.bdf                        ;         ;
+; Almacenamiento/almacenamiento.bdf             ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Almacenamiento/almacenamiento.bdf             ;         ;
+; Contador/contador.bdf                         ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Contador/contador.bdf                         ;         ;
+; Contador/contador_UC.bdf                      ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Contador/contador_UC.bdf                      ;         ;
 ; UnidadDeControl/unidad_control.bdf            ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/UnidadDeControl/unidad_control.bdf            ;         ;
 ; UnidadDeControl/UC_estados.bdf                ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/UnidadDeControl/UC_estados.bdf                ;         ;
 ; UnidadDeControl/UC_detector_pausa.bdf         ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/UnidadDeControl/UC_detector_pausa.bdf         ;         ;
@@ -175,6 +180,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; UnidadDeControl/MEF/MEF.bdf                   ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/UnidadDeControl/MEF/MEF.bdf                   ;         ;
 ; Generales/sumador_completo.bdf                ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/sumador_completo.bdf                ;         ;
 ; Generales/sumador_12bits_serie.bdf            ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/sumador_12bits_serie.bdf            ;         ;
+; Generales/reg_12bits_tristate.bdf             ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/reg_12bits_tristate.bdf             ;         ;
+; Generales/reg_12bits.bdf                      ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/reg_12bits.bdf                      ;         ;
+; Generales/reg_1bit_tristate.bdf               ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/reg_1bit_tristate.bdf               ;         ;
 ; Generales/reg_1bit.bdf                        ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/reg_1bit.bdf                        ;         ;
 ; Generales/conversorCA2.bdf                    ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/conversorCA2.bdf                    ;         ;
 ; Generales/comparador_12bits.bdf               ; yes             ; User Block Diagram/Schematic File        ; /home/joaquin/Universidad/IDL/TEI_GRUPO17/Generales/comparador_12bits.bdf               ;         ;
@@ -183,77 +191,188 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                    ;
-+---------------------------------------------+----------------------------------+
-; Resource                                    ; Usage                            ;
-+---------------------------------------------+----------------------------------+
-; Estimated Total logic elements              ; 84                               ;
-;                                             ;                                  ;
-; Total combinational functions               ; 84                               ;
-; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 59                               ;
-;     -- 3 input functions                    ; 14                               ;
-;     -- <=2 input functions                  ; 11                               ;
-;                                             ;                                  ;
-; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 84                               ;
-;     -- arithmetic mode                      ; 0                                ;
-;                                             ;                                  ;
-; Total registers                             ; 4                                ;
-;     -- Dedicated logic registers            ; 4                                ;
-;     -- I/O registers                        ; 0                                ;
-;                                             ;                                  ;
-; I/O pins                                    ; 68                               ;
-; Embedded Multiplier 9-bit elements          ; 0                                ;
-; Maximum fan-out node                        ; MEF:inst6|MEF_estado:inst1|inst1 ;
-; Maximum fan-out                             ; 15                               ;
-; Total fan-out                               ; 397                              ;
-; Average fan-out                             ; 1.77                             ;
-+---------------------------------------------+----------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 95        ;
+;                                             ;           ;
+; Total combinational functions               ; 95        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 45        ;
+;     -- 3 input functions                    ; 44        ;
+;     -- <=2 input functions                  ; 6         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 95        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 25        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 468       ;
+; Average fan-out                             ; 2.38      ;
++---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Library Name ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
-; |unidad_control                        ; 84 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |unidad_control                                                                                      ; work         ;
-;    |MEF:inst6|                         ; 16 (0)            ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|MEF:inst6                                                                            ; work         ;
-;       |MEF_estado:inst1|               ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|MEF:inst6|MEF_estado:inst1                                                           ; work         ;
-;       |MEF_funcion_de_estado:inst|     ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|MEF:inst6|MEF_funcion_de_estado:inst                                                 ; work         ;
-;    |UC_de_UA:inst3|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UA:inst3                                                                       ; work         ;
-;    |UC_de_UC:inst7|                    ; 5 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UC:inst7                                                                       ; work         ;
-;       |conversorCA2:inst|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UC:inst7|conversorCA2:inst                                                     ; work         ;
-;          |sumador_12bits_serie:inst41| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41                         ; work         ;
-;             |sumador_completo:inst11|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst11 ; work         ;
-;             |sumador_completo:inst1|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst1  ; work         ;
-;             |sumador_completo:inst2|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst2  ; work         ;
-;    |UC_detector_error:inst1|           ; 27 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_error:inst1                                                              ; work         ;
-;       |comparador_12bits:inst|         ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_error:inst1|comparador_12bits:inst                                       ; work         ;
-;          |comparador_1bit:inst4|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst4                 ; work         ;
-;          |comparador_1bit:inst7|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst7                 ; work         ;
-;    |UC_detector_fin:inst8|             ; 30 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_fin:inst8                                                                ; work         ;
-;       |comparador_12bits:inst|         ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_fin:inst8|comparador_12bits:inst                                         ; work         ;
-;          |comparador_1bit:inst11|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst11                  ; work         ;
-;          |comparador_1bit:inst4|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst4                   ; work         ;
-;          |comparador_1bit:inst7|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst7                   ; work         ;
-;          |comparador_1bit:inst8|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst8                   ; work         ;
-;    |UC_estados:inst4|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|UC_estados:inst4                                                                     ; work         ;
-;    |reg_1bit:inst5|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |unidad_control|reg_1bit:inst5                                                                       ; work         ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |circuito_principal                       ; 95 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |circuito_principal                                                                                                          ; work         ;
+;    |almacenamiento:inst2|                 ; 34 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2                                                                                     ; work         ;
+;       |reg_12bits_tristate:inst|          ; 34 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst                                                            ; work         ;
+;          |reg_1bit_tristate:inst10|       ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst10                                   ; work         ;
+;          |reg_1bit_tristate:inst11|       ; 5 (5)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst11                                   ; work         ;
+;          |reg_1bit_tristate:inst1|        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst1                                    ; work         ;
+;          |reg_1bit_tristate:inst2|        ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst2                                    ; work         ;
+;          |reg_1bit_tristate:inst3|        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst3                                    ; work         ;
+;          |reg_1bit_tristate:inst4|        ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst4                                    ; work         ;
+;          |reg_1bit_tristate:inst5|        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst5                                    ; work         ;
+;          |reg_1bit_tristate:inst6|        ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst6                                    ; work         ;
+;          |reg_1bit_tristate:inst7|        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst7                                    ; work         ;
+;          |reg_1bit_tristate:inst8|        ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst8                                    ; work         ;
+;          |reg_1bit_tristate:inst9|        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst9                                    ; work         ;
+;          |reg_1bit_tristate:inst|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst                                     ; work         ;
+;    |contador:inst|                        ; 44 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst                                                                                            ; work         ;
+;       |reg_12bits:inst1|                  ; 12 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1                                                                           ; work         ;
+;          |reg_1bit:inst10|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst10                                                           ; work         ;
+;          |reg_1bit:inst11|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst11                                                           ; work         ;
+;          |reg_1bit:inst1|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst1                                                            ; work         ;
+;          |reg_1bit:inst2|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst2                                                            ; work         ;
+;          |reg_1bit:inst3|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst3                                                            ; work         ;
+;          |reg_1bit:inst4|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst4                                                            ; work         ;
+;          |reg_1bit:inst5|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst5                                                            ; work         ;
+;          |reg_1bit:inst6|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst6                                                            ; work         ;
+;          |reg_1bit:inst7|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst7                                                            ; work         ;
+;          |reg_1bit:inst8|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst8                                                            ; work         ;
+;          |reg_1bit:inst9|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst9                                                            ; work         ;
+;          |reg_1bit:inst|                  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst                                                             ; work         ;
+;       |reg_12bits:inst2|                  ; 13 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2                                                                           ; work         ;
+;          |reg_1bit:inst10|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst10                                                           ; work         ;
+;          |reg_1bit:inst11|                ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst11                                                           ; work         ;
+;          |reg_1bit:inst1|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst1                                                            ; work         ;
+;          |reg_1bit:inst2|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst2                                                            ; work         ;
+;          |reg_1bit:inst3|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst3                                                            ; work         ;
+;          |reg_1bit:inst4|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst4                                                            ; work         ;
+;          |reg_1bit:inst5|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst5                                                            ; work         ;
+;          |reg_1bit:inst6|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst6                                                            ; work         ;
+;          |reg_1bit:inst7|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst7                                                            ; work         ;
+;          |reg_1bit:inst8|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst8                                                            ; work         ;
+;          |reg_1bit:inst9|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst9                                                            ; work         ;
+;          |reg_1bit:inst|                  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst                                                             ; work         ;
+;       |sumador_12bits_serie:inst|         ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst                                                                  ; work         ;
+;          |sumador_completo:inst11|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst11                                          ; work         ;
+;          |sumador_completo:inst1|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst1                                           ; work         ;
+;          |sumador_completo:inst2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst2                                           ; work         ;
+;          |sumador_completo:inst3|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst3                                           ; work         ;
+;          |sumador_completo:inst4|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst4                                           ; work         ;
+;          |sumador_completo:inst5|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst5                                           ; work         ;
+;          |sumador_completo:inst6|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst6                                           ; work         ;
+;          |sumador_completo:inst7|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst7                                           ; work         ;
+;          |sumador_completo:inst8|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst8                                           ; work         ;
+;          |sumador_completo:inst9|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst9                                           ; work         ;
+;    |unidad_control:inst1|                 ; 17 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1                                                                                     ; work         ;
+;       |MEF:inst6|                         ; 9 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|MEF:inst6                                                                           ; work         ;
+;          |MEF_estado:inst1|               ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|MEF:inst6|MEF_estado:inst1                                                          ; work         ;
+;          |MEF_funcion_de_estado:inst|     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|MEF:inst6|MEF_funcion_de_estado:inst                                                ; work         ;
+;       |UC_de_UC:inst7|                    ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|UC_de_UC:inst7                                                                      ; work         ;
+;          |conversorCA2:inst|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst                                                    ; work         ;
+;             |sumador_12bits_serie:inst41| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41                        ; work         ;
+;                |sumador_completo:inst1|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst1 ; work         ;
+;                |sumador_completo:inst2|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst2 ; work         ;
+;       |UC_estados:inst4|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|UC_estados:inst4                                                                    ; work         ;
+;       |decodificador_salida:inst10|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|decodificador_salida:inst10                                                         ; work         ;
+;       |reg_1bit:inst5|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |circuito_principal|unidad_control:inst1|reg_1bit:inst5                                                                      ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; reg_1bit:inst5|inst2~0                                 ;   ;
-; Number of logic cells representing combinational loops ; 1 ;
-+--------------------------------------------------------+---+
++--------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                         ;
++---------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                 ;    ;
++---------------------------------------------------------------------------------+----+
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst11|inst2~0 ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst11|inst2~0  ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst11|inst2~0                          ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst11|inst2~0                          ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst10|inst2~0                          ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst10|inst2~0                          ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst8|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst6|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst4|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst2|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst|inst2~0                            ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst|inst2~0                            ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst1|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst1|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst2|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst3|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst3|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst4|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst5|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst5|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst6|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst7|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst7|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst8|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst2|reg_1bit:inst9|inst2~0                           ;    ;
+; contador:inst|reg_12bits:inst1|reg_1bit:inst9|inst2~0                           ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst10|inst2~0 ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst10|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst9|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst9|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst8|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst8|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst7|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst7|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst6|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst6|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst5|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst5|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst4|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst4|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst3|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst3|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst2|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst2|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst1|inst2~0  ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst1|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst|inst2~0   ;    ;
+; almacenamiento:inst2|reg_12bits_tristate:inst|reg_1bit_tristate:inst|inst2~0    ;    ;
+; unidad_control:inst1|reg_1bit:inst5|inst2~0                                     ;    ;
+; Number of logic cells representing combinational loops                          ; 49 ;
++---------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++-------------------------------------------------------------------------------+--------------------+
+; Register name                                                                 ; Reason for Removal ;
++-------------------------------------------------------------------------------+--------------------+
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst11|inst4 ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst10|inst4 ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst9|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst8|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst7|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst6|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst5|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst4|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst3|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst2|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst1|inst4  ; Lost fanout        ;
+; almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst|inst4   ; Lost fanout        ;
+; Total Number of Removed Registers = 12                                        ;                    ;
++-------------------------------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -261,7 +380,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -276,7 +395,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -286,7 +405,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jul 29 20:25:59 2025
+    Info: Processing started: Tue Jul 29 20:38:26 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TEI_GRUPO17 -c TEI_GRUPO17
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_principal.bdf
@@ -341,40 +460,64 @@ Info (12021): Found 1 design units, including 1 entities, in source file General
     Info (12023): Found entity 1: comparador_12bits
 Info (12021): Found 1 design units, including 1 entities, in source file Generales/comparador_1bit.bdf
     Info (12023): Found entity 1: comparador_1bit
-Info (12127): Elaborating entity "unidad_control" for the top level hierarchy
-Info (12128): Elaborating entity "UC_estados" for hierarchy "UC_estados:inst4"
-Info (12128): Elaborating entity "decodificador_salida" for hierarchy "decodificador_salida:inst10"
-Info (12128): Elaborating entity "MEF" for hierarchy "MEF:inst6"
-Info (12128): Elaborating entity "MEF_funcion_de_salida" for hierarchy "MEF:inst6|MEF_funcion_de_salida:inst2"
-Info (12128): Elaborating entity "MEF_estado" for hierarchy "MEF:inst6|MEF_estado:inst1"
-Info (12128): Elaborating entity "MEF_funcion_de_estado" for hierarchy "MEF:inst6|MEF_funcion_de_estado:inst"
+Info (12127): Elaborating entity "circuito_principal" for the top level hierarchy
+Info (12128): Elaborating entity "unidad_control" for hierarchy "unidad_control:inst1"
+Info (12128): Elaborating entity "UC_estados" for hierarchy "unidad_control:inst1|UC_estados:inst4"
+Info (12128): Elaborating entity "decodificador_salida" for hierarchy "unidad_control:inst1|decodificador_salida:inst10"
+Info (12128): Elaborating entity "MEF" for hierarchy "unidad_control:inst1|MEF:inst6"
+Info (12128): Elaborating entity "MEF_funcion_de_salida" for hierarchy "unidad_control:inst1|MEF:inst6|MEF_funcion_de_salida:inst2"
+Info (12128): Elaborating entity "MEF_estado" for hierarchy "unidad_control:inst1|MEF:inst6|MEF_estado:inst1"
+Info (12128): Elaborating entity "MEF_funcion_de_estado" for hierarchy "unidad_control:inst1|MEF:inst6|MEF_funcion_de_estado:inst"
 Warning (275009): Pin "CLK" not connected
-Info (12128): Elaborating entity "UC_detector_pausa" for hierarchy "UC_detector_pausa:inst"
-Info (12128): Elaborating entity "UC_detector_fin" for hierarchy "UC_detector_fin:inst8"
-Info (12128): Elaborating entity "comparador_12bits" for hierarchy "UC_detector_fin:inst8|comparador_12bits:inst"
-Info (12128): Elaborating entity "comparador_1bit" for hierarchy "UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst11"
-Info (12128): Elaborating entity "reg_1bit" for hierarchy "reg_1bit:inst5"
-Info (12128): Elaborating entity "UC_detector_error" for hierarchy "UC_detector_error:inst1"
-Info (12128): Elaborating entity "UC_de_UA" for hierarchy "UC_de_UA:inst3"
+Info (12128): Elaborating entity "UC_detector_pausa" for hierarchy "unidad_control:inst1|UC_detector_pausa:inst"
+Info (12128): Elaborating entity "UC_detector_fin" for hierarchy "unidad_control:inst1|UC_detector_fin:inst8"
+Info (12128): Elaborating entity "comparador_12bits" for hierarchy "unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst"
+Info (12128): Elaborating entity "comparador_1bit" for hierarchy "unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst11"
+Info (12128): Elaborating entity "reg_1bit" for hierarchy "unidad_control:inst1|reg_1bit:inst5"
+Info (12128): Elaborating entity "UC_detector_error" for hierarchy "unidad_control:inst1|UC_detector_error:inst1"
+Info (12128): Elaborating entity "UC_de_UA" for hierarchy "unidad_control:inst1|UC_de_UA:inst3"
 Warning (275011): Block or symbol "AND3" of instance "inst3" overlaps another block or symbol
-Info (12128): Elaborating entity "UC_de_UC" for hierarchy "UC_de_UC:inst7"
-Info (12128): Elaborating entity "conversorCA2" for hierarchy "UC_de_UC:inst7|conversorCA2:inst"
-Info (12128): Elaborating entity "sumador_12bits_serie" for hierarchy "UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41"
-Info (12128): Elaborating entity "sumador_completo" for hierarchy "UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst11"
+Info (12128): Elaborating entity "UC_de_UC" for hierarchy "unidad_control:inst1|UC_de_UC:inst7"
+Info (12128): Elaborating entity "conversorCA2" for hierarchy "unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst"
+Info (12128): Elaborating entity "sumador_12bits_serie" for hierarchy "unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41"
+Info (12128): Elaborating entity "sumador_completo" for hierarchy "unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst11"
 Warning (12125): Using design file MUX2.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: MUX2
-Info (12128): Elaborating entity "MUX2" for hierarchy "UC_de_UC:inst7|conversorCA2:inst|MUX2:inst"
+Info (12128): Elaborating entity "MUX2" for hierarchy "unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst"
+Info (12128): Elaborating entity "contador" for hierarchy "contador:inst"
+Info (12128): Elaborating entity "reg_12bits" for hierarchy "contador:inst|reg_12bits:inst1"
+Info (12128): Elaborating entity "contador_UC" for hierarchy "contador:inst|contador_UC:inst12"
+Info (12128): Elaborating entity "almacenamiento" for hierarchy "almacenamiento:inst2"
+Info (12128): Elaborating entity "reg_12bits_tristate" for hierarchy "almacenamiento:inst2|reg_12bits_tristate:inst1"
+Info (12128): Elaborating entity "reg_1bit_tristate" for hierarchy "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst"
+Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst11|inst5" to the node "DATA[11]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst10|inst5" to the node "DATA[10]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst9|inst5" to the node "DATA[9]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst8|inst5" to the node "DATA[8]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst7|inst5" to the node "DATA[7]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst6|inst5" to the node "DATA[6]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst5|inst5" to the node "DATA[5]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst4|inst5" to the node "DATA[4]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst3|inst5" to the node "DATA[3]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst2|inst5" to the node "DATA[2]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst1|inst5" to the node "DATA[1]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "almacenamiento:inst2|reg_12bits_tristate:inst1|reg_1bit_tristate:inst|inst5" to the node "DATA[0]"
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 153 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 47 input pins
-    Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 85 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "LOAD_F"
+Info (21057): Implemented 157 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21060): Implemented 12 bidirectional pins
+    Info (21061): Implemented 132 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Tue Jul 29 20:26:01 2025
+    Info: Processing ended: Tue Jul 29 20:38:28 2025
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
