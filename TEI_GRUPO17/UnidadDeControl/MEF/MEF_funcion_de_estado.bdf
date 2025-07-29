@@ -1940,6 +1940,38 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 1360 -552 1424 -504)
+	(text "AND2" (rect 1 0 29 10)(font "Arial" (font_size 6)))
+	(text "inst41" (rect 3 37 33 48)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 23 18)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 23 34)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 23 34)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 69 26)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 69 26)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
 (connector
 	(text "Q2" (rect 392 -176 408 -165)(font "Arial" ))
 	(pt 416 -160)
@@ -2250,11 +2282,6 @@ applicable agreement for further details.
 	(pt 1512 -544)
 )
 (connector
-	(text "FIN" (rect 1304 -512 1321 -501)(font "Arial" ))
-	(pt 1304 -496)
-	(pt 1432 -496)
-)
-(connector
 	(pt 1432 -480)
 	(pt 1416 -480)
 )
@@ -2285,10 +2312,6 @@ applicable agreement for further details.
 (connector
 	(pt 1344 -464)
 	(pt 1336 -464)
-)
-(connector
-	(pt 1344 -424)
-	(pt 1344 -464)
 )
 (connector
 	(text "RECARGAR" (rect 1256 -480 1319 -469)(font "Arial" ))
@@ -2856,3 +2879,29 @@ applicable agreement for further details.
 	(pt 1376 -56)
 	(pt 1376 -32)
 )
+(connector
+	(pt 1432 -496)
+	(pt 1424 -496)
+)
+(connector
+	(pt 1424 -496)
+	(pt 1424 -528)
+)
+(connector
+	(pt 1344 -520)
+	(pt 1360 -520)
+)
+(connector
+	(pt 1344 -520)
+	(pt 1344 -464)
+)
+(connector
+	(pt 1344 -464)
+	(pt 1344 -424)
+)
+(connector
+	(text "FIN" (rect 1322 -552 1339 -541)(font "Arial" ))
+	(pt 1360 -536)
+	(pt 1312 -536)
+)
+(junction (pt 1344 -464))
