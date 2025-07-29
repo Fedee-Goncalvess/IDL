@@ -3,7 +3,7 @@ $comment
 		vcd file TEI_GRUPO17.msim.vcd -direction
 $end
 $date
-	Mon Jul 28 15:25:45 2025
+	Mon Jul 28 22:38:30 2025
 $end
 $version
 	ModelSim Version 10.1d
@@ -11,50 +11,42 @@ $end
 $timescale
 	1ps
 $end
-$scope module conversorCA2_vlg_vec_tst $end
-$var reg 1 ! b0_i $end
-$var reg 1 " b1_i $end
-$var reg 1 # b2_i $end
-$var reg 1 $ UP_DOWN $end
-$var wire 1 % B [11] $end
-$var wire 1 & B [10] $end
-$var wire 1 ' B [9] $end
-$var wire 1 ( B [8] $end
-$var wire 1 ) B [7] $end
-$var wire 1 * B [6] $end
-$var wire 1 + B [5] $end
-$var wire 1 , B [4] $end
-$var wire 1 - B [3] $end
-$var wire 1 . B [2] $end
-$var wire 1 / B [1] $end
-$var wire 1 0 B [0] $end
-$var wire 1 1 sampler $end
+$scope module decodificador_salida_vlg_vec_tst $end
+$var reg 1 ! Q0 $end
+$var reg 1 " Q1 $end
+$var reg 1 # Q2 $end
+$var wire 1 $ Q0_UA $end
+$var wire 1 % Q0_UC $end
+$var wire 1 & Q0_UE $end
+$var wire 1 ' Q1_UA $end
+$var wire 1 ( Q1_UC $end
+$var wire 1 ) Q1_UE $end
+$var wire 1 * Q2_UC $end
+$var wire 1 + sampler $end
 $scope module i1 $end
-$var wire 1 2 gnd $end
-$var wire 1 3 vcc $end
-$var wire 1 4 unknown $end
-$var tri1 1 5 devclrn $end
-$var tri1 1 6 devpor $end
-$var tri1 1 7 devoe $end
-$var wire 1 8 B[11]~output_o $end
-$var wire 1 9 B[10]~output_o $end
-$var wire 1 : B[9]~output_o $end
-$var wire 1 ; B[8]~output_o $end
-$var wire 1 < B[7]~output_o $end
-$var wire 1 = B[6]~output_o $end
-$var wire 1 > B[5]~output_o $end
-$var wire 1 ? B[4]~output_o $end
-$var wire 1 @ B[3]~output_o $end
-$var wire 1 A B[2]~output_o $end
-$var wire 1 B B[1]~output_o $end
-$var wire 1 C B[0]~output_o $end
-$var wire 1 D b0_i~input_o $end
-$var wire 1 E b1_i~input_o $end
-$var wire 1 F b2_i~input_o $end
-$var wire 1 G UP_DOWN~input_o $end
-$var wire 1 H inst41|inst11|inst5~0_combout $end
-$var wire 1 I inst41|inst2|inst5~combout $end
-$var wire 1 J inst41|inst1|inst5~0_combout $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 Q2_UC~output_o $end
+$var wire 1 3 Q1_UC~output_o $end
+$var wire 1 4 Q0_UC~output_o $end
+$var wire 1 5 Q1_UE~output_o $end
+$var wire 1 6 Q0_UE~output_o $end
+$var wire 1 7 Q1_UA~output_o $end
+$var wire 1 8 Q0_UA~output_o $end
+$var wire 1 9 Q2~input_o $end
+$var wire 1 : Q1~input_o $end
+$var wire 1 ; Q0~input_o $end
+$var wire 1 < inst3~combout $end
+$var wire 1 = inst6~0_combout $end
+$var wire 1 > inst9~combout $end
+$var wire 1 ? inst12~combout $end
+$var wire 1 @ inst14~combout $end
+$var wire 1 A inst17~combout $end
+$var wire 1 B inst8~combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -62,45 +54,37 @@ $enddefinitions $end
 $dumpvars
 0!
 0"
-0#
+1#
 0$
-00
-0/
-0.
-0-
-0,
-0+
-0*
-0)
-0(
+1%
+1&
 0'
-0&
-0%
-x1
+0(
+0)
+0*
+x+
+0,
+1-
+x.
+1/
+10
+11
 02
-13
-x4
-15
+03
+14
+05
 16
-17
+07
 08
-09
+19
 0:
 0;
 0<
 0=
-0>
+1>
 0?
-0@
+1@
 0A
 0B
-0C
-0D
-0E
-0F
-0G
-0H
-1I
-0J
 $end
 #1000000
