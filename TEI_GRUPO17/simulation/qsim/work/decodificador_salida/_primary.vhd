@@ -11,6 +11,7 @@ entity decodificador_salida is
         Q1_UE           : out    vl_logic;
         Q0_UE           : out    vl_logic;
         Q1_UA           : out    vl_logic;
-        Q0_UA           : out    vl_logic
+        Q0_UA           : out    vl_logic;
+        Ien             : out    vl_logic
     );
 end decodificador_salida;

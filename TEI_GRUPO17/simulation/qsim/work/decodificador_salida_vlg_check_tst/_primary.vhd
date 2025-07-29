@@ -2,6 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity decodificador_salida_vlg_check_tst is
     port(
+        Ien             : in     vl_logic;
         Q0_UA           : in     vl_logic;
         Q0_UC           : in     vl_logic;
         Q0_UE           : in     vl_logic;
