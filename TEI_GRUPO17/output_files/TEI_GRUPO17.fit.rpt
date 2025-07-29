@@ -1,5 +1,5 @@
 Fitter report for TEI_GRUPO17
-Tue Jul 29 00:13:01 2025
+Tue Jul 29 00:27:33 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,18 +63,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jul 29 00:13:01 2025      ;
+; Fitter Status                      ; Successful - Tue Jul 29 00:27:33 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
-; Top-level Entity Name              ; MEF_funcion_de_estado                      ;
+; Top-level Entity Name              ; MEF                                        ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C5F256C6                                ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 11 / 5,136 ( < 1 % )                       ;
-;     Total combinational functions  ; 11 / 5,136 ( < 1 % )                       ;
+; Total logic elements               ; 13 / 5,136 ( < 1 % )                       ;
+;     Total combinational functions  ; 13 / 5,136 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 5,136 ( 0 % )                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 13 / 183 ( 7 % )                           ;
+; Total pins                         ; 10 / 183 ( 5 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                             ;
@@ -155,19 +155,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-------------------------------+
 ; Pin Name  ; Reason                        ;
 +-----------+-------------------------------+
-; D2        ; Incomplete set of assignments ;
-; D1        ; Incomplete set of assignments ;
-; D0        ; Incomplete set of assignments ;
+; O2        ; Incomplete set of assignments ;
 ; CLK       ; Incomplete set of assignments ;
-; Q2        ; Incomplete set of assignments ;
-; Q0        ; Incomplete set of assignments ;
-; Q1        ; Incomplete set of assignments ;
-; FIN       ; Incomplete set of assignments ;
-; CONTINUAR ; Incomplete set of assignments ;
-; RECARGAR  ; Incomplete set of assignments ;
+; O1        ; Incomplete set of assignments ;
+; O0        ; Incomplete set of assignments ;
 ; START     ; Incomplete set of assignments ;
-; PAUSA     ; Incomplete set of assignments ;
 ; ERROR     ; Incomplete set of assignments ;
+; RECARGAR  ; Incomplete set of assignments ;
+; PAUSA     ; Incomplete set of assignments ;
+; CONTINUAR ; Incomplete set of assignments ;
+; FIN       ; Incomplete set of assignments ;
 +-----------+-------------------------------+
 
 
@@ -177,8 +174,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 48 ) ; 0.00 % ( 0 / 48 )          ; 0.00 % ( 0 / 48 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 48 ) ; 0.00 % ( 0 / 48 )          ; 0.00 % ( 0 / 48 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 44 ) ; 0.00 % ( 0 / 44 )          ; 0.00 % ( 0 / 44 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 44 ) ; 0.00 % ( 0 / 44 )          ; 0.00 % ( 0 / 44 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -201,7 +198,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 38 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 34 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -217,19 +214,19 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 11 / 5,136 ( < 1 % ) ;
-;     -- Combinational with no register       ; 11                   ;
+; Total logic elements                        ; 13 / 5,136 ( < 1 % ) ;
+;     -- Combinational with no register       ; 13                   ;
 ;     -- Register only                        ; 0                    ;
 ;     -- Combinational with a register        ; 0                    ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 8                    ;
-;     -- 3 input functions                    ; 2                    ;
-;     -- <=2 input functions                  ; 1                    ;
+;     -- 4 input functions                    ; 9                    ;
+;     -- 3 input functions                    ; 1                    ;
+;     -- <=2 input functions                  ; 3                    ;
 ;     -- Register only                        ; 0                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 11                   ;
+;     -- normal mode                          ; 13                   ;
 ;     -- arithmetic mode                      ; 0                    ;
 ;                                             ;                      ;
 ; Total registers*                            ; 0 / 6,000 ( 0 % )    ;
@@ -238,7 +235,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ;                                             ;                      ;
 ; Total LABs:  partially or completely used   ; 1 / 321 ( < 1 % )    ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 13 / 183 ( 7 % )     ;
+; I/O pins                                    ; 10 / 183 ( 5 % )     ;
 ;     -- Clock pins                           ; 0 / 4 ( 0 % )        ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )        ;
 ;                                             ;                      ;
@@ -255,10 +252,10 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 6                    ;
-; Highest non-global fan-out                  ; 6                    ;
-; Total fan-out                               ; 61                   ;
-; Average fan-out                             ; 1.30                 ;
+; Maximum fan-out                             ; 8                    ;
+; Highest non-global fan-out                  ; 8                    ;
+; Total fan-out                               ; 63                   ;
+; Average fan-out                             ; 1.47                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -271,19 +268,19 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 11 / 5136 ( < 1 % ) ; 0 / 5136 ( 0 % )               ;
-;     -- Combinational with no register       ; 11                  ; 0                              ;
+; Total logic elements                        ; 13 / 5136 ( < 1 % ) ; 0 / 5136 ( 0 % )               ;
+;     -- Combinational with no register       ; 13                  ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;     -- Combinational with a register        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 8                   ; 0                              ;
-;     -- 3 input functions                    ; 2                   ; 0                              ;
-;     -- <=2 input functions                  ; 1                   ; 0                              ;
+;     -- 4 input functions                    ; 9                   ; 0                              ;
+;     -- 3 input functions                    ; 1                   ; 0                              ;
+;     -- <=2 input functions                  ; 3                   ; 0                              ;
 ;     -- Register only                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 11                  ; 0                              ;
+;     -- normal mode                          ; 13                  ; 0                              ;
 ;     -- arithmetic mode                      ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 0                   ; 0                              ;
@@ -293,7 +290,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; Total LABs:  partially or completely used   ; 1 / 321 ( < 1 % )   ; 0 / 321 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 13                  ; 0                              ;
+; I/O pins                                    ; 10                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 46 ( 0 % )      ; 0 / 46 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -305,7 +302,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 56                  ; 5                              ;
+;     -- Total Connections                    ; 58                  ; 5                              ;
 ;     -- Registered Connections               ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -313,7 +310,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 10                  ; 0                              ;
+;     -- Input Ports                          ; 7                   ; 0                              ;
 ;     -- Output Ports                         ; 3                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
@@ -338,16 +335,13 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; CLK       ; N6    ; 3        ; 7            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; CONTINUAR ; P2    ; 2        ; 0            ; 4            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; ERROR     ; T4    ; 3        ; 5            ; 0            ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; FIN       ; L2    ; 2        ; 0            ; 8            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; CLK       ; G15   ; 6        ; 34           ; 17           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; CONTINUAR ; J1    ; 2        ; 0            ; 10           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; ERROR     ; L2    ; 2        ; 0            ; 8            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; FIN       ; N2    ; 2        ; 0            ; 7            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; PAUSA     ; P1    ; 2        ; 0            ; 4            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Q0        ; K2    ; 2        ; 0            ; 8            ; 0            ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Q1        ; E10   ; 7        ; 28           ; 24           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Q2        ; N2    ; 2        ; 0            ; 7            ; 14           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; RECARGAR  ; K5    ; 2        ; 0            ; 6            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; START     ; P3    ; 3        ; 1            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; RECARGAR  ; R1    ; 2        ; 0            ; 5            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; START     ; C3    ; 8        ; 1            ; 24           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -356,9 +350,9 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; D0   ; R3    ; 3        ; 1            ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; D1   ; L1    ; 2        ; 0            ; 8            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; D2   ; J2    ; 2        ; 0            ; 10           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; O0   ; T4    ; 3        ; 5            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; O1   ; L4    ; 2        ; 0            ; 6            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; O2   ; A2    ; 8        ; 5            ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -379,6 +373,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; H12      ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; G15      ; DIFFIO_R4p, CRC_ERROR       ; Use as regular IO        ; CLK                     ; Dual Purpose Pin          ;
 ; F16      ; DIFFIO_R3n, nCEO            ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
@@ -389,13 +384,13 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
 ; 1        ; 4 / 18 ( 22 % ) ; 2.5V          ; --           ;
-; 2        ; 8 / 19 ( 42 % ) ; 2.5V          ; --           ;
-; 3        ; 4 / 26 ( 15 % ) ; 2.5V          ; --           ;
+; 2        ; 6 / 19 ( 32 % ) ; 2.5V          ; --           ;
+; 3        ; 1 / 26 ( 4 % )  ; 2.5V          ; --           ;
 ; 4        ; 0 / 27 ( 0 % )  ; 2.5V          ; --           ;
 ; 5        ; 0 / 25 ( 0 % )  ; 2.5V          ; --           ;
-; 6        ; 1 / 16 ( 6 % )  ; 2.5V          ; --           ;
-; 7        ; 1 / 26 ( 4 % )  ; 2.5V          ; --           ;
-; 8        ; 0 / 26 ( 0 % )  ; 2.5V          ; --           ;
+; 6        ; 2 / 16 ( 13 % ) ; 2.5V          ; --           ;
+; 7        ; 0 / 26 ( 0 % )  ; 2.5V          ; --           ;
+; 8        ; 2 / 26 ( 8 % )  ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
 
@@ -405,7 +400,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage                                            ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; A1       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A2       ; 194        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A2       ; 194        ; 8        ; O2                                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A3       ; 200        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A4       ; 196        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A5       ; 192        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -438,7 +433,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; B16      ; 141        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C1       ; 5          ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C2       ; 4          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; C3       ; 202        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C3       ; 202        ; 8        ; START                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C4       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C6       ; 187        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -477,7 +472,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; E7       ; 190        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E8       ; 181        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E9       ; 174        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E10      ; 158        ; 7        ; Q1                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E10      ; 158        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E11      ; 157        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E12      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -515,7 +510,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; G12      ; 133        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; G13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; G15      ; 137        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G15      ; 137        ; 6        ; CLK                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G16      ; 136        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H1       ; 15         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; H2       ; 16         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -533,8 +528,8 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; H14      ; 129        ; 6        ; ^CONF_DONE                                                ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; H15      ; 135        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H16      ; 134        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J1       ; 28         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J2       ; 27         ; 2        ; D2                                                        ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J1       ; 28         ; 2        ; CONTINUAR                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J2       ; 27         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J3       ; 22         ; 1        ; ^nCE                                                      ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; J4       ; 21         ; 1        ; #TDO                                                      ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; J5       ; 20         ; 1        ; #TMS                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -550,10 +545,10 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; J15      ; 121        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J16      ; 120        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K1       ; 33         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; K2       ; 32         ; 2        ; Q0                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K2       ; 32         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K3       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; K4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; K5       ; 39         ; 2        ; RECARGAR                                                  ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K5       ; 39         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K6       ; 30         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K7       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K8       ; 60         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -565,10 +560,10 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; K14      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; K15      ; 119        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K16      ; 118        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L1       ; 35         ; 2        ; D1                                                        ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; L2       ; 34         ; 2        ; FIN                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L1       ; 35         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L2       ; 34         ; 2        ; ERROR                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L3       ; 36         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; L4       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L4       ; 40         ; 2        ; O1                                                        ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L5       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L6       ; 31         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L7       ; 65         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -598,11 +593,11 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; M15      ; 126        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M16      ; 125        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N1       ; 38         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; N2       ; 37         ; 2        ; Q2                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N2       ; 37         ; 2        ; FIN                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N3       ; 45         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N4       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N5       ; 55         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; N6       ; 56         ; 3        ; CLK                                                       ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; N6       ; 56         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N7       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N8       ; 70         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N9       ; 79         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -614,8 +609,8 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; N15      ; 112        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N16      ; 111        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P1       ; 44         ; 2        ; PAUSA                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P2       ; 43         ; 2        ; CONTINUAR                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P3       ; 46         ; 3        ; START                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; P2       ; 43         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P3       ; 46         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; P4       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; P5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P6       ; 58         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -629,9 +624,9 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; P14      ; 98         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; P15      ; 107        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P16      ; 108        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; R1       ; 42         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; R1       ; 42         ; 2        ; RECARGAR                                                  ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; R3       ; 47         ; 3        ; D0                                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R3       ; 47         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R4       ; 53         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R5       ; 61         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R6       ; 63         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -648,7 +643,7 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 ; T1       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T2       ; 52         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T3       ; 48         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T4       ; 54         ; 3        ; ERROR                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; T4       ; 54         ; 3        ; O0                                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T5       ; 62         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T6       ; 64         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T7       ; 67         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -665,13 +660,14 @@ The pin-out file can be found in /home/joaquin/Universidad/IDL/TEI_GRUPO17/outpu
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                              ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name    ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+--------------+
-; |MEF_funcion_de_estado     ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; |MEF_funcion_de_estado ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                              ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
+; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name              ; Library Name ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
+; |MEF                             ; 13 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 10   ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; |MEF                             ; work         ;
+;    |MEF_funcion_de_estado:inst2| ; 13 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; |MEF|MEF_funcion_de_estado:inst2 ; work         ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -680,94 +676,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name      ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
-; D2        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; D1        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; D0        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; O2        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; CLK       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; Q2        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Q0        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Q1        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; FIN       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; CONTINUAR ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; RECARGAR  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; O1        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; O0        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; START     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; PAUSA     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; ERROR     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; ERROR     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; RECARGAR  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; PAUSA     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; CONTINUAR ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; FIN       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; CLK                 ;                   ;         ;
-; Q2                  ;                   ;         ;
-;      - inst60~0     ; 0                 ; 6       ;
-;      - inst40~3     ; 0                 ; 6       ;
-;      - inst51~1     ; 0                 ; 6       ;
-;      - inst51~2     ; 0                 ; 6       ;
-;      - inst60~1     ; 0                 ; 6       ;
-; Q0                  ;                   ;         ;
-;      - inst40~0     ; 1                 ; 6       ;
-;      - inst40~3     ; 1                 ; 6       ;
-;      - inst51~0     ; 1                 ; 6       ;
-;      - inst51~2     ; 1                 ; 6       ;
-;      - inst60~1     ; 1                 ; 6       ;
-;      - inst60~3     ; 1                 ; 6       ;
-; Q1                  ;                   ;         ;
-;      - inst40~0     ; 0                 ; 6       ;
-;      - inst40~1     ; 0                 ; 6       ;
-;      - inst60~0     ; 0                 ; 6       ;
-;      - inst60~1     ; 0                 ; 6       ;
-; FIN                 ;                   ;         ;
-;      - inst40~0     ; 0                 ; 6       ;
-;      - inst51~0     ; 0                 ; 6       ;
-;      - inst51~1     ; 0                 ; 6       ;
-;      - inst60~2     ; 0                 ; 6       ;
-; CONTINUAR           ;                   ;         ;
-;      - inst40~0     ; 1                 ; 6       ;
-; RECARGAR            ;                   ;         ;
-;      - inst40~1     ; 0                 ; 6       ;
-;      - inst60~1     ; 0                 ; 6       ;
-; START               ;                   ;         ;
-;      - inst60~0     ; 0                 ; 6       ;
-; PAUSA               ;                   ;         ;
-;      - inst40~2     ; 1                 ; 6       ;
-;      - inst51~1     ; 1                 ; 6       ;
-; ERROR               ;                   ;         ;
-;      - inst40~2     ; 0                 ; 6       ;
-;      - inst51~0     ; 0                 ; 6       ;
-;      - inst60~2     ; 0                 ; 6       ;
-+---------------------+-------------------+---------+
++---------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                            ;
++---------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                         ; Pad To Core Index ; Setting ;
++---------------------------------------------+-------------------+---------+
+; CLK                                         ;                   ;         ;
+; START                                       ;                   ;         ;
+;      - MEF_funcion_de_estado:inst2|inst40~1 ; 0                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst60~1 ; 0                 ; 6       ;
+; ERROR                                       ;                   ;         ;
+;      - MEF_funcion_de_estado:inst2|inst40~1 ; 1                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst51~3 ; 1                 ; 6       ;
+; RECARGAR                                    ;                   ;         ;
+;      - MEF_funcion_de_estado:inst2|inst40~2 ; 0                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst60~2 ; 0                 ; 6       ;
+; PAUSA                                       ;                   ;         ;
+;      - MEF_funcion_de_estado:inst2|inst40~3 ; 0                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst51~2 ; 0                 ; 6       ;
+; CONTINUAR                                   ;                   ;         ;
+;      - MEF_funcion_de_estado:inst2|inst40~4 ; 0                 ; 6       ;
+; FIN                                         ;                   ;         ;
+;      - MEF_funcion_de_estado:inst2|inst40~4 ; 1                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst51~2 ; 1                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst51~3 ; 1                 ; 6       ;
+;      - MEF_funcion_de_estado:inst2|inst58~0 ; 1                 ; 6       ;
++---------------------------------------------+-------------------+---------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+-----------------+---------------+
-; Name            ; Fan-Out       ;
-+-----------------+---------------+
-; Q0~input        ; 6             ;
-; Q2~input        ; 5             ;
-; FIN~input       ; 4             ;
-; Q1~input        ; 4             ;
-; inst60~0        ; 4             ;
-; ERROR~input     ; 3             ;
-; PAUSA~input     ; 2             ;
-; RECARGAR~input  ; 2             ;
-; inst40~1        ; 2             ;
-; START~input     ; 1             ;
-; CONTINUAR~input ; 1             ;
-; inst60~3        ; 1             ;
-; inst60~2        ; 1             ;
-; inst60~1        ; 1             ;
-; inst51~2        ; 1             ;
-; inst51~1        ; 1             ;
-; inst51~0        ; 1             ;
-; inst40~3        ; 1             ;
-; inst40~2        ; 1             ;
-; inst40~0        ; 1             ;
-+-----------------+---------------+
++------------------------------------------------+
+; Non-Global High Fan-Out Signals                ;
++--------------------------------------+---------+
+; Name                                 ; Fan-Out ;
++--------------------------------------+---------+
+; MEF_funcion_de_estado:inst2|inst40~5 ; 8       ;
+; MEF_funcion_de_estado:inst2|inst60~3 ; 7       ;
+; MEF_funcion_de_estado:inst2|inst51~4 ; 7       ;
+; FIN~input                            ; 4       ;
+; PAUSA~input                          ; 2       ;
+; RECARGAR~input                       ; 2       ;
+; ERROR~input                          ; 2       ;
+; START~input                          ; 2       ;
+; MEF_funcion_de_estado:inst2|inst60~1 ; 2       ;
+; MEF_funcion_de_estado:inst2|inst51~3 ; 2       ;
+; MEF_funcion_de_estado:inst2|inst40~2 ; 2       ;
+; CONTINUAR~input                      ; 1       ;
+; MEF_funcion_de_estado:inst2|inst58~0 ; 1       ;
+; MEF_funcion_de_estado:inst2|inst60~2 ; 1       ;
+; MEF_funcion_de_estado:inst2|inst51~2 ; 1       ;
+; MEF_funcion_de_estado:inst2|inst51~1 ; 1       ;
+; MEF_funcion_de_estado:inst2|inst40~4 ; 1       ;
+; MEF_funcion_de_estado:inst2|inst40~3 ; 1       ;
+; MEF_funcion_de_estado:inst2|inst40~1 ; 1       ;
++--------------------------------------+---------+
 
 
 +-----------------------------------------------+
@@ -775,21 +749,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 13 / 32,401 ( < 1 % ) ;
-; C16 interconnects     ; 4 / 1,326 ( < 1 % )   ;
-; C4 interconnects      ; 11 / 21,816 ( < 1 % ) ;
-; Direct links          ; 0 / 32,401 ( 0 % )    ;
+; Block interconnects   ; 11 / 32,401 ( < 1 % ) ;
+; C16 interconnects     ; 2 / 1,326 ( < 1 % )   ;
+; C4 interconnects      ; 14 / 21,816 ( < 1 % ) ;
+; Direct links          ; 2 / 32,401 ( < 1 % )  ;
 ; Global clocks         ; 0 / 10 ( 0 % )        ;
-; Local interconnects   ; 8 / 10,320 ( < 1 % )  ;
-; R24 interconnects     ; 1 / 1,289 ( < 1 % )   ;
-; R4 interconnects      ; 4 / 28,186 ( < 1 % )  ;
+; Local interconnects   ; 12 / 10,320 ( < 1 % ) ;
+; R24 interconnects     ; 0 / 1,289 ( 0 % )     ;
+; R4 interconnects      ; 3 / 28,186 ( < 1 % )  ;
 +-----------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.00) ; Number of LABs  (Total = 1) ;
+; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
@@ -801,9 +775,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
 ; 16                                          ; 0                           ;
@@ -813,7 +787,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 11.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced  (Average = 13.00) ; Number of LABs  (Total = 1) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -826,7 +800,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
-; 11                                           ; 1                           ;
+; 11                                           ; 0                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -845,7 +821,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.00) ; Number of LABs  (Total = 1) ;
+; Number of Distinct Inputs  (Average = 6.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -853,10 +829,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 1                           ;
+; 6                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -917,23 +890,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 13        ; 0            ; 0            ; 13        ; 13        ; 0            ; 3            ; 0            ; 0            ; 10           ; 0            ; 3            ; 10           ; 0            ; 0            ; 0            ; 3            ; 0            ; 0            ; 0            ; 0            ; 0            ; 13        ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 10        ; 0            ; 0            ; 10        ; 10        ; 0            ; 3            ; 0            ; 0            ; 7            ; 0            ; 3            ; 7            ; 0            ; 0            ; 0            ; 3            ; 0            ; 0            ; 0            ; 0            ; 0            ; 10        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 13           ; 13           ; 13           ; 13           ; 13           ; 0         ; 13           ; 13           ; 0         ; 0         ; 13           ; 10           ; 13           ; 13           ; 3            ; 13           ; 10           ; 3            ; 13           ; 13           ; 13           ; 10           ; 13           ; 13           ; 13           ; 13           ; 13           ; 0         ; 13           ; 13           ;
+; Total Inapplicable ; 10           ; 10           ; 10           ; 10           ; 10           ; 0         ; 10           ; 10           ; 0         ; 0         ; 10           ; 7            ; 10           ; 10           ; 3            ; 10           ; 7            ; 3            ; 10           ; 10           ; 10           ; 7            ; 10           ; 10           ; 10           ; 10           ; 10           ; 0         ; 10           ; 10           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; D2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; D1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; D0                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; O2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLK                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Q2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Q0                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; Q1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; FIN                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; CONTINUAR          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; RECARGAR           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; O1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; O0                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; START              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; PAUSA              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ERROR              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; RECARGAR           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; PAUSA              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CONTINUAR          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; FIN                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -994,23 +964,45 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location H2
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location F16
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 13 pins of 13 total pins
-    Info (169086): Pin D2 not assigned to an exact location on the device
-    Info (169086): Pin D1 not assigned to an exact location on the device
-    Info (169086): Pin D0 not assigned to an exact location on the device
+Critical Warning (169085): No exact pin location assignment(s) for 10 pins of 10 total pins
+    Info (169086): Pin O2 not assigned to an exact location on the device
     Info (169086): Pin CLK not assigned to an exact location on the device
-    Info (169086): Pin Q2 not assigned to an exact location on the device
-    Info (169086): Pin Q0 not assigned to an exact location on the device
-    Info (169086): Pin Q1 not assigned to an exact location on the device
-    Info (169086): Pin FIN not assigned to an exact location on the device
-    Info (169086): Pin CONTINUAR not assigned to an exact location on the device
-    Info (169086): Pin RECARGAR not assigned to an exact location on the device
+    Info (169086): Pin O1 not assigned to an exact location on the device
+    Info (169086): Pin O0 not assigned to an exact location on the device
     Info (169086): Pin START not assigned to an exact location on the device
-    Info (169086): Pin PAUSA not assigned to an exact location on the device
     Info (169086): Pin ERROR not assigned to an exact location on the device
+    Info (169086): Pin RECARGAR not assigned to an exact location on the device
+    Info (169086): Pin PAUSA not assigned to an exact location on the device
+    Info (169086): Pin CONTINUAR not assigned to an exact location on the device
+    Info (169086): Pin FIN not assigned to an exact location on the device
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'TEI_GRUPO17.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332125): Found combinational loop of 23 nodes
+    Warning (332126): Node "inst2|inst51~4|combout"
+    Warning (332126): Node "inst2|inst60~1|datac"
+    Warning (332126): Node "inst2|inst60~1|combout"
+    Warning (332126): Node "inst2|inst60~3|datac"
+    Warning (332126): Node "inst2|inst60~3|combout"
+    Warning (332126): Node "inst2|inst51~1|datab"
+    Warning (332126): Node "inst2|inst51~1|combout"
+    Warning (332126): Node "inst2|inst51~4|dataa"
+    Warning (332126): Node "inst2|inst60~2|dataa"
+    Warning (332126): Node "inst2|inst60~2|combout"
+    Warning (332126): Node "inst2|inst60~3|dataa"
+    Warning (332126): Node "inst2|inst58~0|datad"
+    Warning (332126): Node "inst2|inst58~0|combout"
+    Warning (332126): Node "inst2|inst60~3|datab"
+    Warning (332126): Node "inst2|inst60~1|datad"
+    Warning (332126): Node "inst2|inst51~4|datad"
+    Warning (332126): Node "inst2|inst60~2|datad"
+    Warning (332126): Node "inst2|inst40~2|dataa"
+    Warning (332126): Node "inst2|inst40~2|combout"
+    Warning (332126): Node "inst2|inst51~2|dataa"
+    Warning (332126): Node "inst2|inst51~2|combout"
+    Warning (332126): Node "inst2|inst51~4|datab"
+    Warning (332126): Node "inst2|inst58~0|datab"
 Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
@@ -1019,7 +1011,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 13 (unused VREF, 2.5V VCCIO, 10 input, 3 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 10 (unused VREF, 2.5V VCCIO, 7 input, 3 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1044,18 +1036,18 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/joaquin/Universidad/IDL/TEI_GRUPO17/output_files/TEI_GRUPO17.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 789 megabytes
-    Info: Processing ended: Tue Jul 29 00:13:02 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 784 megabytes
+    Info: Processing ended: Tue Jul 29 00:27:33 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
