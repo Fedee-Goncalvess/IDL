@@ -12,8 +12,6 @@ entity unidad_control_vlg_check_tst is
         OenVC_UC        : in     vl_logic;
         OenVI_UA        : in     vl_logic;
         PAUSA           : in     vl_logic;
-        PRUEBA1         : in     vl_logic;
-        PRUEBA2         : in     vl_logic;
         sampler_rx      : in     vl_logic
     );
 end unidad_control_vlg_check_tst;
