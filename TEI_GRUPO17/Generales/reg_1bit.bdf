@@ -327,14 +327,6 @@ applicable agreement for further details.
 	(pt 912 288)
 )
 (connector
-	(pt 912 288)
-	(pt 1120 288)
-)
-(connector
-	(pt 1120 288)
-	(pt 1120 360)
-)
-(connector
 	(pt 768 392)
 	(pt 920 392)
 )
@@ -348,15 +340,23 @@ applicable agreement for further details.
 )
 (connector
 	(pt 1104 360)
-	(pt 1120 360)
-)
-(connector
-	(pt 1120 360)
 	(pt 1152 360)
 )
 (connector
+	(pt 1240 288)
+	(pt 912 288)
+)
+(connector
+	(pt 1240 288)
+	(pt 1240 360)
+)
+(connector
 	(pt 1216 360)
+	(pt 1240 360)
+)
+(connector
+	(pt 1240 360)
 	(pt 1320 360)
 )
 (junction (pt 840 408))
-(junction (pt 1120 360))
+(junction (pt 1240 360))

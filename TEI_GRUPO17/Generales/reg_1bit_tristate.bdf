@@ -318,10 +318,6 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(pt 1040 200)
-	(pt 1008 200)
-)
-(connector
 	(pt 776 160)
 	(pt 816 160)
 )
@@ -386,22 +382,6 @@ applicable agreement for further details.
 	(pt 704 128)
 )
 (connector
-	(pt 704 128)
-	(pt 912 128)
-)
-(connector
-	(pt 912 128)
-	(pt 912 200)
-)
-(connector
-	(pt 896 200)
-	(pt 912 200)
-)
-(connector
-	(pt 912 200)
-	(pt 944 200)
-)
-(connector
 	(pt 1056 88)
 	(pt 1064 88)
 )
@@ -417,5 +397,25 @@ applicable agreement for further details.
 	(pt 1088 200)
 	(pt 1112 200)
 )
+(connector
+	(pt 896 200)
+	(pt 944 200)
+)
+(connector
+	(pt 1024 128)
+	(pt 704 128)
+)
+(connector
+	(pt 1024 128)
+	(pt 1024 200)
+)
+(connector
+	(pt 1040 200)
+	(pt 1024 200)
+)
+(connector
+	(pt 1024 200)
+	(pt 1008 200)
+)
 (junction (pt 632 248))
-(junction (pt 912 200))
+(junction (pt 1024 200))
