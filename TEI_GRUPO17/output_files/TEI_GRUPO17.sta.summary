@@ -3,75 +3,63 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -2.223
-TNS   : -35.215
-
-Type  : Slow 1200mV 85C Model Setup 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : -0.981
-TNS   : -3.448
+Slack : 0.026
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : -0.951
-TNS   : -1.308
-
-Type  : Slow 1200mV 85C Model Hold 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : -0.520
-TNS   : -1.399
+Slack : 0.391
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -43.000
+TNS   : -27.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : 0.317
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IenA'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IenB'
+Slack : -3.000
+TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -1.935
-TNS   : -26.721
-
-Type  : Slow 1200mV 0C Model Setup 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : -0.831
-TNS   : -2.454
+Slack : 0.073
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : -0.878
-TNS   : -1.270
-
-Type  : Slow 1200mV 0C Model Hold 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : -0.417
-TNS   : -0.789
+Slack : 0.401
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -43.000
+TNS   : -27.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : 0.380
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IenA'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IenB'
+Slack : -3.000
+TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -0.827
-TNS   : -9.642
-
-Type  : Fast 1200mV 0C Model Setup 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : -0.160
-TNS   : -0.160
+Slack : -0.079
+TNS   : -0.268
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : -0.603
-TNS   : -1.195
-
-Type  : Fast 1200mV 0C Model Hold 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : -0.319
-TNS   : -1.240
+Slack : 0.714
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -45.940
+TNS   : -28.497
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'unidad_control:inst1|MEF:inst6|MEF_estado:inst1|inst'
-Slack : 0.314
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IenA'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IenB'
+Slack : -3.000
+TNS   : -3.000
 
 ------------------------------------------------------------
