@@ -191,6 +191,13 @@ applicable agreement for further details.
 		(text "FIN" (rect 146 171 163 185)(font "Arial" (font_size 8)))
 		(line (pt 184 176)(pt 168 176))
 	)
+	(port
+		(pt 184 192)
+		(output)
+		(text "FINDET" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "FINDET" (rect 123 187 163 201)(font "Arial" (font_size 8)))
+		(line (pt 184 192)(pt 168 192))
+	)
 	(drawing
 		(rectangle (rect 16 16 168 272))
 	)
