@@ -1,5 +1,5 @@
 Fitter report for TEI_GRUPO17
-Tue Jul 29 21:24:47 2025
+Tue Jul 29 21:39:46 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jul 29 21:24:47 2025      ;
+; Fitter Status                      ; Successful - Tue Jul 29 21:39:46 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
 ; Top-level Entity Name              ; contador                                   ;
@@ -880,7 +880,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; suma[1]      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; suma[0]      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; BidirBus[11] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; BidirBus[10] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; BidirBus[10] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; BidirBus[9]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; BidirBus[8]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; BidirBus[7]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
@@ -900,7 +900,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; B[2]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; B[0]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; IenA         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; B[1]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; B[1]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; B[3]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; B[5]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; B[7]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
@@ -918,7 +918,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BidirBus[11]                                       ;                   ;         ;
 ;      - reg_12bits:inst1|reg_1bit:inst11|inst4      ; 0                 ; 6       ;
 ; BidirBus[10]                                       ;                   ;         ;
-;      - reg_12bits:inst1|reg_1bit:inst10|inst4      ; 0                 ; 6       ;
+;      - reg_12bits:inst1|reg_1bit:inst10|inst4      ; 1                 ; 6       ;
 ; BidirBus[9]                                        ;                   ;         ;
 ;      - reg_12bits:inst1|reg_1bit:inst9|inst4       ; 1                 ; 6       ;
 ; BidirBus[8]                                        ;                   ;         ;
@@ -966,7 +966,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - reg_12bits:inst1|reg_1bit:inst10|inst4      ; 0                 ; 6       ;
 ;      - reg_12bits:inst1|reg_1bit:inst11|inst4      ; 0                 ; 6       ;
 ; B[1]                                               ;                   ;         ;
-;      - reg_12bits:inst2|reg_1bit:inst1|inst4       ; 1                 ; 6       ;
+;      - reg_12bits:inst2|reg_1bit:inst1|inst4       ; 0                 ; 6       ;
 ; B[3]                                               ;                   ;         ;
 ;      - reg_12bits:inst2|reg_1bit:inst3|inst4       ; 0                 ; 6       ;
 ; B[5]                                               ;                   ;         ;
@@ -1106,14 +1106,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 95 / 32,401 ( < 1 % ) ;
-; C16 interconnects     ; 8 / 1,326 ( < 1 % )   ;
-; C4 interconnects      ; 77 / 21,816 ( < 1 % ) ;
+; Block interconnects   ; 94 / 32,401 ( < 1 % ) ;
+; C16 interconnects     ; 7 / 1,326 ( < 1 % )   ;
+; C4 interconnects      ; 81 / 21,816 ( < 1 % ) ;
 ; Direct links          ; 8 / 32,401 ( < 1 % )  ;
 ; Global clocks         ; 1 / 10 ( 10 % )       ;
 ; Local interconnects   ; 26 / 10,320 ( < 1 % ) ;
-; R24 interconnects     ; 7 / 1,289 ( < 1 % )   ;
-; R4 interconnects      ; 83 / 28,186 ( < 1 % ) ;
+; R24 interconnects     ; 6 / 1,289 ( < 1 % )   ;
+; R4 interconnects      ; 84 / 28,186 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
@@ -1528,16 +1528,16 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/joaquin/Universidad/IDL/TEI_GRUPO17/output_files/TEI_GRUPO17.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 794 megabytes
-    Info: Processing ended: Tue Jul 29 21:24:47 2025
+    Info: Peak virtual memory: 789 megabytes
+    Info: Processing ended: Tue Jul 29 21:39:47 2025
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 
