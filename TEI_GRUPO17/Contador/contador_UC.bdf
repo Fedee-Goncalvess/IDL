@@ -22,8 +22,8 @@ applicable agreement for further details.
 (pin
 	(input)
 	(rect 304 128 472 144)
-	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "IenA" (rect 5 0 30 11)(font "Arial" ))
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "IenA" (rect 5 0 28 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -33,13 +33,13 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(input)
 	(rect 304 160 472 176)
-	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "IenB" (rect 5 0 29 11)(font "Arial" ))
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "IenB" (rect 5 0 27 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -49,13 +49,13 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(input)
 	(rect 296 16 464 32)
-	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "OenSUM" (rect 5 0 52 11)(font "Arial" ))
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "OenSUM" (rect 5 0 48 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -65,13 +65,13 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(input)
 	(rect 296 64 464 80)
-	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "SUMBus[11..0]" (rect 5 0 80 11)(font "Arial" ))
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "SUMBus[11..0]" (rect 5 0 79 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -81,13 +81,13 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
 	(rect 760 96 936 112)
-	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
-	(text "ABus[11..0]" (rect 90 0 147 11)(font "Arial" ))
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "ABus[11..0]" (rect 90 0 147 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -102,8 +102,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 760 128 936 144)
-	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
-	(text "OIenA" (rect 90 0 124 11)(font "Arial" ))
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "OIenA" (rect 90 0 121 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -118,8 +118,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 760 160 936 176)
-	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
-	(text "OIenB" (rect 90 0 123 11)(font "Arial" ))
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "OIenB" (rect 90 0 120 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -134,8 +134,8 @@ applicable agreement for further details.
 (pin
 	(bidir)
 	(rect 760 48 936 64)
-	(text "BIDIR" (rect 1 0 28 10)(font "Arial" (font_size 6)))
-	(text "BidirBus[11..0]" (rect 90 0 161 11)(font "Arial" ))
+	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "BidirBus[11..0]" (rect 90 0 161 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 56 4)(pt 78 4))
@@ -146,31 +146,31 @@ applicable agreement for further details.
 		(line (pt 56 4)(pt 52 8))
 		(line (pt 52 8)(pt 56 12))
 	)
-	(text "VCC" (rect 4 7 25 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
 )
 (symbol
-	(rect 480 56 528 88)
-	(text "TRI" (rect 1 0 17 10)(font "Arial" (font_size 6)))
-	(text "inst" (rect 3 21 21 32)(font "Arial" ))
+	(rect 632 40 680 72)
+	(text "TRI" (rect 1 0 16 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 21 26 33)(font "Arial" ))
 	(port
 		(pt 0 16)
 		(input)
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
 		(line (pt 0 16)(pt 14 16))
 	)
 	(port
 		(pt 24 0)
 		(input)
-		(text "OE" (rect 26 0 41 11)(font "Courier New" (bold))(invisible))
-		(text "OE" (rect 26 0 41 11)(font "Courier New" (bold))(invisible))
+		(text "OE" (rect 26 0 37 12)(font "Courier New" (bold))(invisible))
+		(text "OE" (rect 26 0 37 12)(font "Courier New" (bold))(invisible))
 		(line (pt 24 12)(pt 24 0))
 	)
 	(port
 		(pt 48 16)
 		(output)
-		(text "OUT" (rect 32 7 53 18)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 53 18)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
 		(line (pt 32 16)(pt 48 16))
 	)
 	(drawing
@@ -188,29 +188,6 @@ applicable agreement for further details.
 	(pt 760 168)
 )
 (connector
-	(pt 464 72)
-	(pt 480 72)
-	(bus)
-)
-(connector
-	(pt 464 24)
-	(pt 504 24)
-)
-(connector
-	(pt 504 24)
-	(pt 504 56)
-)
-(connector
-	(pt 760 56)
-	(pt 544 56)
-	(bus)
-)
-(connector
-	(pt 528 72)
-	(pt 544 72)
-	(bus)
-)
-(connector
 	(pt 544 104)
 	(pt 760 104)
 	(bus)
@@ -224,5 +201,28 @@ applicable agreement for further details.
 	(pt 544 72)
 	(pt 544 104)
 	(bus)
+)
+(connector
+	(pt 544 56)
+	(pt 632 56)
+	(bus)
+)
+(connector
+	(pt 680 56)
+	(pt 760 56)
+	(bus)
+)
+(connector
+	(pt 464 72)
+	(pt 544 72)
+	(bus)
+)
+(connector
+	(pt 464 24)
+	(pt 656 24)
+)
+(connector
+	(pt 656 24)
+	(pt 656 40)
 )
 (junction (pt 544 72))
