@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 200 144)
+	(rect 16 16 208 144)
 	(text "contador" (rect 5 0 55 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
@@ -59,20 +59,27 @@ applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
-		(pt 184 48)
+		(pt 192 48)
 		(output)
 		(text "C" (rect 0 0 8 14)(font "Arial" (font_size 8)))
-		(text "C" (rect 155 43 163 57)(font "Arial" (font_size 8)))
-		(line (pt 184 48)(pt 168 48))
+		(text "C" (rect 163 43 171 57)(font "Arial" (font_size 8)))
+		(line (pt 192 48)(pt 176 48))
 	)
 	(port
-		(pt 184 32)
+		(pt 192 64)
+		(output)
+		(text "regSuma[11..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "regSuma[11..0]" (rect 85 59 171 73)(font "Arial" (font_size 8)))
+		(line (pt 192 64)(pt 176 64)(line_width 3))
+	)
+	(port
+		(pt 192 32)
 		(bidir)
 		(text "BidirBus[11..0]" (rect 0 0 82 14)(font "Arial" (font_size 8)))
-		(text "BidirBus[11..0]" (rect 81 27 163 41)(font "Arial" (font_size 8)))
-		(line (pt 184 32)(pt 168 32)(line_width 3))
+		(text "BidirBus[11..0]" (rect 89 27 171 41)(font "Arial" (font_size 8)))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 168 112))
+		(rectangle (rect 16 16 176 112))
 	)
 )

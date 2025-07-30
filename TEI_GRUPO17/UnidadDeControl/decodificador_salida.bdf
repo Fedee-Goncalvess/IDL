@@ -1109,17 +1109,17 @@ applicable agreement for further details.
 	(pt 752 776)
 )
 (connector
-	(text "Q1neg" (rect 360 304 391 316)(font "Arial" ))
-	(pt 368 320)
-	(pt 360 320)
-)
-(connector
-	(text "Q0neg" (rect 360 312 391 324)(font "Arial" ))
+	(text "Q0neg" (rect 288 312 319 324)(font "Arial" ))
 	(pt 368 328)
-	(pt 360 328)
+	(pt 288 328)
 )
 (connector
-	(text "Q2neg" (rect 360 296 391 308)(font "Arial" ))
+	(text "Q1neg" (rect 312 304 343 316)(font "Arial" ))
+	(pt 368 320)
+	(pt 312 320)
+)
+(connector
+	(text "Q2neg" (rect 328 296 359 308)(font "Arial" ))
 	(pt 368 312)
-	(pt 360 312)
+	(pt 328 312)
 )
