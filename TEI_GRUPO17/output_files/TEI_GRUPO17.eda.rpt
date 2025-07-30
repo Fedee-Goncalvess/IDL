@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TEI_GRUPO17
-Wed Jul 30 00:31:41 2025
+Wed Jul 30 02:10:16 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jul 30 00:31:41 2025 ;
+; EDA Netlist Writer Status ; Successful - Wed Jul 30 02:10:16 2025 ;
 ; Revision Name             ; TEI_GRUPO17                           ;
-; Top-level Entity Name     ; unidad_control                        ;
+; Top-level Entity Name     ; circuito_principal                    ;
 ; Family                    ; Cyclone III                           ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -50,7 +50,8 @@ applicable agreement for further details.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; On                        ;
+; Generate netlist for functional simulation only                                                   ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -65,13 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                     ;
-+------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                ;
-+------------------------------------------------------------------------------------------------+
-; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17.vo ;
-+------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                           ;
++----------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                      ;
++----------------------------------------------------------------------------------------------------------------------+
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_6_1200mv_85c_slow.vo     ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_6_1200mv_0c_slow.vo      ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_min_1200mv_0c_fast.vo    ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17.vo                       ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_6_1200mv_85c_v_slow.sdo  ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_6_1200mv_0c_v_slow.sdo   ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//TEI_GRUPO17_v.sdo                    ;
++----------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -93,13 +101,20 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Wed Jul 30 00:31:40 2025
-Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
+    Info: Processing started: Wed Jul 30 02:10:15 2025
+Info: Command: quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
+Info (204019): Generated file TEI_GRUPO17_6_1200mv_85c_slow.vo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TEI_GRUPO17_6_1200mv_0c_slow.vo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TEI_GRUPO17_min_1200mv_0c_fast.vo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file TEI_GRUPO17.vo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TEI_GRUPO17_6_1200mv_85c_v_slow.sdo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TEI_GRUPO17_6_1200mv_0c_v_slow.sdo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TEI_GRUPO17_min_1200mv_0c_v_fast.sdo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TEI_GRUPO17_v.sdo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Wed Jul 30 00:31:41 2025
+    Info: Peak virtual memory: 4550 megabytes
+    Info: Processing ended: Wed Jul 30 02:10:16 2025
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

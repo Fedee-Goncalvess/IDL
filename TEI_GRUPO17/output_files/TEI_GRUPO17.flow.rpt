@@ -1,5 +1,5 @@
 Flow report for TEI_GRUPO17
-Wed Jul 30 00:31:41 2025
+Wed Jul 30 02:10:16 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul 30 00:31:41 2025      ;
+; Flow Status                        ; Successful - Wed Jul 30 02:10:16 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TEI_GRUPO17                                ;
-; Top-level Entity Name              ; unidad_control                             ;
+; Top-level Entity Name              ; circuito_principal                         ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 84 / 5,136 ( 2 % )                         ;
-;     Total combinational functions  ; 84 / 5,136 ( 2 % )                         ;
-;     Dedicated logic registers      ; 4 / 5,136 ( < 1 % )                        ;
-; Total registers                    ; 4                                          ;
-; Total pins                         ; 68 / 183 ( 37 % )                          ;
+; Total logic elements               ; 107 / 5,136 ( 2 % )                        ;
+;     Total combinational functions  ; 106 / 5,136 ( 2 % )                        ;
+;     Dedicated logic registers      ; 45 / 5,136 ( < 1 % )                       ;
+; Total registers                    ; 45                                         ;
+; Total pins                         ; 51 / 183 ( 28 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                             ;
@@ -64,29 +64,29 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/29/2025 21:30:50 ;
+; Start date & time ; 07/30/2025 02:06:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TEI_GRUPO17         ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                        ;
-+-------------------------------------+---------------------------------------------------------------------------------+---------------+----------------+----------------+
-; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name    ; Section Id     ;
-+-------------------------------------+---------------------------------------------------------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 106444396547144.175383544917812                                                 ; --            ; --             ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                              ; --            ; --             ; eda_simulation ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ ; --            ; --             ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                     ; --            ; --             ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                       ; <None>        ; --             ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                                                            ; --            ; --             ; eda_simulation ;
-; PARTITION_COLOR                     ; 16764057                                                                        ; --            ; unidad_control ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                           ; --            ; unidad_control ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                          ; --            ; unidad_control ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                    ; --            ; --             ; --             ;
-; TOP_LEVEL_ENTITY                    ; unidad_control                                                                  ; TEI_GRUPO17   ; --             ; --             ;
-+-------------------------------------+---------------------------------------------------------------------------------+---------------+----------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                            ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+--------------------+----------------+
+; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name        ; Section Id     ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+--------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 106444396547144.175385196413340                                                 ; --            ; --                 ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                             ; --            ; --                 ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ ; --            ; --                 ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                     ; --            ; --                 ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                       ; <None>        ; --                 ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                                            ; --            ; --                 ; eda_simulation ;
+; PARTITION_COLOR                     ; 16764057                                                                        ; --            ; circuito_principal ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                           ; --            ; circuito_principal ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                          ; --            ; circuito_principal ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                    ; --            ; --                 ; --             ;
+; TOP_LEVEL_ENTITY                    ; circuito_principal                                                              ; TEI_GRUPO17   ; --                 ; --             ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+--------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -94,38 +94,16 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4616 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 4961 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4583 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4620 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4532 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4616 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 4949 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4612 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4549 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4560 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4549 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4550 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:18                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -143,28 +121,6 @@ applicable agreement for further details.
 ; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; TomiLaptop       ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -176,32 +132,10 @@ quartus_fit --read_settings_files=off --write_settings_files=off TEI_GRUPO17 -c 
 quartus_asm --read_settings_files=off --write_settings_files=off TEI_GRUPO17 -c TEI_GRUPO17
 quartus_sta TEI_GRUPO17 -c TEI_GRUPO17
 quartus_eda --read_settings_files=off --write_settings_files=off TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/vwfUnidadDeControl.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/circuitoPrincipalPrueba.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/circuitoPrincipalPrueba.vwf.vt
+quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog TEI_GRUPO17 -c TEI_GRUPO17 --vector_source=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/TestDeCircuitos-Waveforms/circuitoPrincipalPrueba.vwf --testbench_file=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/circuitoPrincipalPrueba.vwf.vt
+quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
 
 
 
