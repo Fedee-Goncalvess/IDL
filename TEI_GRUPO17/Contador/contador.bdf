@@ -117,7 +117,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 808 496 984 512)
+	(rect 632 192 808 208)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "regSuma[11..0]" (rect 90 0 165 12)(font "Arial" ))
 	(pt 0 8)
@@ -484,34 +484,24 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 576 200)
-	(pt 592 200)
-	(bus)
-)
-(connector
 	(pt 808 8)
 	(pt 808 280)
 	(bus)
 )
 (connector
-	(pt 768 280)
-	(pt 768 504)
-	(bus)
-)
-(connector
-	(pt 768 504)
-	(pt 808 504)
-	(bus)
-)
-(connector
 	(pt 744 280)
-	(pt 768 280)
-	(bus)
-)
-(connector
-	(pt 768 280)
 	(pt 808 280)
 	(bus)
 )
+(connector
+	(pt 576 200)
+	(pt 592 200)
+	(bus)
+)
+(connector
+	(pt 592 200)
+	(pt 632 200)
+	(bus)
+)
 (junction (pt 384 360))
-(junction (pt 768 280))
+(junction (pt 592 200))

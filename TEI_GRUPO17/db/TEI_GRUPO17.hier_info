@@ -121,17 +121,29 @@ VF[10] => UC_detector_fin:inst8.VF[10]
 VF[10] => UC_detector_error:inst1.VF[10]
 VF[11] => UC_detector_fin:inst8.VF[11]
 VF[11] => UC_detector_error:inst1.VF[11]
+VI[0] => UC_detector_fin:inst8.VI[0]
 VI[0] => UC_detector_error:inst1.VI[0]
+VI[1] => UC_detector_fin:inst8.VI[1]
 VI[1] => UC_detector_error:inst1.VI[1]
+VI[2] => UC_detector_fin:inst8.VI[2]
 VI[2] => UC_detector_error:inst1.VI[2]
+VI[3] => UC_detector_fin:inst8.VI[3]
 VI[3] => UC_detector_error:inst1.VI[3]
+VI[4] => UC_detector_fin:inst8.VI[4]
 VI[4] => UC_detector_error:inst1.VI[4]
+VI[5] => UC_detector_fin:inst8.VI[5]
 VI[5] => UC_detector_error:inst1.VI[5]
+VI[6] => UC_detector_fin:inst8.VI[6]
 VI[6] => UC_detector_error:inst1.VI[6]
+VI[7] => UC_detector_fin:inst8.VI[7]
 VI[7] => UC_detector_error:inst1.VI[7]
+VI[8] => UC_detector_fin:inst8.VI[8]
 VI[8] => UC_detector_error:inst1.VI[8]
+VI[9] => UC_detector_fin:inst8.VI[9]
 VI[9] => UC_detector_error:inst1.VI[9]
+VI[10] => UC_detector_fin:inst8.VI[10]
 VI[10] => UC_detector_error:inst1.VI[10]
+VI[11] => UC_detector_fin:inst8.VI[11]
 VI[11] => UC_detector_error:inst1.VI[11]
 ERROR <= UC_estados:inst4.ERROR
 FIN <= UC_estados:inst4.FIN
@@ -141,7 +153,7 @@ LOAD_I => UC_de_UC:inst7.LOAD_I
 LOAD_F => UC_de_UA:inst3.LOAD_F
 IenVF_UA <= UC_de_UA:inst3.IenVF_UA
 OenVI_UA <= UC_de_UA:inst3.OenVI_UA
-Ienb_UC <= UC_de_UC:inst7.Ienb_UC
+Ienb_UC <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 OenVC_UC <= UC_de_UC:inst7.OenVC_UC
 IenVI_UC <= UC_de_UC:inst7.IenVI_UC
 FINDET <= FIN_i.DB_MAX_OUTPUT_PORT_TYPE
@@ -297,19 +309,45 @@ b0 => inst2.IN0
 
 
 |circuito_principal|unidad_control:inst1|UC_detector_fin:inst8
-FIN <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+FIN <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+VI[0] => comparador_12bits:inst12.A[0]
+VI[1] => comparador_12bits:inst12.A[1]
+VI[2] => comparador_12bits:inst12.A[2]
+VI[3] => comparador_12bits:inst12.A[3]
+VI[4] => comparador_12bits:inst12.A[4]
+VI[5] => comparador_12bits:inst12.A[5]
+VI[6] => comparador_12bits:inst12.A[6]
+VI[7] => comparador_12bits:inst12.A[7]
+VI[8] => comparador_12bits:inst12.A[8]
+VI[9] => comparador_12bits:inst12.A[9]
+VI[10] => comparador_12bits:inst12.A[10]
+VI[11] => comparador_12bits:inst12.A[11]
+VF[0] => comparador_12bits:inst12.B[0]
 VF[0] => comparador_12bits:inst.A[0]
+VF[1] => comparador_12bits:inst12.B[1]
 VF[1] => comparador_12bits:inst.A[1]
+VF[2] => comparador_12bits:inst12.B[2]
 VF[2] => comparador_12bits:inst.A[2]
+VF[3] => comparador_12bits:inst12.B[3]
 VF[3] => comparador_12bits:inst.A[3]
+VF[4] => comparador_12bits:inst12.B[4]
 VF[4] => comparador_12bits:inst.A[4]
+VF[5] => comparador_12bits:inst12.B[5]
 VF[5] => comparador_12bits:inst.A[5]
+VF[6] => comparador_12bits:inst12.B[6]
 VF[6] => comparador_12bits:inst.A[6]
+VF[7] => comparador_12bits:inst12.B[7]
 VF[7] => comparador_12bits:inst.A[7]
+VF[8] => comparador_12bits:inst12.B[8]
 VF[8] => comparador_12bits:inst.A[8]
+VF[9] => comparador_12bits:inst12.B[9]
 VF[9] => comparador_12bits:inst.A[9]
+VF[10] => comparador_12bits:inst12.B[10]
 VF[10] => comparador_12bits:inst.A[10]
+VF[11] => comparador_12bits:inst12.B[11]
 VF[11] => comparador_12bits:inst.A[11]
+CARGA => inst1.IN1
+CARGA => inst3.IN0
 VC[0] => comparador_12bits:inst.B[0]
 VC[1] => comparador_12bits:inst.B[1]
 VC[2] => comparador_12bits:inst.B[2]
@@ -326,6 +364,216 @@ UP_DOWN => inst9.IN1
 UP_DOWN => inst7.IN1
 Cout => inst10.IN1
 Cout => inst4.IN0
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12
+AmayB <= comparador_1bit:inst11.AmayB
+A[0] => comparador_1bit:inst.A
+A[1] => comparador_1bit:inst1.A
+A[2] => comparador_1bit:inst2.A
+A[3] => comparador_1bit:inst3.A
+A[4] => comparador_1bit:inst4.A
+A[5] => comparador_1bit:inst5.A
+A[6] => comparador_1bit:inst6.A
+A[7] => comparador_1bit:inst7.A
+A[8] => comparador_1bit:inst8.A
+A[9] => comparador_1bit:inst9.A
+A[10] => comparador_1bit:inst10.A
+A[11] => comparador_1bit:inst11.A
+B[0] => comparador_1bit:inst.B
+B[1] => comparador_1bit:inst1.B
+B[2] => comparador_1bit:inst2.B
+B[3] => comparador_1bit:inst3.B
+B[4] => comparador_1bit:inst4.B
+B[5] => comparador_1bit:inst5.B
+B[6] => comparador_1bit:inst6.B
+B[7] => comparador_1bit:inst7.B
+B[8] => comparador_1bit:inst8.B
+B[9] => comparador_1bit:inst9.B
+B[10] => comparador_1bit:inst10.B
+B[11] => comparador_1bit:inst11.B
+AeqB <= comparador_1bit:inst11.AeqB
+AmenB <= comparador_1bit:inst11.AmenB
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst11
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst10
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst9
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst8
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst7
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst6
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst5
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst4
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst3
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst2
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst1
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
+
+
+|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst
+AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+A => inst6.IN0
+B => inst2.IN1
+B => inst.IN0
+B => inst8.IN1
+I_AmayB => inst5.IN1
+AeqB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I_AeqB => inst3.IN1
+AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+I_AmenB => inst9.IN1
 
 
 |circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst
