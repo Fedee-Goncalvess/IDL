@@ -1220,6 +1220,31 @@ applicable agreement for further details.
 	(pt 696 144)
 )
 (connector
+	(text "Ien" (rect 1042 568 1057 580)(font "Arial" ))
+	(pt 1032 584)
+	(pt 1648 584)
+)
+(connector
+	(pt 1424 224)
+	(pt 1624 224)
+)
+(connector
+	(pt 1624 224)
+	(pt 1624 216)
+)
+(connector
+	(pt 1624 216)
+	(pt 1656 216)
+)
+(connector
+	(pt 1648 232)
+	(pt 1656 232)
+)
+(connector
+	(pt 1648 232)
+	(pt 1648 584)
+)
+(connector
 	(text "U_D" (rect 664 352 686 364)(font "Arial" ))
 	(pt 664 368)
 	(pt 680 368)
@@ -1254,33 +1279,8 @@ applicable agreement for further details.
 	(pt 680 432)
 )
 (connector
-	(text "Ien" (rect 1042 568 1057 580)(font "Arial" ))
-	(pt 1032 584)
-	(pt 1648 584)
-)
-(connector
-	(pt 1424 224)
-	(pt 1624 224)
-)
-(connector
-	(pt 1624 224)
-	(pt 1624 216)
-)
-(connector
-	(pt 1624 216)
-	(pt 1656 216)
-)
-(connector
-	(pt 1648 232)
-	(pt 1656 232)
-)
-(connector
-	(pt 1648 232)
-	(pt 1648 584)
-)
-(connector
-	(pt 808 368)
 	(pt 848 368)
+	(pt 808 368)
 )
 (connector
 	(text "VI[11..0]" (rect 656 432 698 444)(font "Arial" ))

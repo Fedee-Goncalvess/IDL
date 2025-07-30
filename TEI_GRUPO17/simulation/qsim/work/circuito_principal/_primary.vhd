@@ -21,6 +21,7 @@ entity circuito_principal is
         FINDET          : out    vl_logic;
         CarryOUT        : out    vl_logic;
         OregA           : out    vl_logic_vector(11 downto 0);
-        OregB           : out    vl_logic_vector(11 downto 0)
+        OregB           : out    vl_logic_vector(11 downto 0);
+        regA            : out    vl_logic_vector(11 downto 0)
     );
 end circuito_principal;

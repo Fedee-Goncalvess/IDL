@@ -1,7 +1,75 @@
-|circuito_principal
+|circuito_principal_bloque
+ERROR <= circuito_principal:inst.ERROR
+LOAD_I => circuito_principal:inst.LOAD_I
+LOAD_F => circuito_principal:inst.LOAD_F
+CONTINUAR => circuito_principal:inst.CONTINUAR
+RECARGAR => circuito_principal:inst.RECARGAR
+UP_DOWN => circuito_principal:inst.UP_DOWN
+START => circuito_principal:inst.START
+CLK => circuito_principal:inst.CLK
+b[0] => circuito_principal:inst.b[0]
+b[1] => circuito_principal:inst.b[1]
+b[2] => circuito_principal:inst.b[2]
+DATA[0] <> circuito_principal:inst.DATA[0]
+DATA[1] <> circuito_principal:inst.DATA[1]
+DATA[2] <> circuito_principal:inst.DATA[2]
+DATA[3] <> circuito_principal:inst.DATA[3]
+DATA[4] <> circuito_principal:inst.DATA[4]
+DATA[5] <> circuito_principal:inst.DATA[5]
+DATA[6] <> circuito_principal:inst.DATA[6]
+DATA[7] <> circuito_principal:inst.DATA[7]
+DATA[8] <> circuito_principal:inst.DATA[8]
+DATA[9] <> circuito_principal:inst.DATA[9]
+DATA[10] <> circuito_principal:inst.DATA[10]
+DATA[11] <> circuito_principal:inst.DATA[11]
+FIN <= circuito_principal:inst.FIN
+PAUSA <= circuito_principal:inst.PAUSA
+IenVI_UA <= circuito_principal:inst.IenVI_UA
+CarryOUT <= circuito_principal:inst.CarryOUT
+Ienb_UC <= circuito_principal:inst.Ienb_UC
+OenVC_UC <= circuito_principal:inst.OenVC_UC
+FINDET <= circuito_principal:inst.FINDET
+OregA[0] <= circuito_principal:inst.OregA[0]
+OregA[1] <= circuito_principal:inst.OregA[1]
+OregA[2] <= circuito_principal:inst.OregA[2]
+OregA[3] <= circuito_principal:inst.OregA[3]
+OregA[4] <= circuito_principal:inst.OregA[4]
+OregA[5] <= circuito_principal:inst.OregA[5]
+OregA[6] <= circuito_principal:inst.OregA[6]
+OregA[7] <= circuito_principal:inst.OregA[7]
+OregA[8] <= circuito_principal:inst.OregA[8]
+OregA[9] <= circuito_principal:inst.OregA[9]
+OregA[10] <= circuito_principal:inst.OregA[10]
+OregA[11] <= circuito_principal:inst.OregA[11]
+OregB[0] <= circuito_principal:inst.OregB[0]
+OregB[1] <= circuito_principal:inst.OregB[1]
+OregB[2] <= circuito_principal:inst.OregB[2]
+OregB[3] <= circuito_principal:inst.OregB[3]
+OregB[4] <= circuito_principal:inst.OregB[4]
+OregB[5] <= circuito_principal:inst.OregB[5]
+OregB[6] <= circuito_principal:inst.OregB[6]
+OregB[7] <= circuito_principal:inst.OregB[7]
+OregB[8] <= circuito_principal:inst.OregB[8]
+OregB[9] <= circuito_principal:inst.OregB[9]
+OregB[10] <= circuito_principal:inst.OregB[10]
+OregB[11] <= circuito_principal:inst.OregB[11]
+regA[0] <= circuito_principal:inst.regA[0]
+regA[1] <= circuito_principal:inst.regA[1]
+regA[2] <= circuito_principal:inst.regA[2]
+regA[3] <= circuito_principal:inst.regA[3]
+regA[4] <= circuito_principal:inst.regA[4]
+regA[5] <= circuito_principal:inst.regA[5]
+regA[6] <= circuito_principal:inst.regA[6]
+regA[7] <= circuito_principal:inst.regA[7]
+regA[8] <= circuito_principal:inst.regA[8]
+regA[9] <= circuito_principal:inst.regA[9]
+regA[10] <= circuito_principal:inst.regA[10]
+regA[11] <= circuito_principal:inst.regA[11]
+
+
+|circuito_principal_bloque|circuito_principal:inst
 ERROR <= unidad_control:inst1.ERROR
 OenVC_UC <= unidad_control:inst1.OenVC_UC
-IenVI_UC <= unidad_control:inst1.IenVI_UC
 Ienb_UC <= unidad_control:inst1.Ienb_UC
 CLK => contador:inst.CLK
 CLK => unidad_control:inst1.CLK
@@ -68,9 +136,21 @@ OregB[8] <= almacenamiento:inst4.ORegB[8]
 OregB[9] <= almacenamiento:inst4.ORegB[9]
 OregB[10] <= almacenamiento:inst4.ORegB[10]
 OregB[11] <= almacenamiento:inst4.ORegB[11]
+regA[0] <= regSuma[0].DB_MAX_OUTPUT_PORT_TYPE
+regA[1] <= regSuma[1].DB_MAX_OUTPUT_PORT_TYPE
+regA[2] <= regSuma[2].DB_MAX_OUTPUT_PORT_TYPE
+regA[3] <= regSuma[3].DB_MAX_OUTPUT_PORT_TYPE
+regA[4] <= regSuma[4].DB_MAX_OUTPUT_PORT_TYPE
+regA[5] <= regSuma[5].DB_MAX_OUTPUT_PORT_TYPE
+regA[6] <= regSuma[6].DB_MAX_OUTPUT_PORT_TYPE
+regA[7] <= regSuma[7].DB_MAX_OUTPUT_PORT_TYPE
+regA[8] <= regSuma[8].DB_MAX_OUTPUT_PORT_TYPE
+regA[9] <= regSuma[9].DB_MAX_OUTPUT_PORT_TYPE
+regA[10] <= regSuma[10].DB_MAX_OUTPUT_PORT_TYPE
+regA[11] <= regSuma[11].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1
 PAUSA <= UC_estados:inst4.PAUSA
 START => MEF:inst6.START
 RECARGAR => MEF:inst6.RECARGAR
@@ -171,7 +251,7 @@ Bout[10] <= UC_de_UC:inst7.Bo[10]
 Bout[11] <= UC_de_UC:inst7.Bo[11]
 
 
-|circuito_principal|unidad_control:inst1|UC_estados:inst4
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_estados:inst4
 PAUSA <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 Q0 => inst.IN0
 Q0 => inst4.IN1
@@ -181,7 +261,7 @@ ERROR <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 FIN <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|decodificador_salida:inst10
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|decodificador_salida:inst10
 Q2_UC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 Q2 => inst.IN0
 Q2 => inst4.IN0
@@ -216,7 +296,7 @@ Q0_UA <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 Ien <= inst19.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|MEF:inst6
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|MEF:inst6
 O2 <= MEF_funcion_de_salida:inst2.OQ2
 START => MEF_funcion_de_estado:inst.START
 RECARGAR => MEF_funcion_de_estado:inst.RECARGAR
@@ -230,7 +310,7 @@ O1 <= MEF_funcion_de_salida:inst2.OQ1
 O0 <= MEF_funcion_de_salida:inst2.OQ0
 
 
-|circuito_principal|unidad_control:inst1|MEF:inst6|MEF_funcion_de_salida:inst2
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|MEF:inst6|MEF_funcion_de_salida:inst2
 OQ2 <= IQ2.DB_MAX_OUTPUT_PORT_TYPE
 IQ2 => OQ2.DATAIN
 OQ1 <= IQ1.DB_MAX_OUTPUT_PORT_TYPE
@@ -239,7 +319,7 @@ OQ0 <= IQ0.DB_MAX_OUTPUT_PORT_TYPE
 IQ0 => OQ0.DATAIN
 
 
-|circuito_principal|unidad_control:inst1|MEF:inst6|MEF_estado:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|MEF:inst6|MEF_estado:inst1
 Q2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst.CLK
 CLK => inst1.CLK
@@ -251,7 +331,7 @@ Q0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 D0 => inst2.DATAIN
 
 
-|circuito_principal|unidad_control:inst1|MEF:inst6|MEF_funcion_de_estado:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|MEF:inst6|MEF_funcion_de_estado:inst
 D2 <= inst40.DB_MAX_OUTPUT_PORT_TYPE
 Q2 => inst18.IN0
 Q2 => inst22.IN0
@@ -301,14 +381,14 @@ D0 <= inst60.DB_MAX_OUTPUT_PORT_TYPE
 CLK => ~NO_FANOUT~
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_pausa:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_pausa:inst
 pausa <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 b2 => inst.IN0
 b1 => inst1.IN0
 b0 => inst2.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8
 FIN <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 VI[0] => comparador_12bits:inst12.A[0]
 VI[1] => comparador_12bits:inst12.A[1]
@@ -366,7 +446,7 @@ Cout => inst10.IN1
 Cout => inst4.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12
 AmayB <= comparador_1bit:inst11.AmayB
 A[0] => comparador_1bit:inst.A
 A[1] => comparador_1bit:inst1.A
@@ -396,7 +476,7 @@ AeqB <= comparador_1bit:inst11.AeqB
 AmenB <= comparador_1bit:inst11.AmenB
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst11
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -411,7 +491,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst10
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -426,7 +506,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst9
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -441,7 +521,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst8
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -456,7 +536,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst7
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -471,7 +551,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst6
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -486,7 +566,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst5
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -501,7 +581,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst4
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -516,7 +596,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst3
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -531,7 +611,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst2
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -546,7 +626,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst1
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -561,7 +641,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst12|comparador_1bit:inst
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -576,7 +656,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst
 AmayB <= comparador_1bit:inst11.AmayB
 A[0] => comparador_1bit:inst.A
 A[1] => comparador_1bit:inst1.A
@@ -606,7 +686,7 @@ AeqB <= comparador_1bit:inst11.AeqB
 AmenB <= comparador_1bit:inst11.AmenB
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst11
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -621,7 +701,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst10
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -636,7 +716,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst9
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -651,7 +731,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst8
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -666,7 +746,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst7
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -681,7 +761,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst6
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -696,7 +776,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst5
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -711,7 +791,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst4
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -726,7 +806,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst3
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -741,7 +821,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst2
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -756,7 +836,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst1
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -771,7 +851,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_fin:inst8|comparador_12bits:inst|comparador_1bit:inst
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -786,7 +866,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|reg_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|reg_1bit:inst5
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -794,7 +874,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1
 ERROR <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 UP_DOWN => inst2.IN0
 UP_DOWN => inst1.IN0
@@ -824,7 +904,7 @@ VI[10] => comparador_12bits:inst.B[10]
 VI[11] => comparador_12bits:inst.B[11]
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst
 AmayB <= comparador_1bit:inst11.AmayB
 A[0] => comparador_1bit:inst.A
 A[1] => comparador_1bit:inst1.A
@@ -854,7 +934,7 @@ AeqB <= comparador_1bit:inst11.AeqB
 AmenB <= comparador_1bit:inst11.AmenB
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst11
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -869,7 +949,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst10
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -884,7 +964,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst9
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -899,7 +979,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst8
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -914,7 +994,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst7
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -929,7 +1009,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst6
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -944,7 +1024,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst5
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -959,7 +1039,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst4
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -974,7 +1054,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst3
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -989,7 +1069,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst2
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -1004,7 +1084,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst1
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -1019,7 +1099,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_detector_error:inst1|comparador_12bits:inst|comparador_1bit:inst
 AmayB <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 A => inst2.IN0
 A => inst1.IN0
@@ -1034,7 +1114,7 @@ AmenB <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 I_AmenB => inst9.IN1
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UA:inst3
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UA:inst3
 IenVI_UA <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 LOAD_I => inst2.IN0
 Q1 => inst.IN0
@@ -1045,7 +1125,7 @@ LOAD_F => inst3.IN0
 OenVI_UA <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7
 Ienb_UC <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 Q2 => inst1.IN0
 Q0 => inst2.IN0
@@ -1074,7 +1154,7 @@ b1 => conversorCA2:inst.b1i
 b0 => conversorCA2:inst.b0i
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst
 B[0] <= sumador_12bits_serie:inst41.S[0]
 B[1] <= sumador_12bits_serie:inst41.S[1]
 B[2] <= sumador_12bits_serie:inst41.S[2]
@@ -1108,7 +1188,7 @@ b0i => MUX2:inst11.A
 b0i => inst40.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41
 Cout <= sumador_completo:inst11.Cout
 Cin => sumador_completo:inst12.Cin
 A[0] => sumador_completo:inst12.A
@@ -1149,7 +1229,7 @@ S[10] <= sumador_completo:inst10.S
 S[11] <= sumador_completo:inst11.S
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst11
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst11
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1163,7 +1243,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst10
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst10
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1177,7 +1257,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst9
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst9
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1191,7 +1271,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst8
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst8
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1205,7 +1285,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst7
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst7
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1219,7 +1299,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst6
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst6
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1233,7 +1313,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst5
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst5
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1247,7 +1327,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst4
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst4
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1261,7 +1341,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst3
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst3
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1275,7 +1355,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst2
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst2
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1289,7 +1369,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst1
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst1
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1303,7 +1383,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst12
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|sumador_12bits_serie:inst41|sumador_completo:inst12
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1317,7 +1397,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1325,7 +1405,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst14
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst14
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1333,7 +1413,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst17
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst17
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1341,7 +1421,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst20
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst20
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1349,7 +1429,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst23
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst23
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1357,7 +1437,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst26
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst26
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1365,7 +1445,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst29
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst29
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1373,7 +1453,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst32
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst32
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1381,7 +1461,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst35
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst35
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1389,7 +1469,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst9
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst9
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1397,7 +1477,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst10
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst10
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1405,7 +1485,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst11
+|circuito_principal_bloque|circuito_principal:inst|unidad_control:inst1|UC_de_UC:inst7|conversorCA2:inst|MUX2:inst11
 Y <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 B => inst17.IN0
 S => inst17.IN1
@@ -1413,7 +1493,7 @@ S => inst.IN0
 A => inst16.IN0
 
 
-|circuito_principal|contador:inst
+|circuito_principal_bloque|circuito_principal:inst|contador:inst
 C <= sumador_12bits_serie:inst.Cout
 CLK => reg_12bits:inst1.CLK
 CLK => reg_12bits:inst2.CLK
@@ -1444,21 +1524,21 @@ B[8] => reg_12bits:inst2.D[8]
 B[9] => reg_12bits:inst2.D[9]
 B[10] => reg_12bits:inst2.D[10]
 B[11] => reg_12bits:inst2.D[11]
-regSuma[0] <= sumador_12bits_serie:inst.S[0]
-regSuma[1] <= sumador_12bits_serie:inst.S[1]
-regSuma[2] <= sumador_12bits_serie:inst.S[2]
-regSuma[3] <= sumador_12bits_serie:inst.S[3]
-regSuma[4] <= sumador_12bits_serie:inst.S[4]
-regSuma[5] <= sumador_12bits_serie:inst.S[5]
-regSuma[6] <= sumador_12bits_serie:inst.S[6]
-regSuma[7] <= sumador_12bits_serie:inst.S[7]
-regSuma[8] <= sumador_12bits_serie:inst.S[8]
-regSuma[9] <= sumador_12bits_serie:inst.S[9]
-regSuma[10] <= sumador_12bits_serie:inst.S[10]
-regSuma[11] <= sumador_12bits_serie:inst.S[11]
+regSuma[0] <= reg_12bits:inst1.Q[0]
+regSuma[1] <= reg_12bits:inst1.Q[1]
+regSuma[2] <= reg_12bits:inst1.Q[2]
+regSuma[3] <= reg_12bits:inst1.Q[3]
+regSuma[4] <= reg_12bits:inst1.Q[4]
+regSuma[5] <= reg_12bits:inst1.Q[5]
+regSuma[6] <= reg_12bits:inst1.Q[6]
+regSuma[7] <= reg_12bits:inst1.Q[7]
+regSuma[8] <= reg_12bits:inst1.Q[8]
+regSuma[9] <= reg_12bits:inst1.Q[9]
+regSuma[10] <= reg_12bits:inst1.Q[10]
+regSuma[11] <= reg_12bits:inst1.Q[11]
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst
 Cout <= sumador_completo:inst11.Cout
 Cin => sumador_completo:inst12.Cin
 A[0] => sumador_completo:inst12.A
@@ -1499,7 +1579,7 @@ S[10] <= sumador_completo:inst10.S
 S[11] <= sumador_completo:inst11.S
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst11
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst11
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1513,7 +1593,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst10
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst10
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1527,7 +1607,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst9
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst9
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1541,7 +1621,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst8
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst8
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1555,7 +1635,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst7
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst7
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1569,7 +1649,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst6
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst6
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1583,7 +1663,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst5
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst5
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1597,7 +1677,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst4
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst4
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1611,7 +1691,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst3
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst3
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1625,7 +1705,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst2
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst2
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1639,7 +1719,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst1
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst1
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1653,7 +1733,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst12
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|sumador_12bits_serie:inst|sumador_completo:inst12
 Cout <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst3.IN0
 B => inst4.IN0
@@ -1667,7 +1747,7 @@ A => inst5.IN0
 S <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1
 Q[0] <= reg_1bit:inst.O
 Q[1] <= reg_1bit:inst1.O
 Q[2] <= reg_1bit:inst2.O
@@ -1718,7 +1798,7 @@ CLK => reg_1bit:inst10.CLK
 CLK => reg_1bit:inst11.CLK
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1726,7 +1806,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst1
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1734,7 +1814,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst3
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1742,7 +1822,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst2
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1750,7 +1830,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst4
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1758,7 +1838,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst5
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1766,7 +1846,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst6
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1774,7 +1854,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst7
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1782,7 +1862,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst8
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1790,7 +1870,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst9
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1798,7 +1878,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst10
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1806,7 +1886,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst1|reg_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst1|reg_1bit:inst11
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1814,7 +1894,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|contador_UC:inst12
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|contador_UC:inst12
 OIenA <= IenA.DB_MAX_OUTPUT_PORT_TYPE
 IenA => OIenA.DATAIN
 OIenB <= IenB.DB_MAX_OUTPUT_PORT_TYPE
@@ -1869,7 +1949,7 @@ OenSUM => inst[1].OE
 OenSUM => inst[0].OE
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2
 Q[0] <= reg_1bit:inst.O
 Q[1] <= reg_1bit:inst1.O
 Q[2] <= reg_1bit:inst2.O
@@ -1920,7 +2000,7 @@ CLK => reg_1bit:inst10.CLK
 CLK => reg_1bit:inst11.CLK
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1928,7 +2008,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst1
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1936,7 +2016,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst3
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1944,7 +2024,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst2
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1952,7 +2032,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst4
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1960,7 +2040,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst5
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1968,7 +2048,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst6
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1976,7 +2056,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst7
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1984,7 +2064,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst8
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -1992,7 +2072,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst9
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2000,7 +2080,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst10
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2008,7 +2088,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|contador:inst|reg_12bits:inst2|reg_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|contador:inst|reg_12bits:inst2|reg_1bit:inst11
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2016,7 +2096,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4
 Bus[0] <> inst2[0]
 Bus[0] <> inst4[0]
 Bus[1] <> inst2[1]
@@ -2095,7 +2175,7 @@ ORegB[10] <= reg_12bits:inst3.Q[10]
 ORegB[11] <= reg_12bits:inst3.Q[11]
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst
 Q[0] <= reg_1bit:inst.O
 Q[1] <= reg_1bit:inst1.O
 Q[2] <= reg_1bit:inst2.O
@@ -2146,7 +2226,7 @@ CLK => reg_1bit:inst10.CLK
 CLK => reg_1bit:inst11.CLK
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2154,7 +2234,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst1
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2162,7 +2242,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst3
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2170,7 +2250,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst2
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2178,7 +2258,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst4
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2186,7 +2266,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst5
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2194,7 +2274,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst6
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2202,7 +2282,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst7
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2210,7 +2290,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst8
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2218,7 +2298,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst9
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2226,7 +2306,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst10
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2234,7 +2314,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst|reg_1bit:inst11
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2242,7 +2322,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3
 Q[0] <= reg_1bit:inst.O
 Q[1] <= reg_1bit:inst1.O
 Q[2] <= reg_1bit:inst2.O
@@ -2293,7 +2373,7 @@ CLK => reg_1bit:inst10.CLK
 CLK => reg_1bit:inst11.CLK
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2301,7 +2381,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst1
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst1
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2309,7 +2389,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst3
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst3
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2317,7 +2397,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst2
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst2
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2325,7 +2405,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst4
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst4
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2333,7 +2413,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst5
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst5
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2341,7 +2421,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst6
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst6
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2349,7 +2429,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst7
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst7
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2357,7 +2437,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst8
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst8
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2365,7 +2445,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst9
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst9
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2373,7 +2453,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst10
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst10
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
@@ -2381,7 +2461,7 @@ Ien => inst.IN1
 Ien => inst3.IN0
 
 
-|circuito_principal|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst11
+|circuito_principal_bloque|circuito_principal:inst|almacenamiento:inst4|reg_12bits:inst3|reg_1bit:inst11
 O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst4.CLK
 D => inst.IN0
