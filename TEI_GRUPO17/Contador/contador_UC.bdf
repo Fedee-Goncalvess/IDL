@@ -101,9 +101,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 288 72 456 88)
+	(rect 288 0 456 16)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "LOAD_A" (rect 5 0 52 11)(font "Arial" ))
+	(text "OenSUM" (rect 5 0 52 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -117,9 +117,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 288 0 456 16)
+	(rect 288 72 456 88)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "RUN" (rect 5 0 30 11)(font "Arial" ))
+	(text "IenBidirBus" (rect 5 0 63 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -165,7 +165,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 760 72 936 88)
+	(rect 768 144 944 160)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "OutA[11..0]" (rect 90 0 146 11)(font "Arial" ))
 	(pt 0 8)
@@ -327,21 +327,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 584 80)
-	(pt 760 80)
-	(bus)
-)
-(connector
-	(pt 584 48)
-	(pt 584 80)
-	(bus)
-)
-(connector
-	(pt 584 80)
-	(pt 584 112)
-	(bus)
-)
-(connector
 	(pt 456 152)
 	(pt 472 152)
 )
@@ -374,5 +359,20 @@ applicable agreement for further details.
 	(pt 456 328)
 	(pt 760 328)
 )
+(connector
+	(pt 584 152)
+	(pt 768 152)
+	(bus)
+)
+(connector
+	(pt 584 48)
+	(pt 584 112)
+	(bus)
+)
+(connector
+	(pt 584 112)
+	(pt 584 152)
+	(bus)
+)
 (junction (pt 488 112))
-(junction (pt 584 80))
+(junction (pt 584 112))

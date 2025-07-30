@@ -1,5 +1,5 @@
 EDA Netlist Writer report for TEI_GRUPO17
-Wed Jul 30 05:30:07 2025
+Wed Jul 30 16:48:50 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jul 30 05:30:07 2025 ;
+; EDA Netlist Writer Status ; Successful - Wed Jul 30 16:48:50 2025 ;
 ; Revision Name             ; TEI_GRUPO17                           ;
 ; Top-level Entity Name     ; circuito_principal                    ;
 ; Family                    ; Cyclone III                           ;
@@ -93,13 +93,13 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Wed Jul 30 05:30:06 2025
+    Info: Processing started: Wed Jul 30 16:48:50 2025
 Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim/ TEI_GRUPO17 -c TEI_GRUPO17
 Info (204019): Generated file TEI_GRUPO17.vo in folder "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Wed Jul 30 05:30:07 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Jul 30 16:48:50 2025
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
