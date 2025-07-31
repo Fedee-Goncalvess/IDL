@@ -89,8 +89,8 @@ applicable agreement for further details.
 	(port
 		(pt 184 32)
 		(output)
-		(text "LOAD_A" (rect 0 0 50 14)(font "Arial" (font_size 8)))
-		(text "LOAD_A" (rect 113 27 163 41)(font "Arial" (font_size 8)))
+		(text "LOAD_VI" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "LOAD_VI" (rect 110 27 163 41)(font "Arial" (font_size 8)))
 		(line (pt 184 32)(pt 168 32))
 	)
 	(port

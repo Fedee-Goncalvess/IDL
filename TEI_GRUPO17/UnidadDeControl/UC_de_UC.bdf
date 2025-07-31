@@ -248,7 +248,7 @@ applicable agreement for further details.
 	(output)
 	(rect 832 -112 1008 -96)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LOAD_A" (rect 90 0 133 12)(font "Arial" ))
+	(text "LOAD_VI" (rect 90 0 136 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
