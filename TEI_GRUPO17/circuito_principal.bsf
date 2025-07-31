@@ -103,9 +103,30 @@ applicable agreement for further details.
 	(port
 		(pt 192 96)
 		(output)
-		(text "FINDET" (rect 0 0 40 14)(font "Arial" (font_size 8)))
-		(text "FINDET" (rect 131 91 171 105)(font "Arial" (font_size 8)))
+		(text "Ienb_UC" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "Ienb_UC" (rect 124 91 171 105)(font "Arial" (font_size 8)))
 		(line (pt 192 96)(pt 176 96))
+	)
+	(port
+		(pt 192 112)
+		(output)
+		(text "OenVC_UC" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "OenVC_UC" (rect 107 107 171 121)(font "Arial" (font_size 8)))
+		(line (pt 192 112)(pt 176 112))
+	)
+	(port
+		(pt 192 128)
+		(output)
+		(text "IenVI_UC" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "IenVI_UC" (rect 120 123 171 137)(font "Arial" (font_size 8)))
+		(line (pt 192 128)(pt 176 128))
+	)
+	(port
+		(pt 192 144)
+		(output)
+		(text "FINDET" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "FINDET" (rect 131 139 171 153)(font "Arial" (font_size 8)))
+		(line (pt 192 144)(pt 176 144))
 	)
 	(port
 		(pt 192 32)

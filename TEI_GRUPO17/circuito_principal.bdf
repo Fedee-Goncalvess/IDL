@@ -197,9 +197,57 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 560 600 736 616)
+	(rect 616 600 792 616)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "FINDET" (rect 90 0 130 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 616 520 792 536)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "IenVI_UC" (rect 90 0 138 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 616 504 792 520)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "OenVC_UC" (rect 90 0 147 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 616 456 792 472)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Ienb_UC" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -392,7 +440,7 @@ applicable agreement for further details.
 (symbol
 	(rect 376 384 560 672)
 	(text "unidad_control" (rect 5 0 88 14)(font "Arial" (font_size 8)))
-	(text "inst1" (rect 8 272 31 284)(font "Arial" ))
+	(text "inst6" (rect 8 272 31 284)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -709,11 +757,6 @@ applicable agreement for further details.
 	(pt 584 288)
 )
 (connector
-	(text "IenVI_UC" (rect 522 224 570 236)(font "Arial" ))
-	(pt 512 240)
-	(pt 584 240)
-)
-(connector
 	(text "OenVC_UC" (rect 522 208 579 220)(font "Arial" ))
 	(pt 512 224)
 	(pt 584 224)
@@ -756,11 +799,6 @@ applicable agreement for further details.
 	(pt 616 432)
 )
 (connector
-	(text "Ienb_UC" (rect 570 448 613 460)(font "Arial" ))
-	(pt 616 464)
-	(pt 560 464)
-)
-(connector
 	(text "PAUSA" (rect 570 544 607 556)(font "Arial" ))
 	(pt 560 560)
 	(pt 616 560)
@@ -780,16 +818,6 @@ applicable agreement for further details.
 	(pt 560 544)
 	(pt 616 544)
 	(bus)
-)
-(connector
-	(text "OenVC_UC" (rect 570 496 627 508)(font "Arial" ))
-	(pt 560 512)
-	(pt 616 512)
-)
-(connector
-	(text "IenVI_UC" (rect 562 512 610 524)(font "Arial" ))
-	(pt 560 528)
-	(pt 616 528)
 )
 (connector
 	(text "LOAD_A" (rect 570 464 613 476)(font "Arial" ))
@@ -816,4 +844,29 @@ applicable agreement for further details.
 	(pt 376 416)
 	(pt 288 416)
 	(bus)
+)
+(connector
+	(text "IenVI_UC" (rect 512 224 560 236)(font "Arial" ))
+	(pt 584 240)
+	(pt 512 240)
+)
+(connector
+	(text "FINDET" (rect 570 592 610 604)(font "Arial" ))
+	(pt 560 608)
+	(pt 616 608)
+)
+(connector
+	(text "IenVI_UC" (rect 562 512 610 524)(font "Arial" ))
+	(pt 560 528)
+	(pt 616 528)
+)
+(connector
+	(text "OenVC_UC" (rect 570 496 627 508)(font "Arial" ))
+	(pt 560 512)
+	(pt 616 512)
+)
+(connector
+	(text "Ienb_UC" (rect 570 448 613 460)(font "Arial" ))
+	(pt 560 464)
+	(pt 616 464)
 )

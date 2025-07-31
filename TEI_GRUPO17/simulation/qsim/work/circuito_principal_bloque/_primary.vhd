@@ -14,6 +14,9 @@ entity circuito_principal_bloque is
         DATA            : inout  vl_logic_vector(11 downto 0);
         FIN             : out    vl_logic;
         PAUSA           : out    vl_logic;
-        FINDET          : out    vl_logic
+        FINDET          : out    vl_logic;
+        Ienb_UC         : out    vl_logic;
+        OenVC_UC        : out    vl_logic;
+        IenVI_UC        : out    vl_logic
     );
 end circuito_principal_bloque;
