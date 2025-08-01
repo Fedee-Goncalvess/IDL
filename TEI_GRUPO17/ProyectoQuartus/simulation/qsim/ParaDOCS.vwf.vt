@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/01/2025 04:49:17"
+// Generated on "08/01/2025 05:50:48"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    circuito_principal_bloque
 // 
@@ -141,16 +141,16 @@ end
 
 
 
-// expected ERROR
-initial
-begin
-	ERROR_expected = 1'bX;
-end 
-
 // expected FIN
 initial
 begin
 	FIN_expected = 1'bX;
+end 
+
+// expected ERROR
+initial
+begin
+	ERROR_expected = 1'bX;
 end 
 
 // expected PAUSA
@@ -431,28 +431,30 @@ end
 // b[ 2 ]
 initial
 begin
-	b[2] = 1'b1;
-	b[2] = #180000 1'b0;
-	b[2] = #260000 1'b1;
-	b[2] = #440000 1'b0;
+	b[2] = 1'b0;
 end 
 // b[ 1 ]
 initial
 begin
-	b[1] = 1'b1;
+	b[1] = 1'b0;
+	b[1] = #140000 1'b1;
+	b[1] = #330000 1'b0;
 end 
 // b[ 0 ]
 initial
 begin
-	b[0] = 1'b1;
-	b[0] = #180000 1'b0;
-	b[0] = #260000 1'b1;
-	b[0] = #440000 1'b0;
+	b[0] = 1'b0;
+	b[0] = #20000 1'b1;
+	b[0] = #120000 1'b0;
 end 
 // DATA[ 11 ]
 initial
 begin
 	treg_DATA[11] = 1'b0;
+	treg_DATA[11] = #40000 1'bZ;
+	treg_DATA[11] = #120000 1'b0;
+	treg_DATA[11] = #40000 1'bZ;
+	treg_DATA[11] = #60000 1'b0;
 	treg_DATA[11] = #40000 1'bZ;
 end 
 // DATA[ 10 ]
@@ -460,11 +462,19 @@ initial
 begin
 	treg_DATA[10] = 1'b0;
 	treg_DATA[10] = #40000 1'bZ;
+	treg_DATA[10] = #120000 1'b0;
+	treg_DATA[10] = #40000 1'bZ;
+	treg_DATA[10] = #60000 1'b0;
+	treg_DATA[10] = #40000 1'bZ;
 end 
 // DATA[ 9 ]
 initial
 begin
 	treg_DATA[9] = 1'b0;
+	treg_DATA[9] = #40000 1'bZ;
+	treg_DATA[9] = #120000 1'b0;
+	treg_DATA[9] = #40000 1'bZ;
+	treg_DATA[9] = #60000 1'b0;
 	treg_DATA[9] = #40000 1'bZ;
 end 
 // DATA[ 8 ]
@@ -472,24 +482,39 @@ initial
 begin
 	treg_DATA[8] = 1'b0;
 	treg_DATA[8] = #40000 1'bZ;
+	treg_DATA[8] = #120000 1'b0;
+	treg_DATA[8] = #40000 1'bZ;
+	treg_DATA[8] = #60000 1'b0;
+	treg_DATA[8] = #40000 1'bZ;
 end 
 // DATA[ 7 ]
 initial
 begin
 	treg_DATA[7] = 1'b0;
 	treg_DATA[7] = #40000 1'bZ;
+	treg_DATA[7] = #120000 1'b0;
+	treg_DATA[7] = #40000 1'bZ;
+	treg_DATA[7] = #60000 1'b0;
+	treg_DATA[7] = #40000 1'bZ;
 end 
 // DATA[ 6 ]
 initial
 begin
 	treg_DATA[6] = 1'b0;
-	treg_DATA[6] = #20000 1'b1;
-	treg_DATA[6] = #20000 1'bZ;
+	treg_DATA[6] = #40000 1'bZ;
+	treg_DATA[6] = #120000 1'b0;
+	treg_DATA[6] = #40000 1'bZ;
+	treg_DATA[6] = #60000 1'b0;
+	treg_DATA[6] = #40000 1'bZ;
 end 
 // DATA[ 5 ]
 initial
 begin
 	treg_DATA[5] = 1'b0;
+	treg_DATA[5] = #40000 1'bZ;
+	treg_DATA[5] = #120000 1'b0;
+	treg_DATA[5] = #40000 1'bZ;
+	treg_DATA[5] = #60000 1'b0;
 	treg_DATA[5] = #40000 1'bZ;
 end 
 // DATA[ 4 ]
@@ -497,18 +522,31 @@ initial
 begin
 	treg_DATA[4] = 1'b0;
 	treg_DATA[4] = #40000 1'bZ;
+	treg_DATA[4] = #120000 1'b0;
+	treg_DATA[4] = #40000 1'bZ;
+	treg_DATA[4] = #60000 1'b0;
+	treg_DATA[4] = #40000 1'bZ;
 end 
 // DATA[ 3 ]
 initial
 begin
 	treg_DATA[3] = 1'b0;
 	treg_DATA[3] = #40000 1'bZ;
+	treg_DATA[3] = #120000 1'b0;
+	treg_DATA[3] = #40000 1'bZ;
+	treg_DATA[3] = #60000 1'b0;
+	treg_DATA[3] = #40000 1'bZ;
 end 
 // DATA[ 2 ]
 initial
 begin
 	treg_DATA[2] = 1'b0;
-	treg_DATA[2] = #20000 1'b1;
+	treg_DATA[2] = #40000 1'bZ;
+	treg_DATA[2] = #120000 1'b1;
+	treg_DATA[2] = #20000 1'b0;
+	treg_DATA[2] = #20000 1'bZ;
+	treg_DATA[2] = #60000 1'b1;
+	treg_DATA[2] = #20000 1'b0;
 	treg_DATA[2] = #20000 1'bZ;
 end 
 // DATA[ 1 ]
@@ -517,11 +555,19 @@ begin
 	treg_DATA[1] = 1'b0;
 	treg_DATA[1] = #20000 1'b1;
 	treg_DATA[1] = #20000 1'bZ;
+	treg_DATA[1] = #120000 1'b0;
+	treg_DATA[1] = #40000 1'bZ;
+	treg_DATA[1] = #60000 1'b0;
+	treg_DATA[1] = #40000 1'bZ;
 end 
 // DATA[ 0 ]
 initial
 begin
 	treg_DATA[0] = 1'b0;
+	treg_DATA[0] = #40000 1'bZ;
+	treg_DATA[0] = #120000 1'b1;
+	treg_DATA[0] = #40000 1'bZ;
+	treg_DATA[0] = #60000 1'b1;
 	treg_DATA[0] = #40000 1'bZ;
 end 
 
@@ -531,24 +577,37 @@ begin
 	START = 1'b0;
 	START = #40000 1'b1;
 	START = #20000 1'b0;
+	START = #140000 1'b1;
+	START = #20000 1'b0;
+	START = #80000 1'b1;
+	START = #20000 1'b0;
 end 
 
 // RECARGAR
 initial
 begin
 	RECARGAR = 1'b0;
+	RECARGAR = #140000 1'b1;
+	RECARGAR = #20000 1'b0;
+	RECARGAR = #80000 1'b1;
+	RECARGAR = #20000 1'b0;
 end 
 
 // CONTINUAR
 initial
 begin
 	CONTINUAR = 1'b0;
+	CONTINUAR = #320000 1'b1;
 end 
 
 // LOAD_I
 initial
 begin
 	LOAD_I = 1'b1;
+	LOAD_I = #20000 1'b0;
+	LOAD_I = #140000 1'b1;
+	LOAD_I = #20000 1'b0;
+	LOAD_I = #80000 1'b1;
 	LOAD_I = #20000 1'b0;
 end 
 
@@ -558,12 +617,18 @@ begin
 	LOAD_F = 1'b0;
 	LOAD_F = #20000 1'b1;
 	LOAD_F = #20000 1'b0;
+	LOAD_F = #140000 1'b1;
+	LOAD_F = #20000 1'b0;
+	LOAD_F = #80000 1'b1;
+	LOAD_F = #20000 1'b0;
 end 
 
 // UP_DOWN
 initial
 begin
 	UP_DOWN = 1'b0;
+	UP_DOWN = #280000 1'b1;
+	UP_DOWN = #30000 1'b0;
 end 
 
 circuito_principal_bloque_vlg_sample_tst tb_sample (

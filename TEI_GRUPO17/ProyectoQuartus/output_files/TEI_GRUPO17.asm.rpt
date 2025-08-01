@@ -1,5 +1,5 @@
 Assembler report for TEI_GRUPO17
-Thu Jul 31 23:34:28 2025
+Fri Aug 01 05:50:36 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jul 31 23:34:28 2025 ;
+; Assembler Status      ; Successful - Fri Aug 01 05:50:36 2025 ;
 ; Revision Name         ; TEI_GRUPO17                           ;
 ; Top-level Entity Name ; circuito_principal_bloque             ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                              ;
 +----------------+----------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C5F256C6                                                                                                          ;
-; JTAG usercode  ; 0x0009F05C                                                                                                           ;
-; Checksum       ; 0x0009F05C                                                                                                           ;
+; JTAG usercode  ; 0x0009EB7B                                                                                                           ;
+; Checksum       ; 0x0009EB7B                                                                                                           ;
 +----------------+----------------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Jul 31 23:34:27 2025
+    Info: Processing started: Fri Aug 01 05:50:36 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off TEI_GRUPO17 -c TEI_GRUPO17
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4593 megabytes
-    Info: Processing ended: Thu Jul 31 23:34:28 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Aug 01 05:50:36 2025
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

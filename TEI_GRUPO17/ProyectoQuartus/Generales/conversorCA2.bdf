@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 360 528 528 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b2i" (rect 5 0 20 12)(font "Arial" ))
+	(text "b2i" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 544 528 712 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b1i" (rect 5 0 20 12)(font "Arial" ))
+	(text "b1i" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 736 528 904 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b0i" (rect 5 0 20 12)(font "Arial" ))
+	(text "b0i" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1356,16 +1356,6 @@ applicable agreement for further details.
 	(pt 928 456)
 )
 (connector
-	(pt 624 680)
-	(pt 584 680)
-	(bus)
-)
-(connector
-	(text "UP_DOWN" (rect 616 632 672 644)(font "Arial" ))
-	(pt 624 648)
-	(pt 616 648)
-)
-(connector
 	(text "A[11]" (rect 432 120 457 132)(font "Arial" ))
 	(pt 432 136)
 	(pt 440 136)
@@ -1426,18 +1416,28 @@ applicable agreement for further details.
 	(pt 1048 424)
 )
 (connector
-	(pt 768 648)
-	(pt 1208 648)
-	(bus)
-)
-(connector
-	(pt 1208 192)
-	(pt 1208 648)
-	(bus)
-)
-(connector
 	(pt 1208 192)
 	(pt 1224 192)
+	(bus)
+)
+(connector
+	(pt 584 680)
+	(pt 624 680)
+	(bus)
+)
+(connector
+	(text "UP_DOWN" (rect 616 632 672 644)(font "Arial" ))
+	(pt 624 648)
+	(pt 616 648)
+)
+(connector
+	(pt 1208 648)
+	(pt 768 648)
+	(bus)
+)
+(connector
+	(pt 1208 192)
+	(pt 1208 648)
 	(bus)
 )
 (connector
