@@ -557,26 +557,6 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(text "OenVI_UA" (rect 88 200 141 212)(font "Arial" ))
-	(pt 168 216)
-	(pt 88 216)
-)
-(connector
-	(text "IenVI_UA" (rect 88 216 136 228)(font "Arial" ))
-	(pt 168 232)
-	(pt 88 232)
-)
-(connector
-	(text "IenVF_UA" (rect 88 248 139 260)(font "Arial" ))
-	(pt 168 264)
-	(pt 88 264)
-)
-(connector
-	(text "CLK" (rect 88 264 109 276)(font "Arial" ))
-	(pt 168 280)
-	(pt 88 280)
-)
-(connector
 	(text "DATA[11..0]" (rect 336 200 396 212)(font "Arial" ))
 	(pt 328 216)
 	(pt 368 216)
@@ -593,7 +573,27 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "Ienb_UC" (rect 522 240 565 252)(font "Arial" ))
+	(text "IenVF_UA" (rect 72 248 123 260)(font "Arial" ))
+	(pt 168 264)
+	(pt 72 264)
+)
+(connector
+	(text "CLK" (rect 72 264 93 276)(font "Arial" ))
+	(pt 168 280)
+	(pt 72 280)
+)
+(connector
+	(text "IenVI_UA" (rect 72 216 120 228)(font "Arial" ))
+	(pt 168 232)
+	(pt 72 232)
+)
+(connector
+	(text "OenVI_UA" (rect 72 200 125 212)(font "Arial" ))
+	(pt 168 216)
+	(pt 72 216)
+)
+(connector
+	(text "Ienb_UC" (rect 514 240 557 252)(font "Arial" ))
 	(pt 512 256)
 	(pt 584 256)
 )
@@ -609,12 +609,12 @@ applicable agreement for further details.
 	(pt 584 288)
 )
 (connector
-	(text "OenVC_UC" (rect 522 208 579 220)(font "Arial" ))
+	(text "OenVC_UC" (rect 506 208 563 220)(font "Arial" ))
 	(pt 512 224)
 	(pt 584 224)
 )
 (connector
-	(text "RUN" (rect 522 176 546 188)(font "Arial" ))
+	(text "RUN" (rect 514 176 538 188)(font "Arial" ))
 	(pt 584 192)
 	(pt 512 192)
 )
@@ -624,7 +624,7 @@ applicable agreement for further details.
 	(pt 512 240)
 )
 (connector
-	(text "LOAD_VI" (rect 522 192 568 204)(font "Arial" ))
+	(text "LOAD_VI" (rect 506 192 552 204)(font "Arial" ))
 	(pt 584 208)
 	(pt 512 208)
 )
@@ -670,11 +670,6 @@ applicable agreement for further details.
 	(pt 312 560)
 )
 (connector
-	(text "RECARGAR" (rect 360 560 422 572)(font "Arial" ))
-	(pt 312 576)
-	(pt 376 576)
-)
-(connector
 	(text "UP_DOWN" (rect 312 576 368 588)(font "Arial" ))
 	(pt 376 592)
 	(pt 312 592)
@@ -683,11 +678,6 @@ applicable agreement for further details.
 	(text "START" (rect 312 592 346 604)(font "Arial" ))
 	(pt 376 608)
 	(pt 312 608)
-)
-(connector
-	(text "CLK" (rect 312 608 333 620)(font "Arial" ))
-	(pt 376 624)
-	(pt 312 624)
 )
 (connector
 	(pt 344 232)
@@ -713,11 +703,6 @@ applicable agreement for further details.
 	(text "Cout" (rect 322 432 345 444)(font "Arial" ))
 	(pt 376 448)
 	(pt 312 448)
-)
-(connector
-	(text "IenVI_UA" (rect 570 400 618 412)(font "Arial" ))
-	(pt 616 416)
-	(pt 560 416)
 )
 (connector
 	(text "OenVI_UA" (rect 570 432 623 444)(font "Arial" ))
@@ -747,29 +732,14 @@ applicable agreement for further details.
 	(pt 560 512)
 )
 (connector
+	(text "RUN" (rect 570 464 594 476)(font "Arial" ))
+	(pt 616 480)
+	(pt 560 480)
+)
+(connector
 	(text "IenVI_UC" (rect 562 512 610 524)(font "Arial" ))
 	(pt 616 528)
 	(pt 560 528)
-)
-(connector
-	(text "PAUSA" (rect 570 544 607 556)(font "Arial" ))
-	(pt 616 560)
-	(pt 560 560)
-)
-(connector
-	(text "ERROR" (rect 570 560 610 572)(font "Arial" ))
-	(pt 616 576)
-	(pt 560 576)
-)
-(connector
-	(text "FIN" (rect 570 576 588 588)(font "Arial" ))
-	(pt 616 592)
-	(pt 560 592)
-)
-(connector
-	(text "RUN" (rect 570 464 594 476)(font "Arial" ))
-	(pt 560 480)
-	(pt 616 480)
 )
 (connector
 	(text "LOAD_VI" (rect 570 448 616 460)(font "Arial" ))
@@ -780,4 +750,34 @@ applicable agreement for further details.
 	(text "Ienb_UC" (rect 570 480 613 492)(font "Arial" ))
 	(pt 560 496)
 	(pt 616 496)
+)
+(connector
+	(text "RECARGAR" (rect 288 560 350 572)(font "Arial" ))
+	(pt 376 576)
+	(pt 312 576)
+)
+(connector
+	(text "CLK" (rect 312 608 333 620)(font "Arial" ))
+	(pt 376 624)
+	(pt 312 624)
+)
+(connector
+	(text "IenVI_UA" (rect 570 400 618 412)(font "Arial" ))
+	(pt 616 416)
+	(pt 560 416)
+)
+(connector
+	(text "PAUSA" (rect 570 544 607 556)(font "Arial" ))
+	(pt 560 560)
+	(pt 616 560)
+)
+(connector
+	(text "ERROR" (rect 570 560 610 572)(font "Arial" ))
+	(pt 560 576)
+	(pt 616 576)
+)
+(connector
+	(text "FIN" (rect 570 576 588 588)(font "Arial" ))
+	(pt 560 592)
+	(pt 616 592)
 )

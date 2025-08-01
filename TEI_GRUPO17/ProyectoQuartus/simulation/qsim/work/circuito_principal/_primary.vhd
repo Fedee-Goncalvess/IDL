@@ -2,10 +2,9 @@ library verilog;
 use verilog.vl_types.all;
 entity circuito_principal is
     port(
-        ERROR           : out    vl_logic;
-        OenVC_UC        : out    vl_logic;
+        PAUSA           : out    vl_logic;
+        RUN             : out    vl_logic;
         IenVI_UC        : out    vl_logic;
-        Ienb_UC         : out    vl_logic;
         CLK             : in     vl_logic;
         DATA            : inout  vl_logic_vector(11 downto 0);
         b               : in     vl_logic_vector(2 downto 0);
@@ -15,13 +14,8 @@ entity circuito_principal is
         RECARGAR        : in     vl_logic;
         UP_DOWN         : in     vl_logic;
         START           : in     vl_logic;
-        IenVI_UA        : out    vl_logic;
+        ERROR           : out    vl_logic;
         FIN             : out    vl_logic;
-        PAUSA           : out    vl_logic;
-        FINDET          : out    vl_logic;
-        CarryOUT        : out    vl_logic;
-        OregA           : out    vl_logic_vector(11 downto 0);
-        OregB           : out    vl_logic_vector(11 downto 0);
-        regA            : out    vl_logic_vector(11 downto 0)
+        Ien_UA          : out    vl_logic
     );
 end circuito_principal;
