@@ -25,6 +25,8 @@ entity unidad_control is
         Ienb_UC         : out    vl_logic;
         OenVC_UC        : out    vl_logic;
         IenVI_UC        : out    vl_logic;
+        RUN             : out    vl_logic;
+        LOAD_VI         : out    vl_logic;
         Bout            : out    vl_logic_vector(11 downto 0)
     );
 end unidad_control;

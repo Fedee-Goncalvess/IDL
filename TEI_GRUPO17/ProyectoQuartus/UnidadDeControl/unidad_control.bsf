@@ -145,22 +145,22 @@ applicable agreement for further details.
 	(port
 		(pt 184 80)
 		(output)
-		(text "Ienb_UC" (rect 0 0 47 14)(font "Arial" (font_size 8)))
-		(text "Ienb_UC" (rect 116 75 163 89)(font "Arial" (font_size 8)))
+		(text "LOAD_VI" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "LOAD_VI" (rect 110 75 163 89)(font "Arial" (font_size 8)))
 		(line (pt 184 80)(pt 168 80))
 	)
 	(port
 		(pt 184 96)
 		(output)
-		(text "LOAD_VI" (rect 0 0 53 14)(font "Arial" (font_size 8)))
-		(text "LOAD_VI" (rect 110 91 163 105)(font "Arial" (font_size 8)))
+		(text "RUN" (rect 0 0 24 14)(font "Arial" (font_size 8)))
+		(text "RUN" (rect 139 91 163 105)(font "Arial" (font_size 8)))
 		(line (pt 184 96)(pt 168 96))
 	)
 	(port
 		(pt 184 112)
 		(output)
-		(text "RUN" (rect 0 0 24 14)(font "Arial" (font_size 8)))
-		(text "RUN" (rect 139 107 163 121)(font "Arial" (font_size 8)))
+		(text "Ienb_UC" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "Ienb_UC" (rect 116 107 163 121)(font "Arial" (font_size 8)))
 		(line (pt 184 112)(pt 168 112))
 	)
 	(port
