@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Aug 01 04:06:06 2025
+Fitter Status : Successful - Fri Aug 01 05:50:34 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : TEI_GRUPO17
 Top-level Entity Name : circuito_principal_bloque
 Family : Cyclone III
 Device : EP3C5F256C6
 Timing Models : Final
-Total logic elements : 137 / 5,136 ( 3 % )
-    Total combinational functions : 132 / 5,136 ( 3 % )
+Total logic elements : 130 / 5,136 ( 3 % )
+    Total combinational functions : 130 / 5,136 ( 3 % )
     Dedicated logic registers : 45 / 5,136 ( < 1 % )
 Total registers : 45
 Total pins : 25 / 183 ( 14 % )

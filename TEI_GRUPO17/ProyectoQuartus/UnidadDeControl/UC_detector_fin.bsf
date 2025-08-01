@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 144 176)
+	(rect 16 16 152 176)
 	(text "UC_detector_fin" (rect 5 0 97 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 144 25 156)(font "Arial" ))
 	(port
@@ -54,25 +54,32 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "CARGA" (rect 0 0 44 14)(font "Arial" (font_size 8)))
-		(text "CARGA" (rect 21 91 65 105)(font "Arial" (font_size 8)))
+		(text "PAUSADET" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "PAUSADET" (rect 21 91 85 105)(font "Arial" (font_size 8)))
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "VI[11..0]" (rect 0 0 47 14)(font "Arial" (font_size 8)))
-		(text "VI[11..0]" (rect 21 107 68 121)(font "Arial" (font_size 8)))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
+		(text "CARGA" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "CARGA" (rect 21 107 65 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
 	)
 	(port
-		(pt 128 32)
+		(pt 0 128)
+		(input)
+		(text "VI[11..0]" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "VI[11..0]" (rect 21 123 68 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 136 32)
 		(output)
 		(text "FIN" (rect 0 0 17 14)(font "Arial" (font_size 8)))
-		(text "FIN" (rect 90 27 107 41)(font "Arial" (font_size 8)))
-		(line (pt 128 32)(pt 112 32))
+		(text "FIN" (rect 98 27 115 41)(font "Arial" (font_size 8)))
+		(line (pt 136 32)(pt 120 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 112 144))
+		(rectangle (rect 16 16 120 144))
 	)
 )

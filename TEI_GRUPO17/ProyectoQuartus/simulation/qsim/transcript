@@ -27,5 +27,5 @@
 # Loading work.circuito_principal_bloque_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : vwfChequeo.vwf.vt(382)
+# ** Note: $finish    : ParaDOCS.vwf.vt(382)
 #    Time: 1 us  Iteration: 0  Instance: /circuito_principal_bloque_vlg_vec_tst/tb_out

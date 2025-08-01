@@ -48,6 +48,9 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/tomas/Desktop/IngenieriaEnComputacion/IDL/TEI_GRUPO17/ProyectoQuartus/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name BDF_FILE circuito_principal_bloque.bdf
 set_global_assignment -name BDF_FILE circuito_principal.bdf
 set_global_assignment -name BDF_FILE Almacenamiento/almacenamiento.bdf
@@ -77,22 +80,9 @@ set_global_assignment -name BDF_FILE Generales/conversorCA2.bdf
 set_global_assignment -name BDF_FILE Generales/comparador_12bits.bdf
 set_global_assignment -name BDF_FILE Generales/comparador_1bit.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/UnidadDeControl/MEF/MEF_funcion_de_estado.vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/circuito_principal.vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/Contador/contador.vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/UnidadDeControl/vwfUnidadDeControl.vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfCircuitoPrincipal.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfContadorTomi.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/circuitoPrincipalPrueba.vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/Generales/vwfComparador12b.vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/Generales/vwfSumador12bitsSerie.vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/vwfTestCarryOut.vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfTestCircuitoPrincipal.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfCircuitoPrincipalBloque.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfCircuitoPrincipalBloqueConBusData.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/vwfTesteoFinal.vwf"
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfChequeo.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE vwfChequeo2.vwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE "TestDeCircuitos-Waveforms/ParaDOCS.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
